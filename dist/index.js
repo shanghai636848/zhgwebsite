@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const productTabs = document.querySelectorAll('.product-tab');
+
+    
     const productContentContainer = document.getElementById('product-content-container');
+    //移动端
+    const mobileMenuButton = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-menu');
+
 
     // 产品数据
     const products = {
@@ -113,6 +118,31 @@ document.addEventListener('DOMContentLoaded', function () {
                 '组件尺寸范围': 'L:2500-1650mm,W:1450-990mm'
             }
         },
+        'WV-XH13A': {
+            name: '接线盒激光焊接机(WV-XH13A)',
+            images: ['./img/WV-XH13A.jpg'],
+            technicalPerformance: [
+                '采用全新激光焊接工艺,开创激光技术应用于接线盒焊接领域',
+                '激光熔融焊,实现无锡焊接,焊接强度更高',
+                '具备CCD焊前高精度自动定位,精准实现焊接',
+                '具备高精度焊中、焊后检测功能,可精准识别虚焊',
+                '焊接压块具备汇流条折弯校平功能,兼容性更好',
+                '设备整体布局合理,便于调试和维护操作'
+            ],
+            productParameters: {
+                '设备占地': '3145mm×2200mm×2160mm',
+                '兼容组件大小': '长(1600mm-2550mm)×宽(990-1450mm)',
+                '节拍': '≤12S',
+                '焊接良率': '≥99.9%(去除来料不良)',
+                '稼动率': '≥99.5%',
+                '过判率': '≤0.5%',
+                '焊接拉力': '≥100N',
+                '额定功率': '10kw',
+                '归正精度': '±0.5mm',
+                '电源': 'AC 380V±5%,50Hz',
+                '气源': '0.5-0.8MPa'
+            }
+        },
         'WV-XH06A': {
             name: '接线盒高频焊接机(WV-XH06A)',
             images: ['./img/WV-XH06A.jpg'],
@@ -138,31 +168,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 '版型切换时间': '20min',
                 '焊接温度范围': '±15℃',
                 '焊接后拉拔力': '≥50N'
-            }
-        },
-        'WV-XH13A': {
-            name: '接线盒激光焊接机(WV-XH13A)',
-            images: ['./img/WV-XH13A.jpg'],
-            technicalPerformance: [
-                '采用全新激光焊接工艺,开创激光技术应用于接线盒焊接领域',
-                '激光熔融焊,实现无锡焊接,焊接强度更高',
-                '具备CCD焊前高精度自动定位,精准实现焊接',
-                '具备高精度焊中、焊后检测功能,可精准识别虚焊',
-                '焊接压块具备汇流条折弯校平功能,兼容性更好',
-                '设备整体布局合理,便于调试和维护操作'
-            ],
-            productParameters: {
-                '设备占地': '3145mm×2200mm×2160mm',
-                '兼容组件大小': '长(1600mm-2550mm)×宽(990-1450mm)',
-                '节拍': '≤12S',
-                '焊接良率': '≥99.9%(去除来料不良)',
-                '稼动率': '≥99.5%',
-                '过判率': '≤0.5%',
-                '焊接拉力': '≥100N',
-                '额定功率': '10kw',
-                '归正精度': '±0.5mm',
-                '电源': 'AC 380V±5%,50Hz',
-                '气源': '0.5-0.8MPa'
             }
         },
         'WV-XH09A': {
@@ -191,29 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 '视觉检测漏判率': '<0.5%'
             }
         },
-        'WV-TB03A': {
-            name: '贴标机(WV-TB03A)',
-            images: ['./img/WV-TB03A.jpg'],
-            technicalPerformance: [
-                '动力平台辅助撕标，提高出标完好率',
-                '接标平台辅助条码出标，增加出标稳定性',
-                '提前扫码+设备内补扫码功能，扫码成功率>99.9%',
-                '由多个伺服运动轴为驱动轴，调试以及切换版型方便',
-                'U轴采用步进旋转，精度高、调试方便、动作稳定',
-                '视觉检测、三码校验等多个功能选配'
-            ],
-            productParameters: {
-                '设备尺寸': '3800x2300x2000mm(可定制)',
-                '适用组件尺寸': '长(1580-2500)x宽(800-1500)mm',
-                '节拍': '≤15S',
-                '设备稼动率': '≥99.5%',
-                '贴标精度': '±1mm',
-                '合格率': '≥99.8%',
-                '设备电源、功率': '380V/220V 50/60Hz',
-                '气源': '0.5-0.8MPa'
-            }
-        },
-        'WV-KG02': {
+         'WV-KG02': {
             name: '接线盒扣盖机(WV-KG02)',
             images: ['./img/WV-KG02.jpg'],
             technicalPerformance: [
@@ -240,9 +223,55 @@ document.addEventListener('DOMContentLoaded', function () {
                 '节拍': '≤13S',
                 '组件重量': '≤50KG'
             }
+        },
+        'WV-TB03A': {
+            name: '贴标机(WV-TB03A)',
+            images: ['./img/WV-TB03A.jpg'],
+            technicalPerformance: [
+                '动力平台辅助撕标，提高出标完好率',
+                '接标平台辅助条码出标，增加出标稳定性',
+                '提前扫码+设备内补扫码功能，扫码成功率>99.9%',
+                '由多个伺服运动轴为驱动轴，调试以及切换版型方便',
+                'U轴采用步进旋转，精度高、调试方便、动作稳定',
+                '视觉检测、三码校验等多个功能选配'
+            ],
+            productParameters: {
+                '设备尺寸': '3800x2300x2000mm(可定制)',
+                '适用组件尺寸': '长(1580-2500)x宽(800-1500)mm',
+                '节拍': '≤15S',
+                '设备稼动率': '≥99.5%',
+                '贴标精度': '±1mm',
+                '合格率': '≥99.8%',
+                '设备电源、功率': '380V/220V 50/60Hz',
+                '气源': '0.5-0.8MPa'
+            }
         }
+       
     };
 
+    //桌面端和移动端产品目录导航生成
+    const productLinksContainer = document.getElementById('product-container');
+    const mobileMenu = document.getElementById('mobile-product-container');
+    for (const productId in products) {
+        const product = products[productId];
+        //桌面端
+        const link = document.createElement('a');
+        link.href = '#products';
+        link.dataset.product = productId;
+        link.classList.add('nav-link', 'product-a', 'no-wrap');
+        link.textContent = product.name;
+        productLinksContainer.appendChild(link);
+
+        //移动端
+        const mobileLink = document.createElement('a');
+        mobileLink.href = '#products';
+        mobileLink.dataset.product = productId;
+        mobileLink.classList.add('block', 'py-2', 'px-4', 'text-dark', 'hover:text-primary', 'product-a');
+        mobileLink.textContent = product.name;
+        mobileMenu.appendChild(mobileLink);
+    }
+
+    
     // 生成轮播图和指示器
     function generateSlider(images) {
         const sliderContainer = document.createElement('div');
@@ -390,13 +419,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
         return productContent;
     }
-
-    // 选项卡点击事件
-    productTabs.forEach(tab => {
+    
+    //监听按钮点击事件
+    const productA = document.querySelectorAll('.product-a');
+    productA.forEach(tab => {
         tab.addEventListener('click', function () {
             const productId = this.dataset.product;
             const product = products[productId];
 
+            //隐藏移动端菜单
+            mobileNav.style.display = 'none';
             // 清除之前的内容
             productContentContainer.innerHTML = '';
 
@@ -404,19 +436,17 @@ document.addEventListener('DOMContentLoaded', function () {
             const productContent = generateProductContent(product);
             productContentContainer.appendChild(productContent);
 
-            // 更新选项卡样式
-            productTabs.forEach(t => {
-                t.classList.remove('bg-primary', 'text-white');
-                t.classList.add('bg-white', 'text-dark');
-            });
-            this.classList.remove('bg-white', 'text-dark');
-            this.classList.add('bg-primary', 'text-white');
         });
     });
+    
 
+
+   
     // 默认显示第一个产品
-    const firstTab = productTabs[0];
-    firstTab.click();
+    const firstProductKey = Object.keys(products)[0];
+    const firstProduct = products[firstProductKey];
+    productContentContainer.appendChild(generateProductContent(firstProduct));
+
 
 
     // 获取按钮和发展历程内容元素
@@ -446,4 +476,40 @@ document.addEventListener('DOMContentLoaded', function () {
             this.textContent = '收起';
         }
     });
+
+
+    //移动端
+    // 获取菜单按钮和导航菜单元素
+    
+    // 检查元素是否成功获取
+    if (mobileMenuButton && mobileNav) {
+        // 为按钮添加点击事件监听器
+        mobileMenuButton.addEventListener('click', function () {
+            // 切换导航菜单的显示状态
+           
+            if (mobileNav.style.display === 'none') {
+                mobileNav.style.display = 'block';
+            } else {
+                mobileNav.style.display = 'none';
+            }
+        });
+    } else {
+        console.error('无法找到菜单按钮或导航菜单元素。');
+    }
+
+    const productDropdown = document.querySelector('.product-dropdown-mobile');
+    const productLink = document.querySelector('#mobile-menu a[href="#"]');
+
+    // 切换移动端菜单的显示与隐藏
+    mobileMenuButton.addEventListener('click', function () {
+        mobileNav.classList.toggle('hidden');
+    });
+
+    // 切换产品下拉菜单的显示与隐藏
+    productLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        productDropdown.classList.toggle('active');
+    });
+
+
 });
