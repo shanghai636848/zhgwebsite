@@ -64,6 +64,43 @@
                     .nav-link:hover::after {
                         @apply w-full;
                     }
+
+                    /* 产品下拉菜单样式 */
+                    .product-dropdown {
+                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        background-color: white;
+                        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                        border-radius: 0.375rem;
+                        z-index: 10;
+                    }
+
+                    .nav-link:hover .product-dropdown {
+                        display: block;
+                    }
+
+                    .product-dropdown a {
+                        display: block;
+                        padding: 0.75rem 1rem;
+                        color: #1D2129;
+                        text-decoration: none;
+                    }
+
+                    .product-dropdown a:hover {
+                        background-color: #F7F8FA;
+                    }
+
+                     /* 新增样式，防止文本换行 */
+                    .no-wrap {
+                        white-space: nowrap;
+                    }
+                    
+                   
+                    
+                
+
                     /* 轮播图容器样式 */
                     #slider-container {
                         position: relative;
@@ -103,9 +140,20 @@
                     .slider-indicator.active {
                         background-color: blue;
                     }
+
+                    /* 移动端产品下拉菜单样式 */
+                    .product-dropdown-mobile {
+                        display: none;
+                    }
+
+                    .product-dropdown-mobile.active {
+                        display: block;
+                    }
                 }
         
     </style>
+
+    
 </head>
 
 <body class="font-sans text-dark bg-light">
@@ -125,23 +173,62 @@
                 <!-- 桌面导航 -->
                 <nav class="hidden md:flex space-x-1">
                     <a href="#about" class="nav-link">关于我们</a>
-                    <a href="#products" class="nav-link">产品目录</a>
+                    <div class="nav-link relative">
+                        <a href="#products" class="nav-link">产品目录</a>
+                        <div class="product-dropdown" >
+                            <a href="#products" data-product="WV-3500C" class="nav-link product-a no-wrap">无主栅电极互连一体机(WV-3500C)</a>
+                            <a href="#products" data-product="WV-TM100A" class="nav-link product-a no-wrap">无主栅电极互连一体机(WV-TM100A)</a>
+                            <a href="#products" data-product="WV-AZ400" class="nav-link product-a no-wrap">接线盒安装一体机(WV-AZ400)</a>
+                            <a href="#products" data-product="WV-AJ100" class="nav-link product-a no-wrap">引线挑起背板打胶一体机(WV-AJ100)</a>
+                            <a href="#products" data-product="WV-AZ500A" class="nav-link product-a no-wrap">背板打胶及线盒安装一体机(WV-AZ500A)</a>
+                            <a href="#products" data-product="WV-XH06A" class="nav-link product-a no-wrap">接线盒高频焊接机(WV-XH06A)</a>
+                            <a href="#products" data-product="WV-XH13A" class="nav-link product-a no-wrap">接线盒激光焊接机(WV-XH13A)</a>
+                            <a href="#products" data-product="WV-XH09A" class="nav-link product-a no-wrap">接线盒热压焊接机(WV-XH09A)</a>
+                            <a href="#products" data-product="WV-TB03A" class="nav-link product-a no-wrap">贴标机(WV-TB03A)</a>
+                            <a href="#products" data-product="WV-KG02" class="nav-link product-a no-wrap">接线盒扣盖机(WV-KG02)</a>
+                        </div>
+                    </div>
                     <a href="#clients" class="nav-link">合作客户</a>
                     <a href="#contact" class="nav-link">联系我们</a>
                 </nav>
 
-                <!-- 移动端菜单按钮 -->
+                <!-- 移动端菜单按钮  -->
                 <button id="menu-toggle" class="md:hidden text-dark hover:text-primary focus:outline-none">
                     <i class="fa fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
 
+    
         <!-- 移动端导航菜单 -->
         <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
             <div class="container mx-auto px-4 py-3 space-y-3">
                 <a href="#about" class="block py-2 text-dark hover:text-primary">关于我们</a>
-                <a href="#products" class="block py-2 text-dark hover:text-primary">产品目录</a>
+                <div class="relative">
+                    <a href="#" class="block py-2 text-dark hover:text-primary">产品目录</a>
+                    <div class="product-dropdown-mobile hidden bg-white border-t">
+                        <a href="#products" data-product="WV-3500C"
+                            class="block py-2 px-4 text-dark hover:text-primary product-a">无主栅电极互连一体机(WV-3500C)</a>
+                        <a href="#products" data-product="WV-TM100A"
+                            class="block py-2 px-4 text-dark hover:text-primary product-a">无主栅电极互连一体机(WV-TM100A)</a>
+                        <a href="#products" data-product="WV-AZ400"
+                            class="block py-2 px-4 text-dark hover:text-primary product-a">接线盒安装一体机(WV-AZ400)</a>
+                        <a href="#products" data-product="WV-AJ100"
+                            class="block py-2 px-4 text-dark hover:text-primary product-a">引线挑起背板打胶一体机(WV-AJ100)</a>
+                        <a href="#products" data-product="WV-AZ500A"
+                            class="block py-2 px-4 text-dark hover:text-primary product-a">背板打胶及线盒安装一体机(WV-AZ500A)</a>
+                        <a href="#products" data-product="WV-XH06A"
+                            class="block py-2 px-4 text-dark hover:text-primary product-a">接线盒高频焊接机(WV-XH06A)</a>
+                        <a href="#products" data-product="WV-XH13A"
+                            class="block py-2 px-4 text-dark hover:text-primary product-a">接线盒激光焊接机(WV-XH13A)</a>
+                        <a href="#products" data-product="WV-XH09A"
+                            class="block py-2 px-4 text-dark hover:text-primary product-a">接线盒热压焊接机(WV-XH09A)</a>
+                        <a href="#products" data-product="WV-TB03A"
+                            class="block py-2 px-4 text-dark hover:text-primary product-a">贴标机(WV-TB03A)</a>
+                        <a href="#products" data-product="WV-KG02"
+                            class="block py-2 px-4 text-dark hover:text-primary product-a">接线盒扣盖机(WV-KG02)</a>
+                    </div>
+                </div>
                 <a href="#clients" class="block py-2 text-dark hover:text-primary">合作客户</a>
                 <a href="#contact" class="block py-2 text-dark hover:text-primary">联系我们</a>
             </div>
@@ -646,7 +733,7 @@
             </div>
 
             <!-- 产品选项卡 -->
-            <div class="mb-10">
+            <!-- <div class="mb-10">
                 <div class="flex flex-wrap justify-center gap-4">
                     <button class="product-tab px-6 py-3 rounded-lg bg-primary text-white font-medium"
                         data-product="WV-3500C">
@@ -698,7 +785,7 @@
                         接线盒扣盖机(WV-KG02)
                     </button>
                 </div>
-            </div>
+            </div> -->
 
             <!-- 产品内容将通过 JS 动态生成 -->
             <div id="product-content-container"></div>

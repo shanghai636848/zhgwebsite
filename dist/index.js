@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const productTabs = document.querySelectorAll('.product-tab');
+
+    const productA = document.querySelectorAll('.product-a');
     const productContentContainer = document.getElementById('product-content-container');
+    //移动端
+    const mobileMenuButton = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-menu');
+
 
     // 产品数据
     const products = {
@@ -391,32 +396,30 @@ document.addEventListener('DOMContentLoaded', function () {
         return productContent;
     }
 
-    // 选项卡点击事件
-    productTabs.forEach(tab => {
+
+    productA.forEach(tab => {
         tab.addEventListener('click', function () {
             const productId = this.dataset.product;
             const product = products[productId];
-
+            //隐藏移动端菜单
+            mobileNav.style.display = 'none';
             // 清除之前的内容
             productContentContainer.innerHTML = '';
 
             // 生成新的产品内容
             const productContent = generateProductContent(product);
             productContentContainer.appendChild(productContent);
-
-            // 更新选项卡样式
-            productTabs.forEach(t => {
-                t.classList.remove('bg-primary', 'text-white');
-                t.classList.add('bg-white', 'text-dark');
-            });
-            this.classList.remove('bg-white', 'text-dark');
-            this.classList.add('bg-primary', 'text-white');
+            
         });
     });
 
+
+   
     // 默认显示第一个产品
-    const firstTab = productTabs[0];
-    firstTab.click();
+    const firstProductKey = Object.keys(products)[0];
+    const firstProduct = products[firstProductKey];
+    productContentContainer.appendChild(generateProductContent(firstProduct));
+
 
 
     // 获取按钮和发展历程内容元素
@@ -446,4 +449,40 @@ document.addEventListener('DOMContentLoaded', function () {
             this.textContent = '收起';
         }
     });
+
+
+    //移动端
+    // 获取菜单按钮和导航菜单元素
+    
+    // 检查元素是否成功获取
+    if (mobileMenuButton && mobileNav) {
+        // 为按钮添加点击事件监听器
+        mobileMenuButton.addEventListener('click', function () {
+            // 切换导航菜单的显示状态
+           
+            if (mobileNav.style.display === 'none') {
+                mobileNav.style.display = 'block';
+            } else {
+                mobileNav.style.display = 'none';
+            }
+        });
+    } else {
+        console.error('无法找到菜单按钮或导航菜单元素。');
+    }
+
+    const productDropdown = document.querySelector('.product-dropdown-mobile');
+    const productLink = document.querySelector('#mobile-menu a[href="#"]');
+
+    // 切换移动端菜单的显示与隐藏
+    mobileMenuButton.addEventListener('click', function () {
+        mobileNav.classList.toggle('hidden');
+    });
+
+    // 切换产品下拉菜单的显示与隐藏
+    productLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        productDropdown.classList.toggle('active');
+    });
+
+
 });
