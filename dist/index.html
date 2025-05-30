@@ -9,6 +9,7 @@
     <script src="./tailwind.min.js"></script>
     <script src="./index.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
     <script src="./chart.umd.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -175,17 +176,7 @@
                     <a href="#about" class="nav-link">关于我们</a>
                     <div class="nav-link relative">
                         <a href="#products" class="nav-link">产品目录</a>
-                        <div class="product-dropdown" >
-                            <a href="#products" data-product="WV-3500C" class="nav-link product-a no-wrap">无主栅电极互连一体机(WV-3500C)</a>
-                            <a href="#products" data-product="WV-TM100A" class="nav-link product-a no-wrap">无主栅电极互连一体机(WV-TM100A)</a>
-                            <a href="#products" data-product="WV-AZ400" class="nav-link product-a no-wrap">接线盒安装一体机(WV-AZ400)</a>
-                            <a href="#products" data-product="WV-AJ100" class="nav-link product-a no-wrap">引线挑起背板打胶一体机(WV-AJ100)</a>
-                            <a href="#products" data-product="WV-AZ500A" class="nav-link product-a no-wrap">背板打胶及线盒安装一体机(WV-AZ500A)</a>
-                            <a href="#products" data-product="WV-XH06A" class="nav-link product-a no-wrap">接线盒高频焊接机(WV-XH06A)</a>
-                            <a href="#products" data-product="WV-XH13A" class="nav-link product-a no-wrap">接线盒激光焊接机(WV-XH13A)</a>
-                            <a href="#products" data-product="WV-XH09A" class="nav-link product-a no-wrap">接线盒热压焊接机(WV-XH09A)</a>
-                            <a href="#products" data-product="WV-TB03A" class="nav-link product-a no-wrap">贴标机(WV-TB03A)</a>
-                            <a href="#products" data-product="WV-KG02" class="nav-link product-a no-wrap">接线盒扣盖机(WV-KG02)</a>
+                        <div class="product-dropdown" id="product-container">
                         </div>
                     </div>
                     <a href="#clients" class="nav-link">合作客户</a>
@@ -206,27 +197,8 @@
                 <a href="#about" class="block py-2 text-dark hover:text-primary">关于我们</a>
                 <div class="relative">
                     <a href="#" class="block py-2 text-dark hover:text-primary">产品目录</a>
-                    <div class="product-dropdown-mobile hidden bg-white border-t">
-                        <a href="#products" data-product="WV-3500C"
-                            class="block py-2 px-4 text-dark hover:text-primary product-a">无主栅电极互连一体机(WV-3500C)</a>
-                        <a href="#products" data-product="WV-TM100A"
-                            class="block py-2 px-4 text-dark hover:text-primary product-a">无主栅电极互连一体机(WV-TM100A)</a>
-                        <a href="#products" data-product="WV-AZ400"
-                            class="block py-2 px-4 text-dark hover:text-primary product-a">接线盒安装一体机(WV-AZ400)</a>
-                        <a href="#products" data-product="WV-AJ100"
-                            class="block py-2 px-4 text-dark hover:text-primary product-a">引线挑起背板打胶一体机(WV-AJ100)</a>
-                        <a href="#products" data-product="WV-AZ500A"
-                            class="block py-2 px-4 text-dark hover:text-primary product-a">背板打胶及线盒安装一体机(WV-AZ500A)</a>
-                        <a href="#products" data-product="WV-XH06A"
-                            class="block py-2 px-4 text-dark hover:text-primary product-a">接线盒高频焊接机(WV-XH06A)</a>
-                        <a href="#products" data-product="WV-XH13A"
-                            class="block py-2 px-4 text-dark hover:text-primary product-a">接线盒激光焊接机(WV-XH13A)</a>
-                        <a href="#products" data-product="WV-XH09A"
-                            class="block py-2 px-4 text-dark hover:text-primary product-a">接线盒热压焊接机(WV-XH09A)</a>
-                        <a href="#products" data-product="WV-TB03A"
-                            class="block py-2 px-4 text-dark hover:text-primary product-a">贴标机(WV-TB03A)</a>
-                        <a href="#products" data-product="WV-KG02"
-                            class="block py-2 px-4 text-dark hover:text-primary product-a">接线盒扣盖机(WV-KG02)</a>
+                    <div class="product-dropdown-mobile hidden bg-white border-t" id="mobile-product-container">
+                       
                     </div>
                 </div>
                 <a href="#clients" class="block py-2 text-dark hover:text-primary">合作客户</a>
