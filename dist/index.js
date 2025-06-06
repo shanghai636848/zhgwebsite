@@ -260,7 +260,10 @@ document.addEventListener('DOMContentLoaded', function () {
         link.dataset.product = productId;
         link.classList.add('nav-link', 'product-a', 'no-wrap');
         link.textContent = product.name;
+        link.setAttribute('data-target', 'product-catalog');
         productLinksContainer.appendChild(link);
+        
+        
 
         //移动端
         const mobileLink = document.createElement('a');
@@ -268,6 +271,7 @@ document.addEventListener('DOMContentLoaded', function () {
         mobileLink.dataset.product = productId;
         mobileLink.classList.add('block', 'py-2', 'px-4', 'text-dark', 'hover:text-primary', 'product-a');
         mobileLink.textContent = product.name;
+        mobileLink.setAttribute('data-target', 'product-catalog');
         mobileMenu.appendChild(mobileLink);
     }
 
@@ -420,28 +424,6 @@ document.addEventListener('DOMContentLoaded', function () {
         return productContent;
     }
     
-    //监听按钮点击事件
-    const productA = document.querySelectorAll('.product-a');
-    productA.forEach(tab => {
-        tab.addEventListener('click', function () {
-            const productId = this.dataset.product;
-            const product = products[productId];
-
-            //隐藏移动端菜单
-            mobileNav.style.display = 'none';
-            // 清除之前的内容
-            productContentContainer.innerHTML = '';
-
-            // 生成新的产品内容
-            const productContent = generateProductContent(product);
-            productContentContainer.appendChild(productContent);
-
-        });
-    });
-    
-
-
-   
     // 默认显示第一个产品
     const firstProductKey = Object.keys(products)[0];
     const firstProduct = products[firstProductKey];
@@ -452,15 +434,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // 获取按钮和发展历程内容元素
     const toggleButton = document.getElementById('toggle-timeline');
     const timelineContent = document.getElementById('timeline-content');
-
     // 初始状态下隐藏部分内容
     const allItems = timelineContent.children;
- 
     for (let i = 3; i < allItems.length; i++) {
         allItems[i].style.display = 'none';
-        
     }
-
     // 处理按钮点击事件
     toggleButton.addEventListener('click', function () {
         const isExpanded = this.textContent === '收起';
@@ -480,7 +458,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //移动端
     // 获取菜单按钮和导航菜单元素
-    
     // 检查元素是否成功获取
     if (mobileMenuButton && mobileNav) {
         // 为按钮添加点击事件监听器
@@ -509,6 +486,44 @@ document.addEventListener('DOMContentLoaded', function () {
     productLink.addEventListener('click', function (e) {
         e.preventDefault();
         productDropdown.classList.toggle('active');
+    });
+
+
+    //切换界面
+    // 获取所有导航项
+    const navItems = document.querySelectorAll('nav a');
+    // 为每个导航项添加点击事件监听器
+    navItems.forEach(item => {
+        item.addEventListener('click', function () {
+           
+            // 获取目标内容区域的 ID
+            const targetId = this.getAttribute('data-target');
+            //生成指定产品内容
+            if(targetId == "product-catalog"){
+                const productId = this.dataset.product;
+                const product = products[productId];
+                // 清除之前的内容
+                productContentContainer.innerHTML = '';
+                // 生成新的产品内容
+                const productContent = generateProductContent(product);
+                productContentContainer.appendChild(productContent);
+            }
+            
+            // 获取所有内容区域
+            const contentAreas = document.querySelectorAll('.content');
+
+            // 隐藏所有内容区域
+            contentAreas.forEach(area => {
+                area.classList.remove('active');
+            });
+
+            // 显示目标内容区域
+            const targetArea = document.getElementById(targetId);
+            targetArea.classList.add('active');
+
+            //隐藏移动端菜单
+            mobileNav.style.display = 'none';
+        });
     });
 
 
