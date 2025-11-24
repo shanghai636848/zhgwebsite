@@ -107,7 +107,7 @@
                         white-space: nowrap;
                     }
                     
-                    /* 轮播图容器样式 */
+                    /* 产品轮播图容器样式 */
                     #slider-container {
                         position: relative;
                         max-width: 100%;
@@ -126,12 +126,10 @@
                         opacity: 0;
                         transition: opacity 0.5s ease-in-out;
                     }
-
                     /* 显示中的图片样式 */
                     .slider-image.active {
                         opacity: 1;
                     }
-
                     /* 轮播图指示器样式 */
                     .slider-indicator {
                         width: 10px;
@@ -141,7 +139,6 @@
                         margin: 0 5px;
                         cursor: pointer;
                     }
-
                     /* 激活的指示器样式 */
                     .slider-indicator.active {
                         background-color: blue;
@@ -151,15 +148,221 @@
                     .product-dropdown-mobile {
                         display: none;
                     }
-
                     .product-dropdown-mobile.active {
                         display: block;
                     }
+
+                    /* 证书轮播样式 */
+                    .carousel-container {
+                        position: relative;
+                        width: 100%;
+                        max-width: 1200px;
+                        height: 400px;
+                        margin: 0 auto;
+                        perspective: 1000px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .carousel-track {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        transform-style: preserve-3d;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        transition: transform 0.8s ease;
+                    }
+
+                    .carousel-item {
+                        position: relative;
+                        width: 220px;
+                        height: 280px;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                        transition: all 0.5s ease;
+                        transform: perspective(800px) rotateY(0deg) scale(0.9);
+                        opacity: 0.7;
+                        cursor: pointer;
+                    }
+
+                    .carousel-item.active {
+                        transform: perspective(800px) rotateY(0deg) scale(1.2);
+                        opacity: 1;
+                        z-index: 10;
+                        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+                    }
+
+                    .carousel-item.prev {
+                        transform: perspective(800px) rotateY(15deg) scale(0.95);
+                        opacity: 0.85;
+                    }
+
+                    .carousel-item.next {
+                        transform: perspective(800px) rotateY(-15deg) scale(0.95);
+                        opacity: 0.85;
+                    }
+
+                    .carousel-item.far-prev {
+                        transform: perspective(800px) rotateY(25deg) scale(0.85);
+                        opacity: 0.7;
+                    }
+
+                    .carousel-item.far-next {
+                        transform: perspective(800px) rotateY(-25deg) scale(0.85);
+                        opacity: 0.7;
+                    }
+
+                    .carousel-item img {
+                        width: 100%;
+                        height: 100%;
+                        background-color: #fff;
+                        /* padding: 15px; */
+                        transition: transform 0.5s ease;
+                    }
+
+                    .carousel-item:hover img {
+                        transform: scale(1.05);
+                    }
+
+                    .carousel-btn {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 50px;
+                        height: 50px;
+                        background-color: #fff;
+                        border: none;
+                        border-radius: 50%;
+                        font-size: 24px;
+                        cursor: pointer;
+                        z-index: 20;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+                        transition: all 0.3s ease;
+                    }
+
+                    .carousel-btn:hover {
+                        background-color: #eee;
+                        transform: translateY(-50%) scale(1.1);
+                    }
+
+                    .prev-btn {
+                        left: 20px;
+                    }
+
+                    .next-btn {
+                        right: 20px;
+                    }
+
+                    .carousel-indicators {
+                        position: absolute;
+                        bottom: -60px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        display: flex;
+                        gap: 10px;
+                        z-index: 20;
+                    }
+
+                    .indicator {
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background-color: #ccc;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                    }
+
+                    .indicator.active {
+                        background-color: #165DFF;
+                    }
+
+              
+    
+                    /* 横向时间线核心样式 */
+                    .timeline-horizontal {
+                        width: 100%;
+                        overflow-x: auto;
+                        padding: 10px 0 20px;
+                        position: relative;
+                    }
+                    .timeline-item {
+                        padding: 0 8px;
+                        position: relative;
+                    }
+                    /* 适配不同屏幕的轴线位置 */
+                    @media (max-width: 768px) {
+                        .timeline-item {
+                            width: 33.333%;
+                            margin-bottom: 16px;
+                        }
+                        .timeline-horizontal .absolute.top-5 {
+                            left: 12%;
+                            right: 12%;
+                        }
+                        .timeline-horizontal .absolute.-top-10 {
+                            left: 25%;
+                        }
+                    }
+                    @media (max-width: 480px) {
+                        .timeline-item {
+                            width: 50%;
+                        }
+                        .timeline-horizontal .absolute.top-5 {
+                            left: 15%;
+                            right: 15%;
+                        }
+                        .timeline-horizontal .absolute.-top-10 {
+                            left: 40%;
+                        }
+                    }
+                    /* 节点样式优化（增强视觉层级） */
+                    .timeline-item .rounded-full {
+                        transition: transform 0.3s ease;
+                    }
+                    .timeline-item:hover .rounded-full {
+                        transform: scale(1.1);
+                    }
+
+                    /* 右侧图片粘性定位优化 */
+                    @media (min-width: 1024px) {
+                        .sticky {
+                            position: sticky;
+                            top: 2rem;
+                        }
+                    }
+
+                    /* 产品内容布局优化 */
+                    .product-content {
+                        max-width: 1400px;
+                        margin: 0 auto;
+                        padding: 0 20px;
+                    }
+                    .slider-container {
+                        width: 100%;
+                        height: auto;
+                        aspect-ratio: 4/3; /* 保证图片比例，可选 */
+                    }
+                    .slider-image {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                    
+                  
+                    
                 }
         
     </style>
 
-    
+
 </head>
 
 <body class="font-sans text-dark bg-light">
@@ -167,7 +370,7 @@
     <header id="navbar"
         class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 md:h-20">
+            <div class="flex justify-between items-center h-16 md:h-20 no-wrap">
                 <!-- logo -->
                 <a href="#" class="flex items-center space-x-2">
                     <div class="w-10 h-10  rounded-lg flex items-center justify-center">
@@ -177,15 +380,16 @@
                 </a>
 
                 <!-- 桌面导航 -->
-                <nav class="hidden md:flex space-x-1">
-                    <a href="#about" class="nav-link" data-target="about-us">关于我们</a>
+                <nav class="hidden md:flex justify-center w-full">
+                    <a href="#index" class="nav-link" data-target="index" id="index-a">首页</a>
+                    <a href="#about" class="nav-link" data-target="about-us" id="about-a">关于我们</a>
                     <div class="nav-link relative">
-                        <a href="#" class="nav-link">产品目录</a>
+                        <a href="#" class="nav-link" id="product-a">产品目录</a>
                         <div class="product-dropdown" id="product-container">
                         </div>
                     </div>
-                    <a href="#clients" class="nav-link" data-target="about-us">合作客户</a>
-                    <a href="#contact" class="nav-link" data-target="about-us">联系我们</a>
+                    <!-- <a href="#clients" class="nav-link" data-target="about-us">合作客户</a> -->
+                    <a href="#contact" class="nav-link" data-target="index">联系我们</a>
                 </nav>
 
                 <!-- 移动端菜单按钮  -->
@@ -195,28 +399,41 @@
             </div>
         </div>
 
-    
-        <!-- 移动端导航菜单 -->   
+
+        <!-- 移动端导航菜单 -->
         <nav id="mobile-menu" class="md:hidden hidden bg-white border-t">
             <div class="container mx-auto px-4 py-3 space-y-3">
+                <a href="#index" class="block py-2 text-dark hover:text-primary" data-target="index">首页</a>
                 <a href="#about" class="block py-2 text-dark hover:text-primary" data-target="about-us">关于我们</a>
                 <div class="relative">
                     <a href="#" class="block py-2 text-dark hover:text-primary">产品目录</a>
                     <div class="product-dropdown-mobile hidden bg-white border-t" id="mobile-product-container">
                     </div>
                 </div>
-                <a href="#clients" class="block py-2 text-dark hover:text-primary" data-target="about-us">合作客户</a>
-                <a href="#contact" class="block py-2 text-dark hover:text-primary" data-target="about-us">联系我们</a>
+                <!-- <a href="#clients" class="block py-2 text-dark hover:text-primary" data-target="about-us">合作客户</a> -->
+                <a href="#contact" class="block py-2 text-dark hover:text-primary" data-target="index">联系我们</a>
             </div>
         </nav>
     </header>
 
-    <div class="content active" id="about-us">
-        <!-- 英雄区域 -->
+    <!-- 首页 -->
+    <div class="content active" id="index">
+
         <section class="pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-br from-primary/5 to-accent/5">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col lg:flex-row items-center">
-                    <div class="lg:w-1/2 mb-10 lg:mb-0">
+            <!-- 核心修改：将背景图放到container容器中，通过background-image实现 -->
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative min-h-[500px] md:min-h-[600px]"
+                style="background-image: url('./img/gs.jpg'); background-size: cover;  background-repeat: no-repeat; border-radius: 2xl;">
+
+
+                <div class="flex flex-col lg:flex-row items-center relative z-10 h-full py-8">
+                    <div class="lg:w-1/2 relative min-h-[400px] flex items-center justify-center">
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl -z-10">
+                        </div>
+                        <div class="absolute -top-6 -left-6 w-40 h-40 bg-primary/20 rounded-full blur-3xl -z-10"></div>
+                    </div>
+
+                    <!-- 文字内容移到右侧（lg:w-1/2），并优化层级 -->
+                    <div class="lg:w-1/2 lg:pl-10">
                         <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-dark leading-tight text-shadow">
                             光伏组件激光智能装备<br>
                             <span class="text-primary">综合解决方案提供商</span>
@@ -225,27 +442,19 @@
                             专注于电极互连技术应用研究及高端激光微纳加工智能装备研发制造，为光伏行业提供领先的封装焊接设备解决方案
                         </p>
                         <div class="mt-8 flex flex-wrap gap-4">
-                            <a href="#products"
+                            <a href="#products" id="productsBtn"
                                 class="px-8 py-3 bg-primary text-white rounded-lg font-medium shadow-lg hover:bg-primary/90 transition-custom">
                                 了解产品
                             </a>
-                            <a href="#about"
+                            <a href="#about" id="aboutBtn"
                                 class="px-8 py-3 bg-white text-primary border border-primary rounded-lg font-medium hover:bg-primary/5 transition-custom">
                                 关于我们
                             </a>
                         </div>
                     </div>
-                    <div class="lg:w-1/2 relative">
-                        <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
-                            <img src="./img/gs.jpg" alt="光伏组件激光设备" class="w-full h-auto">
-                        </div>
-                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl -z-10"></div>
-                        <div class="absolute -top-6 -left-6 w-40 h-40 bg-primary/20 rounded-full blur-3xl -z-10"></div>
-                    </div>
                 </div>
             </div>
         </section>
-
         <!-- 数据统计 -->
         <section class="py-12 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -269,429 +478,19 @@
                 </div>
             </div>
         </section>
-
-        <!-- 关于我们 -->
-        <section id="about" class="section-padding bg-white">
+        <!-- 主产品展示 -->
+        <section id="main-products" class="section-padding bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4">关于智慧谷激光</h2>
+                    <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4">主产品展示</h2>
                     <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
                     <p class="text-lg text-gray-600">
-                        苏州智慧谷激光智能装备有限公司成立于2019年，聚焦于电极互连技术的应用研究及高端激光微纳加工智能装备的研发及制造
+                        智慧谷激光核心产品，为光伏组件生产提供高效智能的解决方案
                     </p>
                 </div>
 
-                <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <div class="lg:w-1/2">
-                        <div class="relative">
-                            <div class="relative z-10 rounded-2xl overflow-hidden shadow-xl">
-                                <img src="./img/cj.png" alt="公司研发基地" class="w-full h-auto">
-                            </div>
-                            <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl -z-10">
-                            </div>
-                            <div class="absolute -top-6 -right-6 w-40 h-40 bg-accent/20 rounded-full blur-3xl -z-10"></div>
-                        </div>
-                    </div>
-
-                    <div class="lg:w-1/2">
-                        <h3 class="text-2xl md:text-3xl font-bold text-dark mb-6">光伏行业领先的封装焊接设备供应商</h3>
-
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <div
-                                    class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa fa-building text-primary text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-semibold text-dark mb-2">研发生产基地</h4>
-                                    <p class="text-gray-600">
-                                        公司拥有8000平米研发及生产场地，具备年产量1000+台设备的组装交付能力，为客户提供稳定的产能保障。
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div
-                                    class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa fa-users text-primary text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-semibold text-dark mb-2">专业团队</h4>
-                                    <p class="text-gray-600">
-                                        现有员工180余名，研发技术人员占比35%，拥有行业内资深的研发团队，培养一批行业激光焊接工艺技术骨干。
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div
-                                    class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa fa-rocket text-primary text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-semibold text-dark mb-2">技术创新</h4>
-                                    <p class="text-gray-600">
-                                        凭借专业的技术积累和自主创新的研发理念，致力打造新能源电极互连高端激光装备新赛道，推动行业技术进步。
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-10 grid grid-cols-2 gap-6">
-                            <div class="bg-light p-6 rounded-xl">
-                                <h4 class="text-lg font-semibold text-dark mb-2">企业愿景</h4>
-                                <p class="text-gray-600">成为最具价值的激光装备公司</p>
-                            </div>
-                            <div class="bg-light p-6 rounded-xl">
-                                <h4 class="text-lg font-semibold text-dark mb-2">企业使命</h4>
-                                <p class="text-gray-600">激光装备技术创新应用实践者</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 发展历程 -->
-                <div class="mt-20">
-                    <h3 class="text-2xl md:text-3xl font-bold text-dark text-center mb-12">发展历程</h3>
-
-                    <div class="relative">
-                        <!-- 时间线 -->
-                        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/20"></div>
-
-                        <div class="space-y-12 relative" id="timeline-content">
-                            <!-- 历程项1 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2019年7月</h4>
-                                    <p class="text-gray-600 mt-2">智慧谷激光成立</p>
-                                </div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12"></div>
-                            </div>
-
-                            <!-- 历程项2 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12"></div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2019年10月</h4>
-                                    <p class="text-gray-600 mt-2">国内首款接线盒全自动加锡焊接机上线，开启智慧谷产品篇章</p>
-                                </div>
-                            </div>
-
-                            <!-- 历程项3 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2020年3月</h4>
-                                    <p class="text-gray-600 mt-2">启动研发国内首款接线盒自动安装一体机AZ01A</p>
-                                </div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12"></div>
-                            </div>
-
-                            <!-- 历程项4 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12"></div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2020年4月</h4>
-                                    <p class="text-gray-600 mt-2">启动接线盒激光焊接机研发，首次将激光焊接工艺引入组件生产端</p>
-                                </div>
-                            </div>
-
-                            <!-- 历程项5 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2020年6月</h4>
-                                    <p class="text-gray-600 mt-2">同步推出 WV-XH04A 接线盒热压焊接机、 WV-XH04B 接线盒高频焊接机并成功导入多家行业知名企业</p>
-                                </div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12"></div>
-                            </div>
-
-                            <!-- 历程项6 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12"></div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2021年8月</h4>
-                                    <p class="text-gray-600 mt-2">首款自主研发 18S 汇流条叠焊机 WV-DN200 研发成功</p>
-                                </div>
-                            </div>
-
-                            <!-- 历程项7 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2021年12月</h4>
-                                    <p class="text-gray-600 mt-2">荣获国家级高新技术企业</p>
-                                </div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12"></div>
-                            </div>
-
-                            <!-- 历程项8 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12"></div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2022年3月</h4>
-                                    <p class="text-gray-600 mt-2">接线盒自动安装一体机 AZ200 研发成功，正式导入客户端上线生产</p>
-                                </div>
-                            </div>
-
-                            <!-- 历程项9 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2022年5月</h4>
-                                    <p class="text-gray-600 mt-2">正式迁址桦青科技产业园，扩产增能</p>
-                                </div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12"></div>
-                            </div>
-
-                            <!-- 历程项10 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12"></div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2022年6月</h4>
-                                    <p class="text-gray-600 mt-2">启动无主栅激光划焊一体机 WV-1012研发，开启智慧谷串焊设备产品篇章</p>
-                                </div>
-                            </div>
-
-                            <!-- 历程项11 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2023年2月</h4>
-                                    <p class="text-gray-600 mt-2">推 出 WV-XH12 接 线 盒 激 光 焊 接 机（ 升 级 版）、AZ300 接线盒自动安装一体机，成功量产并导入客户组件端生产</p>
-                                </div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12"></div>
-                            </div>
-
-                            <!-- 历程项12 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12"></div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2023年3月</h4>
-                                    <p class="text-gray-600 mt-2">推出无序抓取技术 AZ400 接线盒自动安装一体机并量产</p>
-                                </div>
-                            </div>
-
-                            <!-- 历程项13 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2023年6月</h4>
-                                    <p class="text-gray-600 mt-2">无主栅电极互连一体机 WV-3500 正式启动研发，丰富串焊设备产品</p>
-                                </div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12"></div>
-                            </div>
-
-                            <!-- 历程项14 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12"></div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2024年1月</h4>
-                                    <p class="text-gray-600 mt-2">获评苏州市独角兽培育企业</p>
-                                </div>
-                            </div>
-
-                            <!-- 历程项15 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2024年5月</h4>
-                                    <p class="text-gray-600 mt-2">成功通过江苏省2024年专精特新中小企业认定</p>
-                                </div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12"></div>
-                            </div>
-
-
-                            <!-- 新增历程项17 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2024年9月</h4>
-                                    <p class="text-gray-600 mt-2">荣获第十二届“创业江苏”科技创业大赛暨第十三届中国创新创业大赛江苏赛区总决赛成长组三等奖</p>
-                                </div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12"></div>
-                            </div>
-
-                            <!-- 新增历程项18 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12"></div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2024年10月</h4>
-                                    <p class="text-gray-600 mt-2">荣获江苏省潜在独角兽企业</p>
-                                </div>
-                            </div>
-
-                            <!-- 新增历程项19 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2024年11月</h4>
-                                    <p class="text-gray-600 mt-2">首台无主栅电极互连一体机WV-3500 DEMO机成功导入行业知名头部企业进行验证</p>
-                                </div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12"></div>
-                            </div>
-
-                            <!-- 新增历程项20 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12"></div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2025年2月</h4>
-                                    <p class="text-gray-600 mt-2">荣获花桥经济开发区高质量突出贡献奖</p>
-                                </div>
-                            </div>
-
-                            <!-- 新增历程项21 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2025年3月</h4>
-                                    <p class="text-gray-600 mt-2">顺利通过ISO14001环境管理体系及ISO45001职业健康安全体系认证。完善管理体系，提升公司运营效率</p>
-                                </div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12"></div>
-                            </div>
-
-                            <!-- 新增历程项22 -->
-                            <div class="flex flex-col md:flex-row items-center">
-                                <div class="md:w-1/2 md:pr-12"></div>
-                                <div
-                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
-                                    <h4 class="text-xl font-semibold text-dark">2025年6月</h4>
-                                    <p class="text-gray-600 mt-2">无主栅电极互连一体机WV-3500C/WV-TM100A两款新品同步上线，正式开启智慧谷低温互连设备新篇章</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <button id="toggle-timeline"
-                            class="block mx-auto mt-8 px-8 py-3 bg-primary text-white rounded-lg font-medium shadow-lg hover:bg-primary/90 transition-custom">展开更多</button>
-                    </div>
-                </div>
-
-                <!-- 荣誉资质 -->
-                <div class="mt-20">
-                    <h3 class="text-2xl md:text-3xl font-bold text-dark text-center mb-12">荣誉资质</h3>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-white p-6 rounded-xl shadow-md card-hover">
-                            <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                                <i class="fa fa-trophy text-primary text-2xl"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold text-dark mb-2">国家级高新技术企业</h4>
-                            <p class="text-gray-600">2021年获得认定，标志着公司在技术创新和研发能力方面达到国家级水平</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-xl shadow-md card-hover">
-                            <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                                <i class="fa fa-certificate text-primary text-2xl"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold text-dark mb-2">江苏省专精特新中小企业</h4>
-                            <p class="text-gray-600">2024年通过认定，体现公司在专业领域的技术实力和市场竞争力</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-xl shadow-md card-hover">
-                            <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                                <i class="fa fa-star text-primary text-2xl"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold text-dark mb-2">苏州市独角兽培育企业</h4>
-                            <p class="text-gray-600">2024年获评，代表公司具有高成长性和创新能力，是行业内的标杆企业</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-xl shadow-md card-hover">
-                            <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                                <i class="fa fa-cogs text-primary text-2xl"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold text-dark mb-2">苏州市工程技术研究中心</h4>
-                            <p class="text-gray-600">依托公司建立，专注于激光智能装备领域的工程技术研究和产业化</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-xl shadow-md card-hover">
-                            <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                                <i class="fa fa-lightbulb-o text-primary text-2xl"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold text-dark mb-2">208项授权专利</h4>
-                            <p class="text-gray-600">其中发明专利授权28项，体现了公司在激光装备领域的核心技术实力</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-xl shadow-md card-hover">
-                            <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                                <i class="fa fa-file-text-o text-primary text-2xl"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold text-dark mb-2">12项软件著作权</h4>
-                            <p class="text-gray-600">涵盖激光装备控制系统、自动化管理软件等多个领域，展现公司的软件研发能力</p>
-                        </div>
-                    </div>
+                <div id="main-product-container" class="flex flex-col lg:flex-row items-center gap-12">
+                    <!-- 内容将通过JS动态生成 -->
                 </div>
             </div>
         </section>
@@ -709,52 +508,327 @@
 
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
                     <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-32 card-hover">
-                        <img src="./img/hzhb/Logo_00.png" class="max-h-full max-w-full object-contain"  >
+                        <img src="./img/hzhb/Logo_00.png" class="max-h-full max-w-full object-contain">
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-32 card-hover">
-                        <img src="./img/hzhb/Logo_01.png" class="max-h-full max-w-full object-contain"  >
+                        <img src="./img/hzhb/Logo_01.png" class="max-h-full max-w-full object-contain">
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-32 card-hover">
-                        <img src="./img/hzhb/Logo_02.png" class="max-h-full max-w-full object-contain"  >
+                        <img src="./img/hzhb/Logo_02.png" class="max-h-full max-w-full object-contain">
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-32 card-hover">
-                        <img src="./img/hzhb/Logo_03.png" class="max-h-full max-w-full object-contain"  >
+                        <img src="./img/hzhb/Logo_03.png" class="max-h-full max-w-full object-contain">
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-32 card-hover">
-                        <img src="./img/hzhb/Logo_04.png" class="max-h-full max-w-full object-contain"  >
+                        <img src="./img/hzhb/Logo_04.png" class="max-h-full max-w-full object-contain">
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-32 card-hover">
-                        <img src="./img/hzhb/Logo_05.png" class="max-h-full max-w-full object-contain"  >
+                        <img src="./img/hzhb/Logo_05.png" class="max-h-full max-w-full object-contain">
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-32 card-hover">
-                        <img src="./img/hzhb/Logo_06.png" class="max-h-full max-w-full object-contain"  >
+                        <img src="./img/hzhb/Logo_06.png" class="max-h-full max-w-full object-contain">
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-32 card-hover">
-                        <img src="./img/hzhb/Logo_07.png" class="max-h-full max-w-full object-contain"  >
+                        <img src="./img/hzhb/Logo_07.png" class="max-h-full max-w-full object-contain">
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-32 card-hover">
-                        <img src="./img/hzhb/Logo_08.png" class="max-h-full max-w-full object-contain"  >
+                        <img src="./img/hzhb/Logo_08.png" class="max-h-full max-w-full object-contain">
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-32 card-hover">
-                        <img src="./img/hzhb/Logo_09.png" class="max-h-full max-w-full object-contain"  >
+                        <img src="./img/hzhb/Logo_09.png" class="max-h-full max-w-full object-contain">
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-32 card-hover">
-                        <img src="./img/hzhb/Logo_10.png" class="max-h-full max-w-full object-contain"  >
+                        <img src="./img/hzhb/Logo_10.png" class="max-h-full max-w-full object-contain">
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-32 card-hover">
-                        <img src="./img/hzhb/Logo_11.png" class="max-h-full max-w-full object-contain"  >
+                        <img src="./img/hzhb/Logo_11.png" class="max-h-full max-w-full object-contain">
                     </div>
-                
+
                 </div>
 
                 <!-- <div id="client-container"></div> -->
             </div>
         </section>
     </div>
-    
+    <!-- 关于我们 -->
+    <div class="content" id="about-us">
 
+        <!-- 关于智慧谷激光 -->
+        <section id="about" class="section-padding bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- 标题区域 -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4">关于智慧谷激光</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600">
+                        苏州智慧谷激光智能装备有限公司成立于2019年，聚焦于电极互连技术的应用研究及高端激光微纳加工智能装备的研发及制造
+                    </p>
+                </div>
+
+                <!-- 核心布局：左侧选项卡 + 右侧图片 -->
+                <div class="flex flex-col lg:flex-row items-start gap-12">
+                    <!-- 左侧选项卡容器（占1/2） -->
+                    <div class="lg:w-1/2">
+                        <!-- 选项卡导航 -->
+                        <div class="flex flex-wrap mb-8 border-b border-gray-200">
+                            <button class="tab-btn active px-6 py-3 font-medium text-primary border-b-2 border-primary"
+                                data-tab="overview">
+                                概况
+                            </button>
+                            <button class="tab-btn  px-6 py-3 font-medium  border-b-2 "
+                                data-tab="mission">
+                                愿景使命
+                            </button>
+                            <button class="tab-btn  px-6 py-3 font-medium  border-b-2 "
+                                data-tab="timeline">
+                                发展历程
+                            </button>
+                        </div>
+
+                        <!-- 选项卡内容区 -->
+                        <div class="tab-content active" id="overview-content">
+                            <h3 class="text-2xl md:text-3xl font-bold text-dark mb-6">光伏行业领先的封装焊接设备供应商</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i class="fa fa-building text-primary text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-dark mb-2">研发生产基地</h4>
+                                        <p class="text-gray-600">
+                                            公司拥有8000平米研发及生产场地，具备年产量1000+台设备的组装交付能力，为客户提供稳定的产能保障。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i class="fa fa-users text-primary text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-dark mb-2">专业团队</h4>
+                                        <p class="text-gray-600">
+                                            现有员工180余名，研发技术人员占比35%，拥有行业内资深的研发团队，培养一批行业激光焊接工艺技术骨干。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i class="fa fa-rocket text-primary text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-dark mb-2">技术创新</h4>
+                                        <p class="text-gray-600">
+                                            凭借专业的技术积累和自主创新的研发理念，致力打造新能源电极互连高端激光装备新赛道，推动行业技术进步。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content hidden" id="mission-content">
+                            <h3 class="text-2xl md:text-3xl font-bold text-dark mb-8">企业愿景与使命</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="bg-light p-8 rounded-xl shadow-sm border border-gray-100">
+                                    <div
+                                        class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                                        <i class="fa fa-lightbulb-o text-primary text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-semibold text-dark mb-3">企业愿景</h4>
+                                    <p class="text-gray-600 text-lg">成为最具价值的激光装备公司</p>
+                                </div>
+                                <div class="bg-light p-8 rounded-xl shadow-sm border border-gray-100">
+                                    <div
+                                        class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                                        <i class="fa fa-bullseye text-primary text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-semibold text-dark mb-3">企业使命</h4>
+                                    <p class="text-gray-600 text-lg">激光装备技术创新应用实践者</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content hidden" id="timeline-content">
+                            <h3 class="text-2xl md:text-3xl font-bold text-dark mb-8">发展历程</h3>
+                            <!-- 横向发展历程（两行展示 + 时间轴线串联） -->
+                            <div class="timeline-horizontal relative">
+                                <!-- 第一行（带轴线） -->
+                                <div class="flex flex-wrap justify-between mb-8 relative">
+                                    <!-- 第一行轴线：绝对定位贯穿所有节点 -->
+                                    <div class="absolute top-5 left-[8%] right-[8%] h-1 bg-primary/20 z-0"></div>
+                        
+                                    <div class="timeline-item text-center w-1/4 sm:w-1/6 relative z-10">
+                                        <div
+                                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-2 border-4 border-white shadow-md">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <h4 class="text-lg font-semibold text-dark">2019年</h4>
+                                        <p class="text-gray-600 text-sm mt-1">智慧谷激光成立</p>
+                                    </div>
+                                    <div class="timeline-item text-center w-1/4 sm:w-1/6 relative z-10">
+                                        <div
+                                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-2 border-4 border-white shadow-md">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <h4 class="text-lg font-semibold text-dark">2020年</h4>
+                                        <p class="text-gray-600 text-sm mt-1">启动研发首款接线盒自动安装一体机AZ01A</p>
+                                    </div>
+                                    <div class="timeline-item text-center w-1/4 sm:w-1/6 relative z-10">
+                                        <div
+                                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-2 border-4 border-white shadow-md">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <h4 class="text-lg font-semibold text-dark">2021年</h4>
+                                        <p class="text-gray-600 text-sm mt-1">18S汇流条叠焊机WV-DN200研发成功</p>
+                                    </div>
+                                    <div class="timeline-item text-center w-1/4 sm:w-1/6 relative z-10">
+                                        <div
+                                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-2 border-4 border-white shadow-md">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <h4 class="text-lg font-semibold text-dark">2022年</h4>
+                                        <p class="text-gray-600 text-sm mt-1">AZ200研发成功并导入客户端生产</p>
+                                    </div>
+                                </div>
+                        
+                                <!-- 第二行（带轴线 + 与第一行衔接） -->
+                                <div class="flex flex-wrap justify-between relative">
+                                    <!-- 第二行轴线：绝对定位贯穿所有节点 -->
+                                    <div class="absolute top-5 left-[8%] right-[8%] h-1 bg-primary/20 z-0"></div>
+                                    <!-- 第一行与第二行的衔接线（可选，增强连贯性） -->
+                                    <div class="absolute -top-10 left-[92%] w-1 h-10 bg-primary/20 z-0"></div>
+                                    <div class="timeline-item text-center w-1/4 sm:w-1/6 relative z-10">
+                                        <div
+                                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-2 border-4 border-white shadow-md">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <h4 class="text-lg font-semibold text-dark">2025年</h4>
+                                        <p class="text-gray-600 text-sm mt-1">荣获高质量突出贡献奖</p>
+                                    </div>
+                                      <div class="timeline-item text-center w-1/4 sm:w-1/6 relative z-10">
+                                        <div
+                                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-2 border-4 border-white shadow-md">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <h4 class="text-lg font-semibold text-dark">2024年</h4>
+                                        <p class="text-gray-600 text-sm mt-1">获评苏州市独角兽培育企业</p>
+                                    </div>
+                                    <div class="timeline-item text-center w-1/4 sm:w-1/6 relative z-10">
+                                        <div
+                                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-2 border-4 border-white shadow-md">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <h4 class="text-lg font-semibold text-dark">2023年</h4>
+                                        <p class="text-gray-600 text-sm mt-1">推出WV-XH12/AZ300并量产</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右侧图片区域（占1/2） -->
+                    <div class="lg:w-1/2">
+                        <div class="relative sticky top-8">
+                            <div class="relative z-10 rounded-2xl overflow-hidden shadow-xl">
+                                <img src="./img/cj.png" alt="公司研发基地" class="w-full h-auto">
+                            </div>
+                            <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl -z-10">
+                            </div>
+                            <div class="absolute -top-6 -right-6 w-40 h-40 bg-accent/20 rounded-full blur-3xl -z-10">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 荣誉资质 -->
+        <section class="section-padding bg-light" id="about">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4">荣誉资质</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover">
+                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-trophy text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-dark mb-2">国家级高新技术企业</h4>
+                    <p class="text-gray-600">2021年获得认定，标志着公司在技术创新和研发能力方面达到国家级水平</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover">
+                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-certificate text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-dark mb-2">江苏省专精特新中小企业</h4>
+                    <p class="text-gray-600">2024年通过认定，体现公司在专业领域的技术实力和市场竞争力</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover">
+                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-star text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-dark mb-2">苏州市独角兽培育企业</h4>
+                    <p class="text-gray-600">2024年获评，代表公司具有高成长性和创新能力，是行业内的标杆企业</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover">
+                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-cogs text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-dark mb-2">苏州市工程技术研究中心</h4>
+                    <p class="text-gray-600">依托公司建立，专注于激光智能装备领域的工程技术研究和产业化</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover">
+                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-lightbulb-o text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-dark mb-2">208项授权专利</h4>
+                    <p class="text-gray-600">其中发明专利授权28项，体现了公司在激光装备领域的核心技术实力</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover">
+                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-file-text-o text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-dark mb-2">12项软件著作权</h4>
+                    <p class="text-gray-600">涵盖激光装备控制系统、自动化管理软件等多个领域，展现公司的软件研发能力</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D 翻转轮播图 - 证书展示 -->
+        <section class="section-padding bg-white" id="about">
+            <div class="relative container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4">证书展示</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                </div>
+                <!-- 轮播容器 -->
+                <div class="carousel-container">
+                    <div class="carousel-track" id="certificateTrack">
+                        <!-- 轮播项由JS动态生成 -->
+                    </div>
+
+                    <!-- 切换按钮 -->
+                    <button class="carousel-btn prev-btn">&lt;</button>
+                    <button class="carousel-btn next-btn">&gt;</button>
+
+                    <!-- 指示器 -->
+                    <div class="carousel-indicators" id="certificateIndicators">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 产品目录 -->
     <div class="content" id="product-catalog">
-         <!-- 产品目录 -->
+        <!-- 产品目录 -->
         <section id="products" class="section-padding bg-light">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
@@ -776,11 +850,6 @@
             </div>
         </section>
     </div>
-   
-
-
-    
-
 
     <!-- 联系我们 -->
     <section id="contact" class="section-padding bg-white">

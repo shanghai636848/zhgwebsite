@@ -1,13 +1,110 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+
     
-    const productContentContainer = document.getElementById('product-content-container');
     //移动端
     const mobileMenuButton = document.getElementById('menu-toggle');
     const mobileNav = document.getElementById('mobile-menu');
 
+    // 主产品展示
+    const mainProductDataArray = [
+        {
+            id: 1,
+            image: "./img/3500-1.jpg",
+            title: "无主栅电极互连一体机(WV-3500C)",
+            description: "无主栅电极互连一体机（综合性焊接平台，可覆盖HJT/TOPcon/PERC/钙钛矿叠层, 首创 OBB 条膜工艺）",
+            features: [
+                {
+                    title: "高性能",
+                    content: "采用PC-Base控制系统，可重构I/O接口与定制化系统集成，智能化控制中枢构建高性能自动化平台"
+                },
+                {
+                    title: "高精密",
+                    content: "亚微米级重复定位精度(±0.5μm)，高分辨率直线电机驱动单元，温度漂移实时补偿模块高精度伺服控制架构"
+                },
+                {
+                    title: "电池兼容",
+                    content: "兼容182-210规格HJT/TOPcon/PERC/钙钛矿叠层"
+                }
+            ],
+            buttonText: "了解更多产品细节",
+            buttonIcon: "fa-arrow-right",
+            badgeText: "核心产品"
+        }
+    ];
+    // 生成主产品展示内容
+    function generateMainProduct() {
+        // 确保数据存在
+        if (!mainProductDataArray.length) return '';
 
-    // 产品数据
+        const mainProductData = mainProductDataArray[0]; // 假设只展示第一个产品
+
+        // 产品图片部分（变量名移除 product 字样）
+        const imageHTML = `
+            <div class="lg:w-1/2 relative">
+                <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="${mainProductData.image}" alt="${mainProductData.title}" class="w-full h-auto">
+                    ${mainProductData.badgeText ? `
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">
+                            ${mainProductData.badgeText}
+                        </div>
+                    ` : ''}
+                </div>
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl -z-10"></div>
+                <div class="absolute -top-6 -left-6 w-40 h-40 bg-primary/20 rounded-full blur-3xl -z-10"></div>
+            </div>
+        `;
+
+        // 产品描述部分（变量名移除 product 字样）
+        const featureListHTML = mainProductData.features.map(feature => `
+            <div class="flex items-start gap-3">
+                <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <i class="fa fa-check text-primary"></i>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold text-dark mb-1">${feature.title}</h4>
+                    <p class="text-gray-600">${feature.content}</p>
+                </div>
+            </div>
+        `).join('');
+
+        const descHTML = `
+            <div class="lg:w-1/2">
+                <h3 class="text-2xl md:text-3xl font-bold text-dark mb-6">${mainProductData.title}</h3>
+                <p class="text-gray-700 mb-6 text-lg">${mainProductData.description}</p>
+                
+                <div class="space-y-4 mb-8">
+                    ${featureListHTML}
+                </div>
+                
+                <a href="#products" id="mainProductBtn" class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium shadow-lg hover:bg-primary/90 transition-custom">
+                    ${mainProductData.buttonText}
+                    <i class="fa ${mainProductData.buttonIcon} ml-2"></i>
+                </a>
+            </div>
+        `;
+
+        // 组合完整内容
+        return `
+            <div class="flex flex-col lg:flex-row items-center gap-12" id="mainProductContainer">
+                ${imageHTML}
+                ${descHTML}
+            </div>
+        `;
+    }
+    // 生成主产品内容
+    const mainProductHTML = generateMainProduct();
+    // 插入到主产品展示 section 中
+    const mainProductSection = document.getElementById('main-products');
+    if (mainProductSection) {
+        const contentContainer = mainProductSection.querySelector('#main-product-container');
+        if (contentContainer) {
+            contentContainer.innerHTML = mainProductHTML;
+        }
+    }
+
+    // 产品目录
+    const productContentContainer = document.getElementById('product-content-container');
     const products = {
         'WV-3500C': {
             name: '无主栅电极互连一体机(WV-3500C)',
@@ -196,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 '视觉检测漏判率': '<0.5%'
             }
         },
-         'WV-KG02': {
+        'WV-KG02': {
             name: '接线盒扣盖机(WV-KG02)',
             images: ['./img/WV-KG02.jpg'],
             technicalPerformance: [
@@ -246,9 +343,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 '气源': '0.5-0.8MPa'
             }
         }
-       
-    };
 
+    };
     //桌面端和移动端产品目录导航生成
     const productLinksContainer = document.getElementById('product-container');
     const mobileMenu = document.getElementById('mobile-product-container');
@@ -262,8 +358,8 @@ document.addEventListener('DOMContentLoaded', function () {
         link.textContent = product.name;
         link.setAttribute('data-target', 'product-catalog');
         productLinksContainer.appendChild(link);
-        
-        
+
+
 
         //移动端
         const mobileLink = document.createElement('a');
@@ -275,7 +371,6 @@ document.addEventListener('DOMContentLoaded', function () {
         mobileMenu.appendChild(mobileLink);
     }
 
-    
     // 生成轮播图和指示器
     function generateSlider(images) {
         const sliderContainer = document.createElement('div');
@@ -344,24 +439,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const productContent = document.createElement('div');
         productContent.classList.add('product-content');
 
-        // 图片部分
-        const imageWrapper = document.createElement('div');
-        imageWrapper.classList.add('flex', 'justify-center', 'mb-8', 'w-full');
+        // 核心：图片+技术性能 左右分栏容器
+        const mainWrapper = document.createElement('div');
+        mainWrapper.classList.add('flex', 'flex-col', 'lg:flex-row', 'gap-12', 'items-center', 'mb-8');
 
-        if (product.images.length > 0) {
-            const { sliderContainer, sliderIndicators } = generateSlider(product.images);
-            const sliderWrapper = document.createElement('div');
-            sliderWrapper.classList.add('w-full');
-            sliderWrapper.appendChild(sliderContainer);
-            sliderWrapper.appendChild(sliderIndicators);
-            imageWrapper.appendChild(sliderWrapper);
-        }
-
-        productContent.appendChild(imageWrapper);
-
-        // 技术性能和产品参数部分
-        const infoWrapper = document.createElement('div');
-        infoWrapper.classList.add('flex', 'flex-col', 'lg:flex-row', 'gap-12', 'items-center');
+        // 左侧：技术性能（lg占1/2）
+        const techWrapper = document.createElement('div');
+        techWrapper.classList.add('lg:w-1/2', 'order-2', 'lg:order-1','lg:w-1/2', 'order-1', 'lg:order-2','w-full', 'lg:min-w-[628px]', 'lg:min-h-[76px]'); // 移动端图片在上，技术性能在下；PC端反之
 
         const spaceYDiv = document.createElement('div');
         spaceYDiv.classList.add('space-y-6');
@@ -391,7 +475,29 @@ document.addEventListener('DOMContentLoaded', function () {
             spaceYDiv.appendChild(techDiv);
         }
 
-        // 产品参数
+        techWrapper.appendChild(spaceYDiv);
+        mainWrapper.appendChild(techWrapper);
+
+        // 右侧：图片（lg占1/2）
+        const imageWrapper = document.createElement('div');
+        imageWrapper.classList.add('lg:w-1/2', 'order-1', 'lg:order-2','w-full', 'lg:min-w-[628px]', 'lg:min-h-[76px]'); // 移动端优先显示图片，PC端放右侧
+
+        if (product.images.length > 0) {
+            const { sliderContainer, sliderIndicators } = generateSlider(product.images);
+            const sliderWrapper = document.createElement('div');
+            sliderWrapper.classList.add('w-full');
+            sliderWrapper.appendChild(sliderContainer);
+            sliderWrapper.appendChild(sliderIndicators);
+            imageWrapper.appendChild(sliderWrapper);
+        }
+
+        mainWrapper.appendChild(imageWrapper);
+        productContent.appendChild(mainWrapper);
+
+        // 产品参数部分（单独一行）
+        const paramWrapper = document.createElement('div');
+        paramWrapper.classList.add('w-full');
+
         if (Object.keys(product.productParameters).length > 0) {
             const paramDiv = document.createElement('div');
             const paramTitle = document.createElement('h4');
@@ -403,7 +509,8 @@ document.addEventListener('DOMContentLoaded', function () {
             paramGrid.classList.add('grid', 'grid-cols-1', 'md:grid-cols-2', 'gap-4');
             for (const [key, value] of Object.entries(product.productParameters)) {
                 const paramItem = document.createElement('div');
-                paramItem.classList.add('bg-white', 'p-4', 'rounded-lg');
+                paramItem.classList.add('bg-white', 'p-4', 'rounded-lg', 'w-full', 'lg:min-w-[628px]', 'lg:min-h-[76px]');
+
                 const paramKey = document.createElement('p');
                 paramKey.classList.add('text-sm', 'text-gray-500');
                 paramKey.textContent = key;
@@ -415,45 +522,40 @@ document.addEventListener('DOMContentLoaded', function () {
                 paramGrid.appendChild(paramItem);
             }
             paramDiv.appendChild(paramGrid);
-            spaceYDiv.appendChild(paramDiv);
+            paramWrapper.appendChild(paramDiv);
         }
 
-        infoWrapper.appendChild(spaceYDiv);
-        productContent.appendChild(infoWrapper);
+        productContent.appendChild(paramWrapper);
 
         return productContent;
     }
-    
-    // 默认显示第一个产品
-    const firstProductKey = Object.keys(products)[0];
-    const firstProduct = products[firstProductKey];
-    productContentContainer.appendChild(generateProductContent(firstProduct));
 
+    //关于我们
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
 
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            // 移除所有激活状态
+            tabBtns.forEach(b => b.classList.remove('active', 'border-primary', 'text-primary'));
+            tabBtns.forEach(b => b.classList.add('text-gray-500'));
+            tabContents.forEach(c => c.classList.add('hidden'));
+            tabContents.forEach(c => c.classList.remove('active'));
 
-    // 获取按钮和发展历程内容元素
-    const toggleButton = document.getElementById('toggle-timeline');
-    const timelineContent = document.getElementById('timeline-content');
-    // 初始状态下隐藏部分内容
-    const allItems = timelineContent.children;
-    for (let i = 3; i < allItems.length; i++) {
-        allItems[i].style.display = 'none';
-    }
-    // 处理按钮点击事件
-    toggleButton.addEventListener('click', function () {
-        const isExpanded = this.textContent === '收起';
-        if (isExpanded) {
-            for (let i = 3; i < allItems.length; i++) {
-                allItems[i].style.display = 'none';
-            }
-            this.textContent = '展开更多';
-        } else {
-            for (let i = 3; i < allItems.length; i++) {
-                allItems[i].style.display = 'flex';
-            }
-            this.textContent = '收起';
-        }
+            // 添加当前激活状态
+            this.classList.add('active', 'border-primary', 'text-primary');
+            this.classList.remove('text-gray-500');
+            const targetTab = this.dataset.tab;
+            document.getElementById(`${targetTab}-content`).classList.remove('hidden');
+            document.getElementById(`${targetTab}-content`).classList.add('active');
+        });
     });
+
+    // 移除原发展历程的展开按钮（不需要了）
+    const toggleBtn = document.getElementById('toggle-timeline');
+    if (toggleBtn) toggleBtn.remove();
+
+   
 
 
     //移动端
@@ -463,7 +565,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // 为按钮添加点击事件监听器
         mobileMenuButton.addEventListener('click', function () {
             // 切换导航菜单的显示状态
-           
+
             if (mobileNav.style.display === 'none') {
                 mobileNav.style.display = 'block';
             } else {
@@ -495,11 +597,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // 为每个导航项添加点击事件监听器
     navItems.forEach(item => {
         item.addEventListener('click', function () {
-           
+
             // 获取目标内容区域的 ID
             const targetId = this.getAttribute('data-target');
             //生成指定产品内容
-            if(targetId == "product-catalog"){
+            if (targetId == "product-catalog") {
                 const productId = this.dataset.product;
                 const product = products[productId];
                 // 清除之前的内容
@@ -508,7 +610,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const productContent = generateProductContent(product);
                 productContentContainer.appendChild(productContent);
             }
-            
+
             // 获取所有内容区域
             const contentAreas = document.querySelectorAll('.content');
 
@@ -526,5 +628,181 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    function firstProductClick(){
+        const firstLink = document.querySelector("#product-container > a:nth-child(1)");
+        firstLink.click();
+    }
+    
+
+    //产品目录按钮
+    const pBtn = document.getElementById("product-a")
+    pBtn.addEventListener('click', function () {
+        firstProductClick()
+    });
+    //了解产品按钮
+    const productsBtn = document.getElementById("productsBtn")
+    productsBtn.addEventListener('click', function () {
+        firstProductClick()
+    });
+    //关于我们按钮
+    const aboutBtn = document.getElementById("aboutBtn")
+    aboutBtn.addEventListener('click', function () {
+        const firstLink = document.getElementById("about-a");
+        firstLink.click();
+    });
+    //了解更多产品细节按钮
+    const mainProductBtn = document.getElementById("mainProductBtn")
+    mainProductBtn.addEventListener('click', function () {
+        firstProductClick()
+    });
+
+
+    //证书展示
+    // 证书图片地址
+    const certificateUrls = [
+        './img/ryzz/1.png',
+        './img/ryzz/2.png',
+        './img/ryzz/3.png',
+        './img/ryzz/4.png',
+        './img/ryzz/5.png',
+        './img/ryzz/6.png',
+        './img/ryzz/7.png',
+        './img/ryzz/8.png',
+        './img/ryzz/9.png'
+    ];
+
+    // DOM元素
+    const track = document.getElementById('certificateTrack');
+    const indicatorContainer = document.getElementById('certificateIndicators');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    // 配置
+    const displayCount = 5; // 显示5个证书
+    const totalCount = certificateUrls.length;
+    let currentIndex = 2; // 默认中间项为选中态
+    const itemClasses = ['far-prev', 'prev', 'active', 'next', 'far-next'];
+    let autoPlayTimer;
+
+    // 初始化轮播
+    function initCarousel() {
+        generateCarouselItems();
+        generateIndicators();
+        bindEvents();
+        startAutoPlay();
+    }
+
+    // 生成轮播项
+    function generateCarouselItems() {
+        track.innerHTML = '';
+        for (let i = 0; i < displayCount; i++) {
+            const imgIndex = (currentIndex - 2 + i + totalCount) % totalCount;
+            const item = document.createElement('div');
+            item.className = 'carousel-item';
+            item.dataset.index = imgIndex;
+
+            const img = document.createElement('img');
+            img.src = certificateUrls[imgIndex];
+            img.alt = `证书 ${imgIndex + 1}`;
+
+            item.appendChild(img);
+            track.appendChild(item);
+        }
+        updateItemStyles();
+    }
+
+    // 生成指示器
+    function generateIndicators() {
+        indicatorContainer.innerHTML = '';
+        for (let i = 0; i < totalCount; i++) {
+            const indicator = document.createElement('span');
+            indicator.className = `indicator ${i === currentIndex ? 'active' : ''}`;
+            indicator.dataset.index = i;
+            indicatorContainer.appendChild(indicator);
+        }
+    }
+
+    // 更新样式
+    function updateItemStyles() {
+        const items = track.querySelectorAll('.carousel-item');
+        const indicators = indicatorContainer.querySelectorAll('.indicator');
+
+        items.forEach((item, idx) => {
+            item.classList.remove(...itemClasses);
+            item.classList.add(itemClasses[idx]);
+        });
+
+        indicators.forEach((ind, idx) => {
+            ind.classList.toggle('active', idx === currentIndex);
+        });
+    }
+
+    // 上一张
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalCount) % totalCount;
+        generateCarouselItems();
+        resetAutoPlay();
+    }
+
+    // 下一张
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalCount;
+        generateCarouselItems();
+        resetAutoPlay();
+    }
+
+    // 跳转到指定索引
+    function goToSlide(targetIndex) {
+        currentIndex = targetIndex;
+        generateCarouselItems();
+        resetAutoPlay();
+    }
+
+    // 绑定事件
+    function bindEvents() {
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        indicatorContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('indicator')) {
+                const targetIndex = parseInt(e.target.dataset.index);
+                goToSlide(targetIndex);
+            }
+        });
+
+        track.addEventListener('click', (e) => {
+            const item = e.target.closest('.carousel-item');
+            if (item) {
+                const targetIndex = parseInt(item.dataset.index);
+                goToSlide(targetIndex);
+            }
+        });
+
+        // 鼠标悬停暂停自动播放
+        document.querySelector('.carousel-container').addEventListener('mouseenter', () => {
+            clearInterval(autoPlayTimer);
+        });
+
+        document.querySelector('.carousel-container').addEventListener('mouseleave', startAutoPlay);
+    }
+
+    // 自动播放
+    function startAutoPlay() {
+        autoPlayTimer = setInterval(nextSlide, 5000); // 5秒切换一次
+    }
+
+    // 重置自动播放
+    function resetAutoPlay() {
+        clearInterval(autoPlayTimer);
+        startAutoPlay();
+    }
+
+    // 初始化证书轮播
+    if (document.getElementById('certificateTrack')) {
+        initCarousel();
+    }
+
 
 });
+
+
