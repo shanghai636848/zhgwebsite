@@ -4,363 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>智慧谷激光 - 光伏组件激光智能装备解决方案提供商</title>
+    <title data-i18n="home.title">智慧谷激光 - 光伏组件激光智能装备解决方案提供商</title>
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
-    <script src="./tailwind.min.js"></script>
-    <script src="./index.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <script src="./chart.umd.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="./css2.css" rel="stylesheet">
-
-
-    <!-- Tailwind 配置 -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#165DFF',
-                        secondary: '#0A2463',
-                        accent: '#36CFC9',
-                        dark: '#1D2129',
-                        light: '#F7F8FA',
-                        success: '#52C41A',
-                        warning: '#FAAD14',
-                        danger: '#FF4D4F'
-                    },
-                    fontFamily: {
-                        sans: ['Noto Sans SC', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-
-    <style type="text/tailwindcss">
-        @layer utilities {
-                    /* 隐藏所有内容区域 */
-                    .content {
-                        display: none;
-                    }
-
-                    /* 激活状态下的内容区域显示 */
-                    .content.active {
-                        display: block;
-                    }
-                    .content-auto {
-                        content-visibility: auto;
-                    }
-                    .text-shadow {
-                        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                    }
-                    .transition-custom {
-                        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                    }
-                    .card-hover {
-                        @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
-                    }
-                    .section-padding {
-                        @apply py-16 md:py-24;
-                    }
-                    .nav-link {
-                        @apply relative px-3 py-2 text-dark hover:text-primary transition-colors duration-300;
-                    }
-                    .nav-link::after {
-                        @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
-                    }
-                    .nav-link:hover::after {
-                        @apply w-full;
-                    }
-
-                    /* 产品下拉菜单样式 */
-                    .product-dropdown {
-                        display: none;
-                        position: absolute;
-                        top: 100%;
-                        left: 0;
-                        background-color: white;
-                        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-                        border-radius: 0.375rem;
-                        z-index: 10;
-                    }
-
-                    .nav-link:hover .product-dropdown {
-                        display: block;
-                    }
-
-                    .product-dropdown a {
-                        display: block;
-                        padding: 0.75rem 1rem;
-                        color: #1D2129;
-                        text-decoration: none;
-                    }
-
-                    .product-dropdown a:hover {
-                        background-color: #F7F8FA;
-                    }
-
-                     /* 新增样式，防止文本换行 */
-                    .no-wrap {
-                        white-space: nowrap;
-                    }
-                    
-                    /* 产品轮播图容器样式 */
-                    #slider-container {
-                        position: relative;
-                        max-width: 100%;
-                        width: 100%;
-                        height: 0;
-                        padding-bottom: 75%; /* 默认4:3比例 */
-                    }
-
-                    /* 轮播图图片样式 */
-                    .slider-image {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: auto;
-                        opacity: 0;
-                        transition: opacity 0.5s ease-in-out;
-                    }
-                    /* 显示中的图片样式 */
-                    .slider-image.active {
-                        opacity: 1;
-                    }
-                    /* 轮播图指示器样式 */
-                    .slider-indicator {
-                        width: 10px;
-                        height: 10px;
-                        border-radius: 50%;
-                        background-color: gray;
-                        margin: 0 5px;
-                        cursor: pointer;
-                    }
-                    /* 激活的指示器样式 */
-                    .slider-indicator.active {
-                        background-color: blue;
-                    }
-
-                    /* 移动端产品下拉菜单样式 */
-                    .product-dropdown-mobile {
-                        display: none;
-                    }
-                    .product-dropdown-mobile.active {
-                        display: block;
-                    }
-
-                    /* 证书轮播样式 */
-                    .carousel-container {
-                        position: relative;
-                        width: 100%;
-                        max-width: 1200px;
-                        height: 400px;
-                        margin: 0 auto;
-                        perspective: 1000px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-
-                    .carousel-track {
-                        position: relative;
-                        width: 100%;
-                        height: 100%;
-                        transform-style: preserve-3d;
-                        display: flex;
-                        justify-content: space-around;
-                        align-items: center;
-                        transition: transform 0.8s ease;
-                    }
-
-                    .carousel-item {
-                        position: relative;
-                        width: 220px;
-                        height: 280px;
-                        border-radius: 8px;
-                        overflow: hidden;
-                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-                        transition: all 0.5s ease;
-                        transform: perspective(800px) rotateY(0deg) scale(0.9);
-                        opacity: 0.7;
-                        cursor: pointer;
-                    }
-
-                    .carousel-item.active {
-                        transform: perspective(800px) rotateY(0deg) scale(1.2);
-                        opacity: 1;
-                        z-index: 10;
-                        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-                    }
-
-                    .carousel-item.prev {
-                        transform: perspective(800px) rotateY(15deg) scale(0.95);
-                        opacity: 0.85;
-                    }
-
-                    .carousel-item.next {
-                        transform: perspective(800px) rotateY(-15deg) scale(0.95);
-                        opacity: 0.85;
-                    }
-
-                    .carousel-item.far-prev {
-                        transform: perspective(800px) rotateY(25deg) scale(0.85);
-                        opacity: 0.7;
-                    }
-
-                    .carousel-item.far-next {
-                        transform: perspective(800px) rotateY(-25deg) scale(0.85);
-                        opacity: 0.7;
-                    }
-
-                    .carousel-item img {
-                        width: 100%;
-                        height: 100%;
-                        background-color: #fff;
-                        /* padding: 15px; */
-                        transition: transform 0.5s ease;
-                    }
-
-                    .carousel-item:hover img {
-                        transform: scale(1.05);
-                    }
-
-                    .carousel-btn {
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        width: 50px;
-                        height: 50px;
-                        background-color: #fff;
-                        border: none;
-                        border-radius: 50%;
-                        font-size: 24px;
-                        cursor: pointer;
-                        z-index: 20;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-                        transition: all 0.3s ease;
-                    }
-
-                    .carousel-btn:hover {
-                        background-color: #eee;
-                        transform: translateY(-50%) scale(1.1);
-                    }
-
-                    .prev-btn {
-                        left: 20px;
-                    }
-
-                    .next-btn {
-                        right: 20px;
-                    }
-
-                    .carousel-indicators {
-                        position: absolute;
-                        bottom: -60px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        display: flex;
-                        gap: 10px;
-                        z-index: 20;
-                    }
-
-                    .indicator {
-                        width: 12px;
-                        height: 12px;
-                        border-radius: 50%;
-                        background-color: #ccc;
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-                    }
-
-                    .indicator.active {
-                        background-color: #165DFF;
-                    }
-
-              
+    <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./tailwind.css" />
     
-                    /* 横向时间线核心样式 */
-                    .timeline-horizontal {
-                        width: 100%;
-                        overflow-x: auto;
-                        padding: 10px 0 20px;
-                        position: relative;
-                    }
-                    .timeline-item {
-                        padding: 0 8px;
-                        position: relative;
-                    }
-                    /* 适配不同屏幕的轴线位置 */
-                    @media (max-width: 768px) {
-                        .timeline-item {
-                            width: 33.333%;
-                            margin-bottom: 16px;
-                        }
-                        .timeline-horizontal .absolute.top-5 {
-                            left: 12%;
-                            right: 12%;
-                        }
-                        .timeline-horizontal .absolute.-top-10 {
-                            left: 25%;
-                        }
-                    }
-                    @media (max-width: 480px) {
-                        .timeline-item {
-                            width: 50%;
-                        }
-                        .timeline-horizontal .absolute.top-5 {
-                            left: 15%;
-                            right: 15%;
-                        }
-                        .timeline-horizontal .absolute.-top-10 {
-                            left: 40%;
-                        }
-                    }
-                    /* 节点样式优化（增强视觉层级） */
-                    .timeline-item .rounded-full {
-                        transition: transform 0.3s ease;
-                    }
-                    .timeline-item:hover .rounded-full {
-                        transform: scale(1.1);
-                    }
+    <script src="./i18next.min.js"></script>
+    <script src="./i18nextHttpBackend.min.js"></script>
+    <script src="./i18nextBrowserLanguageDetector.min.js"></script>
+    
 
-                    /* 右侧图片粘性定位优化 */
-                    @media (min-width: 1024px) {
-                        .sticky {
-                            position: sticky;
-                            top: 2rem;
-                        }
-                    }
+    <script src="./index.js"></script>
 
-                    /* 产品内容布局优化 */
-                    .product-content {
-                        max-width: 1400px;
-                        margin: 0 auto;
-                        padding: 0 20px;
-                    }
-                    .slider-container {
-                        width: 100%;
-                        height: auto;
-                        aspect-ratio: 4/3; /* 保证图片比例，可选 */
-                    }
-                    .slider-image {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-
-                    
-                  
-                    
-                }
-        
-    </style>
 
 
 </head>
@@ -376,21 +31,28 @@
                     <div class="w-10 h-10  rounded-lg flex items-center justify-center">
                         <img src="./img/logo.jpg">
                     </div>
-                    <span class="text-xl md:text-2xl font-bold text-primary">智慧谷激光</span>
+                    <span class="text-xl md:text-2xl font-bold text-primary" data-i18n="nav.logo">智慧谷激光</span>
                 </a>
 
                 <!-- 桌面导航 -->
                 <nav class="hidden md:flex justify-center w-full">
-                    <a href="#index" class="nav-link" data-target="index" id="index-a">首页</a>
-                    <a href="#about" class="nav-link" data-target="about-us" id="about-a">关于我们</a>
+                    <a href="#index" data-i18n="nav.index" class="nav-link" data-target="index" id="index-a">首页</a>
+                    <a href="#about" data-i18n="nav.about" class="nav-link" data-target="about-us" id="about-a">关于我们</a>
                     <div class="nav-link relative">
-                        <a href="#" class="nav-link" id="product-a">产品目录</a>
-                        <div class="product-dropdown" id="product-container">
+                        <a href="#" class="nav-link" id="product-a" data-i18n="nav.product">产品目录</a>
+                        <div class="product-dropdown" id="product-container" >
                         </div>
                     </div>
-                    <!-- <a href="#clients" class="nav-link" data-target="about-us">合作客户</a> -->
-                    <a href="#contact" class="nav-link" data-target="index">联系我们</a>
+                    <a href="#index-contact" class="nav-link" data-target="index-contact" data-i18n="nav.contact">联系我们</a>
                 </nav>
+                
+                <div class="flex justify-center space-x-6">
+                    <select id="lang-selector"
+                        class="bg-transparent border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+                        <option value="zh-CN" >中文</option>
+                        <option value="en" >English</option>
+                    </select>
+                </div>
 
                 <!-- 移动端菜单按钮  -->
                 <button id="menu-toggle" class="md:hidden text-dark hover:text-primary focus:outline-none">
@@ -403,15 +65,14 @@
         <!-- 移动端导航菜单 -->
         <nav id="mobile-menu" class="md:hidden hidden bg-white border-t">
             <div class="container mx-auto px-4 py-3 space-y-3">
-                <a href="#index" class="block py-2 text-dark hover:text-primary" data-target="index">首页</a>
-                <a href="#about" class="block py-2 text-dark hover:text-primary" data-target="about-us">关于我们</a>
+                <a href="#index" class="block py-2 text-dark hover:text-primary" data-target="index" data-i18n="nav.index">首页</a>
+                <a href="#about" class="block py-2 text-dark hover:text-primary" data-target="about-us" data-i18n="nav.about">关于我们</a>
                 <div class="relative">
-                    <a href="#" class="block py-2 text-dark hover:text-primary">产品目录</a>
+                    <a href="#" class="block py-2 text-dark hover:text-primary" data-i18n="nav.product">产品目录</a>
                     <div class="product-dropdown-mobile hidden bg-white border-t" id="mobile-product-container">
                     </div>
                 </div>
-                <!-- <a href="#clients" class="block py-2 text-dark hover:text-primary" data-target="about-us">合作客户</a> -->
-                <a href="#contact" class="block py-2 text-dark hover:text-primary" data-target="index">联系我们</a>
+                <a href="#index-contact" class="block py-2 text-dark hover:text-primary" data-target="index-contact" data-i18n="nav.contact">联系我们</a>
             </div>
         </nav>
     </header>
@@ -419,12 +80,9 @@
     <!-- 首页 -->
     <div class="content active" id="index">
 
-        <section class="pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-br from-primary/5 to-accent/5">
-            <!-- 核心修改：将背景图放到container容器中，通过background-image实现 -->
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative min-h-[500px] md:min-h-[600px]"
-                style="background-image: url('./img/gs.jpg'); background-size: cover;  background-repeat: no-repeat; border-radius: 2xl;">
-
-
+        <section class="pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-br from-primary/5 to-accent/5"
+            style="background-image: url('./img/gs.jpg'); background-size: cover;  background-repeat: no-repeat; border-radius: 2xl;">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative min-h-[500px] md:min-h-[600px]">
                 <div class="flex flex-col lg:flex-row items-center relative z-10 h-full py-8">
                     <div class="lg:w-1/2 relative min-h-[400px] flex items-center justify-center">
                         <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl -z-10">
@@ -434,19 +92,19 @@
 
                     <!-- 文字内容移到右侧（lg:w-1/2），并优化层级 -->
                     <div class="lg:w-1/2 lg:pl-10">
-                        <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-dark leading-tight text-shadow">
+                        <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-dark leading-tight text-shadow" data-i18n="hero.title">
                             光伏组件激光智能装备<br>
                             <span class="text-primary">综合解决方案提供商</span>
                         </h1>
-                        <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-lg">
+                        <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-lg text-white" data-i18n="hero.desc">
                             专注于电极互连技术应用研究及高端激光微纳加工智能装备研发制造，为光伏行业提供领先的封装焊接设备解决方案
                         </p>
                         <div class="mt-8 flex flex-wrap gap-4">
-                            <a href="#products" id="productsBtn"
-                                class="px-8 py-3 bg-primary text-white rounded-lg font-medium shadow-lg hover:bg-primary/90 transition-custom">
+                            <a href="#products" id="productsBtn"  data-i18n="hero.btn.product"
+                                class="px-8 py-3 bg-primary text-white rounded-lg font-medium shadow-lg hover:bg-primary/90 transition-custom" >
                                 了解产品
                             </a>
-                            <a href="#about" id="aboutBtn"
+                            <a href="#about" id="aboutBtn" data-target="about-us" data-i18n="hero.btn.about"
                                 class="px-8 py-3 bg-white text-primary border border-primary rounded-lg font-medium hover:bg-primary/5 transition-custom">
                                 关于我们
                             </a>
@@ -461,19 +119,19 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                     <div class="p-4">
                         <div class="text-3xl md:text-4xl font-bold text-primary mb-2" id="counter1">8000+</div>
-                        <p class="text-gray-600">平方米研发基地</p>
+                        <p class="text-gray-600" data-i18n="stats.rndBase">平方米研发基地</p>
                     </div>
                     <div class="p-4">
                         <div class="text-3xl md:text-4xl font-bold text-primary mb-2" id="counter2">1000+</div>
-                        <p class="text-gray-600">台设备年产量</p>
+                        <p class="text-gray-600" data-i18n="stats.annualOutput">台设备年产量</p>
                     </div>
                     <div class="p-4">
                         <div class="text-3xl md:text-4xl font-bold text-primary mb-2" id="counter3">180+</div>
-                        <p class="text-gray-600">名现有员工</p>
+                        <p class="text-gray-600" data-i18n="stats.employees">名现有员工</p>
                     </div>
                     <div class="p-4">
                         <div class="text-3xl md:text-4xl font-bold text-primary mb-2" id="counter4">208</div>
-                        <p class="text-gray-600">项授权专利</p>
+                        <p class="text-gray-600" data-i18n="stats.patents">项授权专利</p>
                     </div>
                 </div>
             </div>
@@ -482,9 +140,9 @@
         <section id="main-products" class="section-padding bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4">主产品展示</h2>
+                    <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4" data-i18n="section.mainProducts.title">主产品展示</h2>
                     <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                    <p class="text-lg text-gray-600">
+                    <p class="text-lg text-gray-600" data-i18n="section.mainProducts.desc">
                         智慧谷激光核心产品，为光伏组件生产提供高效智能的解决方案
                     </p>
                 </div>
@@ -499,9 +157,9 @@
         <section id="clients" class="section-padding bg-light">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4">合作客户</h2>
+                    <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4" data-i18n="section.clients.title">合作客户</h2>
                     <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                    <p class="text-lg text-gray-600">
+                    <p class="text-lg text-gray-600" data-i18n="section.clients.desc">
                         智慧谷激光的产品和服务已获得众多行业领先企业的认可和信赖
                     </p>
                 </div>
@@ -558,9 +216,9 @@
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- 标题区域 -->
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4">关于智慧谷激光</h2>
+                    <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4" data-i18n="section.about.title">关于智慧谷激光</h2>
                     <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                    <p class="text-lg text-gray-600">
+                    <p class="text-lg text-gray-600" data-i18n="section.about.desc">
                         苏州智慧谷激光智能装备有限公司成立于2019年，聚焦于电极互连技术的应用研究及高端激光微纳加工智能装备的研发及制造
                     </p>
                 </div>
@@ -572,22 +230,22 @@
                         <!-- 选项卡导航 -->
                         <div class="flex flex-wrap mb-8 border-b border-gray-200">
                             <button class="tab-btn active px-6 py-3 font-medium text-primary border-b-2 border-primary"
-                                data-tab="overview">
+                                data-tab="overview" data-i18n="tab.overview">
                                 概况
                             </button>
                             <button class="tab-btn  px-6 py-3 font-medium  border-b-2 "
-                                data-tab="mission">
+                                data-tab="mission" data-i18n="tab.mission">
                                 愿景使命
                             </button>
                             <button class="tab-btn  px-6 py-3 font-medium  border-b-2 "
-                                data-tab="timeline">
+                                data-tab="timeline" data-i18n="tab.timeline">
                                 发展历程
                             </button>
                         </div>
 
                         <!-- 选项卡内容区 -->
                         <div class="tab-content active" id="overview-content">
-                            <h3 class="text-2xl md:text-3xl font-bold text-dark mb-6">光伏行业领先的封装焊接设备供应商</h3>
+                            <h3 class="text-2xl md:text-3xl font-bold text-dark mb-6" data-i18n="overview.title">光伏行业领先的封装焊接设备供应商</h3>
                             <div class="space-y-6">
                                 <div class="flex items-start gap-4">
                                     <div
@@ -595,8 +253,8 @@
                                         <i class="fa fa-building text-primary text-xl"></i>
                                     </div>
                                     <div>
-                                        <h4 class="text-xl font-semibold text-dark mb-2">研发生产基地</h4>
-                                        <p class="text-gray-600">
+                                        <h4 class="text-xl font-semibold text-dark mb-2" data-i18n="overview.rndBase.title">研发生产基地</h4>
+                                        <p class="text-gray-600" data-i18n="overview.rndBase.desc">
                                             公司拥有8000平米研发及生产场地，具备年产量1000+台设备的组装交付能力，为客户提供稳定的产能保障。
                                         </p>
                                     </div>
@@ -607,8 +265,8 @@
                                         <i class="fa fa-users text-primary text-xl"></i>
                                     </div>
                                     <div>
-                                        <h4 class="text-xl font-semibold text-dark mb-2">专业团队</h4>
-                                        <p class="text-gray-600">
+                                        <h4 class="text-xl font-semibold text-dark mb-2" data-i18n="overview.team.title">专业团队</h4>
+                                        <p class="text-gray-600" data-i18n="overview.team.desc">
                                             现有员工180余名，研发技术人员占比35%，拥有行业内资深的研发团队，培养一批行业激光焊接工艺技术骨干。
                                         </p>
                                     </div>
@@ -619,8 +277,8 @@
                                         <i class="fa fa-rocket text-primary text-xl"></i>
                                     </div>
                                     <div>
-                                        <h4 class="text-xl font-semibold text-dark mb-2">技术创新</h4>
-                                        <p class="text-gray-600">
+                                        <h4 class="text-xl font-semibold text-dark mb-2" data-i18n="overview.innovation.title">技术创新</h4>
+                                        <p class="text-gray-600" data-i18n="overview.innovation.desc">
                                             凭借专业的技术积累和自主创新的研发理念，致力打造新能源电极互连高端激光装备新赛道，推动行业技术进步。
                                         </p>
                                     </div>
@@ -629,29 +287,29 @@
                         </div>
 
                         <div class="tab-content hidden" id="mission-content">
-                            <h3 class="text-2xl md:text-3xl font-bold text-dark mb-8">企业愿景与使命</h3>
+                            <h3 class="text-2xl md:text-3xl font-bold text-dark mb-8" data-i18n="mission.title">企业愿景与使命</h3>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="bg-light p-8 rounded-xl shadow-sm border border-gray-100">
                                     <div
                                         class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                                         <i class="fa fa-lightbulb-o text-primary text-2xl"></i>
                                     </div>
-                                    <h4 class="text-xl font-semibold text-dark mb-3">企业愿景</h4>
-                                    <p class="text-gray-600 text-lg">成为最具价值的激光装备公司</p>
+                                    <h4 class="text-xl font-semibold text-dark mb-3" data-i18n="mission.vision.title">企业愿景</h4>
+                                    <p class="text-gray-600 text-lg" data-i18n="mission.vision.desc">成为最具价值的激光装备公司</p>
                                 </div>
                                 <div class="bg-light p-8 rounded-xl shadow-sm border border-gray-100">
                                     <div
                                         class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                                         <i class="fa fa-bullseye text-primary text-2xl"></i>
                                     </div>
-                                    <h4 class="text-xl font-semibold text-dark mb-3">企业使命</h4>
-                                    <p class="text-gray-600 text-lg">激光装备技术创新应用实践者</p>
+                                    <h4 class="text-xl font-semibold text-dark mb-3" data-i18n="mission.mission.title">企业使命</h4>
+                                    <p class="text-gray-600 text-lg" data-i18n="mission.mission.desc">激光装备技术创新应用实践者</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="tab-content hidden" id="timeline-content">
-                            <h3 class="text-2xl md:text-3xl font-bold text-dark mb-8">发展历程</h3>
+                            <h3 class="text-2xl md:text-3xl font-bold text-dark mb-8" data-i18n="timeline.title">发展历程</h3>
                             <!-- 横向发展历程（两行展示 + 时间轴线串联） -->
                             <div class="timeline-horizontal relative">
                                 <!-- 第一行（带轴线） -->
@@ -665,7 +323,7 @@
                                             <i class="fa fa-calendar"></i>
                                         </div>
                                         <h4 class="text-lg font-semibold text-dark">2019年</h4>
-                                        <p class="text-gray-600 text-sm mt-1">智慧谷激光成立</p>
+                                        <p class="text-gray-600 text-sm mt-1" data-i18n="timeline.2019">智慧谷激光成立</p>
                                     </div>
                                     <div class="timeline-item text-center w-1/4 sm:w-1/6 relative z-10">
                                         <div
@@ -673,7 +331,7 @@
                                             <i class="fa fa-calendar"></i>
                                         </div>
                                         <h4 class="text-lg font-semibold text-dark">2020年</h4>
-                                        <p class="text-gray-600 text-sm mt-1">启动研发首款接线盒自动安装一体机AZ01A</p>
+                                        <p class="text-gray-600 text-sm mt-1" data-i18n="timeline.2020">启动研发首款接线盒自动安装一体机AZ01A</p>
                                     </div>
                                     <div class="timeline-item text-center w-1/4 sm:w-1/6 relative z-10">
                                         <div
@@ -681,7 +339,7 @@
                                             <i class="fa fa-calendar"></i>
                                         </div>
                                         <h4 class="text-lg font-semibold text-dark">2021年</h4>
-                                        <p class="text-gray-600 text-sm mt-1">18S汇流条叠焊机WV-DN200研发成功</p>
+                                        <p class="text-gray-600 text-sm mt-1" data-i18n="timeline.2021">18S汇流条叠焊机WV-DN200研发成功</p>
                                     </div>
                                     <div class="timeline-item text-center w-1/4 sm:w-1/6 relative z-10">
                                         <div
@@ -689,7 +347,7 @@
                                             <i class="fa fa-calendar"></i>
                                         </div>
                                         <h4 class="text-lg font-semibold text-dark">2022年</h4>
-                                        <p class="text-gray-600 text-sm mt-1">AZ200研发成功并导入客户端生产</p>
+                                        <p class="text-gray-600 text-sm mt-1" data-i18n="timeline.2022">AZ200研发成功并导入客户端生产</p>
                                     </div>
                                 </div>
                         
@@ -705,7 +363,7 @@
                                             <i class="fa fa-calendar"></i>
                                         </div>
                                         <h4 class="text-lg font-semibold text-dark">2025年</h4>
-                                        <p class="text-gray-600 text-sm mt-1">荣获高质量突出贡献奖</p>
+                                        <p class="text-gray-600 text-sm mt-1" data-i18n="timeline.2025">荣获高质量突出贡献奖</p>
                                     </div>
                                       <div class="timeline-item text-center w-1/4 sm:w-1/6 relative z-10">
                                         <div
@@ -713,15 +371,15 @@
                                             <i class="fa fa-calendar"></i>
                                         </div>
                                         <h4 class="text-lg font-semibold text-dark">2024年</h4>
-                                        <p class="text-gray-600 text-sm mt-1">获评苏州市独角兽培育企业</p>
+                                        <p class="text-gray-600 text-sm mt-1" data-i18n="timeline.2024">获评苏州市独角兽培育企业</p>
                                     </div>
                                     <div class="timeline-item text-center w-1/4 sm:w-1/6 relative z-10">
                                         <div
                                             class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-2 border-4 border-white shadow-md">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <h4 class="text-lg font-semibold text-dark">2023年</h4>
-                                        <p class="text-gray-600 text-sm mt-1">推出WV-XH12/AZ300并量产</p>
+                                        <h4 class="text-lg font-semibold text-dark" >2023年</h4>
+                                        <p class="text-gray-600 text-sm mt-1" data-i18n="timeline.2023">推出WV-XH12/AZ300并量产</p>
                                     </div>
                                 </div>
                             </div>
@@ -745,9 +403,9 @@
         </section>
 
         <!-- 荣誉资质 -->
-        <section class="section-padding bg-light" id="about">
+        <section class="section-padding bg-light" >
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4">荣誉资质</h2>
+                <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4" data-i18n="section.honors.title">荣誉资质</h2>
                 <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -755,57 +413,57 @@
                     <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                         <i class="fa fa-trophy text-primary text-2xl"></i>
                     </div>
-                    <h4 class="text-xl font-semibold text-dark mb-2">国家级高新技术企业</h4>
-                    <p class="text-gray-600">2021年获得认定，标志着公司在技术创新和研发能力方面达到国家级水平</p>
+                    <h4 class="text-xl font-semibold text-dark mb-2" data-i18n="honor.1.title">国家级高新技术企业</h4>
+                    <p class="text-gray-600" data-i18n="honor.1.desc">2021年获得认定，标志着公司在技术创新和研发能力方面达到国家级水平</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-xl shadow-md card-hover">
                     <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                         <i class="fa fa-certificate text-primary text-2xl"></i>
                     </div>
-                    <h4 class="text-xl font-semibold text-dark mb-2">江苏省专精特新中小企业</h4>
-                    <p class="text-gray-600">2024年通过认定，体现公司在专业领域的技术实力和市场竞争力</p>
+                    <h4 class="text-xl font-semibold text-dark mb-2" data-i18n="honor.2.title">江苏省专精特新中小企业</h4>
+                    <p class="text-gray-600" data-i18n="honor.2.desc">2024年通过认定，体现公司在专业领域的技术实力和市场竞争力</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-xl shadow-md card-hover">
                     <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                         <i class="fa fa-star text-primary text-2xl"></i>
                     </div>
-                    <h4 class="text-xl font-semibold text-dark mb-2">苏州市独角兽培育企业</h4>
-                    <p class="text-gray-600">2024年获评，代表公司具有高成长性和创新能力，是行业内的标杆企业</p>
+                    <h4 class="text-xl font-semibold text-dark mb-2" data-i18n="honor.3.title">苏州市独角兽培育企业</h4>
+                    <p class="text-gray-600" data-i18n="honor.3.desc">2024年获评，代表公司具有高成长性和创新能力，是行业内的标杆企业</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-xl shadow-md card-hover">
                     <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                         <i class="fa fa-cogs text-primary text-2xl"></i>
                     </div>
-                    <h4 class="text-xl font-semibold text-dark mb-2">苏州市工程技术研究中心</h4>
-                    <p class="text-gray-600">依托公司建立，专注于激光智能装备领域的工程技术研究和产业化</p>
+                    <h4 class="text-xl font-semibold text-dark mb-2" data-i18n="honor.4.title">苏州市工程技术研究中心</h4>
+                    <p class="text-gray-600" data-i18n="honor.4.desc">依托公司建立，专注于激光智能装备领域的工程技术研究和产业化</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-xl shadow-md card-hover">
                     <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                         <i class="fa fa-lightbulb-o text-primary text-2xl"></i>
                     </div>
-                    <h4 class="text-xl font-semibold text-dark mb-2">208项授权专利</h4>
-                    <p class="text-gray-600">其中发明专利授权28项，体现了公司在激光装备领域的核心技术实力</p>
+                    <h4 class="text-xl font-semibold text-dark mb-2"  data-i18n="honor.5.title">208项授权专利</h4>
+                    <p class="text-gray-600" data-i18n="honor.5.desc">其中发明专利授权28项，体现了公司在激光装备领域的核心技术实力</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-xl shadow-md card-hover">
                     <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                         <i class="fa fa-file-text-o text-primary text-2xl"></i>
                     </div>
-                    <h4 class="text-xl font-semibold text-dark mb-2">12项软件著作权</h4>
-                    <p class="text-gray-600">涵盖激光装备控制系统、自动化管理软件等多个领域，展现公司的软件研发能力</p>
+                    <h4 class="text-xl font-semibold text-dark mb-2"  data-i18n="honor.6.title">12项软件著作权</h4>
+                    <p class="text-gray-600" data-i18n="honor.6.desc">涵盖激光装备控制系统、自动化管理软件等多个领域，展现公司的软件研发能力</p>
                 </div>
             </div>
         </section>
 
         <!-- 3D 翻转轮播图 - 证书展示 -->
-        <section class="section-padding bg-white" id="about">
+        <section class="section-padding bg-white" >
             <div class="relative container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4">证书展示</h2>
+                    <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4" data-i18n="section.certificates.title">证书展示</h2>
                     <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
                 </div>
                 <!-- 轮播容器 -->
@@ -832,19 +490,19 @@
         <section id="products" class="section-padding bg-light">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4">产品目录</h2>
+                    <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4" data-i18n="section.products.title">产品目录</h2>
                     <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                    <p class="text-lg text-gray-600">
+                    <p class="text-lg text-gray-600" data-i18n="section.products.desc">
                         智慧谷激光凭借先进的技术和创新能力，为光伏行业提供多种高性能的激光智能装备
                     </p>
                 </div>
                 <div id="product-content-container"></div>
 
                 <div class="mt-12 text-center">
-                    <a href="#contact"
+                    <a href="#index-contact"
                         class="inline-flex items-center px-8 py-3 bg-primary text-white rounded-lg font-medium shadow-lg hover:bg-primary/90 transition-custom">
                         <i class="fa fa-envelope-o mr-2"></i>
-                        咨询更多产品信息
+                        <span data-i18n="product.btn.inquire">咨询更多产品信息</span>
                     </a>
                 </div>
             </div>
@@ -852,44 +510,44 @@
     </div>
 
     <!-- 联系我们 -->
-    <section id="contact" class="section-padding bg-white">
+    <section id="index-contact" class="section-padding bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4">联系我们</h2>
+                <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4" data-i18n="section.contact.title">联系我们</h2>
                 <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                <p class="text-lg text-gray-600">如果您有任何疑问或需求，请随时与我们联系。</p>
+                <p class="text-lg text-gray-600" data-i18n="section.contact.desc">如果您有任何疑问或需求，请随时与我们联系。</p>
             </div>
             <div class="flex flex-col md:flex-row justify-center gap-8">
                 <div class="bg-light p-8 rounded-xl shadow-md w-full md:w-2/3 lg:w-1/2">
-                    <h3 class="text-xl font-semibold text-dark mb-4">公司信息</h3>
+                    <h3 class="text-xl font-semibold text-dark mb-4" data-i18n="contact.title">公司信息</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="flex items-center space-x-3">
                             <i class="fa fa-building text-primary text-2xl"></i>
                             <div>
-                                <p class="text-sm text-gray-500">公司名称</p>
-                                <p class="font-semibold">苏州智慧谷激光智能装备有限公司</p>
+                                <p class="text-sm text-gray-500" data-i18n="contact.company">公司名称</p>
+                                <p class="font-semibold" data-i18n="contact.companyName">苏州智慧谷激光智能装备有限公司</p>
                             </div>
                         </div>
                         <div class="flex items-center space-x-3">
                             <i class="fa fa-phone text-primary text-2xl"></i>
                             <div>
-                                <p class="text-sm text-gray-500">电话</p>
+                                <p class="text-sm text-gray-500" data-i18n="contact.phone">电话</p>
                                 <p class="font-semibold">13776027737</p>
                             </div>
                         </div>
                         <div class="flex items-center space-x-3">
                             <i class="fa fa-envelope text-primary text-2xl"></i>
                             <div>
-                                <p class="text-sm text-gray-500">邮箱</p>
+                                <p class="text-sm text-gray-500" data-i18n="contact.email">邮箱</p>
                                 <p class="font-semibold"><a href="mailto:witvaley@kswvitalicy.com"
-                                        class="text-primary hover:underline">witvalley@kswitvalley.com</a></p>
+                                        class="text-primary hover:underline" data-i18n="contact.emailAddr">witvalley@kswitvalley.com</a></p>
                             </div>
                         </div>
                         <div class="flex items-center space-x-3">
                             <i class="fa fa-map-marker text-primary text-2xl"></i>
                             <div>
-                                <p class="text-sm text-gray-500">地址</p>
-                                <p class="font-semibold">苏州市相城区永昌路28号ESR产业园A2-2</p>
+                                <p class="text-sm text-gray-500" data-i18n="contact.address">地址</p>
+                                <p class="font-semibold" data-i18n="contact.addressDesc">苏州市相城区永昌路28号ESR产业园A2-2</p>
                             </div>
                         </div>
                     </div>

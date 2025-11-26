@@ -1,0 +1,818 @@
+{
+  "home": {
+    "title": "WitValley Laser - Provider of Laser Intelligent Equipment Solutions for PV Modules"
+  },
+  "nav": {
+    "logo": "WitValley Laser",
+    "index": "Home",
+    "about": "About Us",
+    "product": "Product Catalog",
+    "contact": "Contact Us"
+  },
+  "lang": {
+    "zh": "Chinese",
+    "en": "English"
+  },
+  "hero": {
+    "title": "Laser Intelligent Equipment for PV Modules<br><span class='text-primary'>Comprehensive Solution Provider</span>",
+    "desc": "Focused on the application research of electrode interconnection technology and the R&D and manufacturing of high-end laser micro-nano processing intelligent equipment, providing leading packaging and welding equipment solutions for the photovoltaic industry",
+    "btn": {
+      "product": "Explore Products",
+      "about": "About Us"
+    }
+  },
+  "stats": {
+    "rndBase": "R&D & Production Base (sqm)",
+    "annualOutput": "Annual Equipment Output (units)",
+    "employees": "Current Employees",
+    "patents": "Authorized Patents"
+  },
+  "section": {
+    "mainProducts": {
+      "title": "Core Product Display",
+      "desc": "WitValley Laser's core products provide efficient and intelligent solutions for PV module production"
+    },
+    "clients": {
+      "title": "Cooperative Clients",
+      "desc": "WitValley Laser's products and services have been recognized and trusted by many leading enterprises in the industry"
+    },
+    "about": {
+      "title": "About WitValley Laser",
+      "desc": "Suzhou WitValley Laser Intelligent Equipment Co., Ltd. was established in 2019, focusing on the application research of electrode interconnection technology and the R&D and manufacturing of high-end laser micro-nano processing intelligent equipment"
+    },
+    "honors": {
+      "title": "Honors & Qualifications"
+    },
+    "certificates": {
+      "title": "Certificate Display"
+    },
+    "products": {
+      "title": "Product Catalog",
+      "desc": "With advanced technology and innovation capabilities, WitValley Laser provides a variety of high-performance laser intelligent equipment for the photovoltaic industry"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "desc": "If you have any questions or needs, please feel free to contact us."
+    }
+  },
+  "mainProduct": {
+    "badge": "Core Product",
+    "title": "Cell Interconnection Integrated Machine (WV-3500C)",
+    "desc": "Cell Interconnection Integrated Machine (Comprehensive welding platform covering HJT/TOPcon/PERC/Perovskite Tandem, pioneering OBB strip film technology)",
+    "feature0": {
+      "title": "High Performance",
+      "desc": "Adopts PC-Base control system, reconfigurable I/O interface and customized system integration, intelligent control core builds high-performance automation platform"
+    },
+    "feature1": {
+      "title": "High Precision",
+      "desc": "Sub-micron repeat positioning accuracy (±0.5μm), high-resolution linear motor drive unit, temperature drift real-time compensation module, high-precision servo control architecture"
+    },
+    "feature2": {
+      "title": "Battery Compatibility",
+      "desc": "Compatible with 182-210mm HJT/TOPcon/PERC/Perovskite Tandem cells"
+    },
+    "btn": "Learn More Product Details"
+  },
+  "tab": {
+    "overview": "Overview",
+    "mission": "Vision & Mission",
+    "timeline": "Development History"
+  },
+  "overview": {
+    "title": "Leading Packaging and Welding Equipment Supplier in the PV Industry",
+    "rndBase": {
+      "title": "R&D & Production Base",
+      "desc": "The company has an 8,000-square-meter R&D and production site, with an annual assembly and delivery capacity of over 1,000 sets of equipment, providing stable production capacity guarantee for customers."
+    },
+    "team": {
+      "title": "Professional Team",
+      "desc": "With more than 180 employees, R&D and technical personnel account for 35%, owning a senior R&D team in the industry and cultivating a number of key technical personnel in laser welding process."
+    },
+    "innovation": {
+      "title": "Technological Innovation",
+      "desc": "Based on professional technical accumulation and independent innovation R&D concept, we are committed to creating a new track of high-end laser equipment for new energy electrode interconnection and promoting the technological progress of the industry."
+    }
+  },
+  "mission": {
+    "title": "Corporate Vision & Mission",
+    "vision": {
+      "title": "Corporate Vision",
+      "desc": "To become the most valuable laser equipment company"
+    },
+    "mission": {
+      "title": "Corporate Mission",
+      "desc": "Practitioner of laser equipment technology innovation and application"
+    }
+  },
+  "timeline": {
+    "title": "Development History",
+    "2019": "WitValley Laser Established",
+    "2020": "Launched R&D of first junction box automatic installation machine AZ01A",
+    "2021": "18S Busbar Laminating Welder WV-DN200 R&D Successful",
+    "2022": "AZ200 R&D Successful and Introduced to Customer Production",
+    "2023": "Launched WV-XH12/AZ300 and Mass Production",
+    "2024": "Rated as Suzhou Unicorn Cultivation Enterprise",
+    "2025": "Won High-Quality Outstanding Contribution Award"
+  },
+  "honor": {
+    "1": {
+      "title": "National High-Tech Enterprise",
+      "desc": "Certified in 2021, marking the company's national-level R&D capabilities and technological innovation"
+    },
+    "2": {
+      "title": "Jiangsu Province Specialized, Refined, Characteristic and Novel SME",
+      "desc": "Certified in 2024, reflecting the company's technical strength and market competitiveness in professional fields"
+    },
+    "3": {
+      "title": "Suzhou Unicorn Cultivation Enterprise",
+      "desc": "Rated in 2024, representing the company's high growth potential and innovation capability as an industry benchmark"
+    },
+    "4": {
+      "title": "Suzhou Engineering Technology Research Center",
+      "desc": "Established based on the company, focusing on engineering technology research and industrialization in the field of laser intelligent equipment"
+    },
+    "5": {
+      "title": "208 Authorized Patents",
+      "desc": "Including 28 invention patents, demonstrating the company's core technical strength in laser equipment"
+    },
+    "6": {
+      "title": "12 Software Copyrights",
+      "desc": "Covering laser equipment control systems, automation management software and other fields, showing the company's software R&D capabilities"
+    }
+  },
+  "product": {
+    "select": "Select Product",
+    "technicalPerformance": "Technical Performance",
+    "parameters": "Product Parameters",
+    "btn": {
+      "inquire": "Inquire About More Product Information"
+    },
+    "list": {
+      "WV-3500C": {
+        "id": "WV-3500C",
+        "name": "Busbar-Free Electrode Interconnection Machine(WV-3500C)",
+        "images": [
+          "./img/3500-1.jpg",
+          "./img/3500-2.jpg",
+          "./img/3500-3.jpg"
+        ],
+        "technicalPerformance": [
+          "High Performance: Adopts PC-Base control system, reconfigurable I/O interface and customized system integration, and builds a high-performance automation platform with an intelligent control center",
+          "High Precision: Submicron repeat positioning accuracy (±0.5μm), high-resolution linear motor drive unit, and high-precision servo control architecture with real-time temperature drift compensation module",
+          "Battery Compatibility: Compatible with 182-210 specification HJT/TOPcon/PERC/perovskite tandem cells"
+        ],
+        "productParameters": {
+          "Capacity": "4500 half-cells/hour (single track)",
+          "Slicing Method": "Laser non-destructive cutting (optional)",
+          "Connection Method": "Strip film/sheet film lamination",
+          "Solar Cell Specification": "182-210mm solar cell 1/2 slice",
+          "Number of Main Grid Lines": "12-32BB (customizable)",
+          "Solar Cell Thickness": "90-180μm",
+          "Welding Ribbon Specification": "φ0.16-φ0.32mm",
+          "Compatible Solar String Type": "Positive spacing (0.5-5mm) Negative spacing (-0.5-2mm)",
+          "Equipment Dimensions": "Length 8150 × Width 1294 × Height 2537 (mm)",
+          "Compatible Adhesive Film Specification": "Film material: Modified EVA/POE/TPO (or equivalent low fluidity material film); also compatible with Pet with back glue; Roll outer diameter: 450mm (online automatic material change available); Roll inner diameter: 76 mm; Film strip width: 2.8-6mm; Front and back film: Different films can be used for front and back sides",
+          "Fragmentation Rate": "≤0.15% (solar cell thickness 120-140um)",
+          "String Rework Rate": "≤1%",
+          "OEE": "≥85%",
+          "Flux": "None",
+          "Welding Temperature": "Low temperature"
+        }
+      },
+      "WV-TM100A": {
+        "id": "WV-TM100A",
+        "name": "Busbarless Electrode Interconnection Machine (WV-TM100A)",
+        "images": [
+          "./img/TM100A-1.jpg",
+          "./img/TM100A-2.jpg",
+          "./img/TM100A-3.jpg"
+        ],
+        "technicalPerformance": [
+          "High Speed: Highly customized system integration, based on PC-Base control system with fast response speed",
+          "Smart Interconnection: Intelligent data classification and AI data analysis",
+          "Battery Compatibility: Compatible with 182-210 specification HJT/TOPcon/PERC/perovskite tandem cells",
+          "Integrates multiple processes, detection and data tracking systems to realize production, detection and judgment in one, ensuring product yield during manufacturing"
+        ],
+        "productParameters": {
+          "Capacity": "7000 quarter-cells/hour (single track) (compatible with half-cells)",
+          "Slicing Method": "Laser non-destructive cutting (optional)",
+          "Connection Method": "Strip film/sheet film lamination",
+          "Solar Cell Specification": "182-210mm",
+          "Number of Main Grid Lines": "12-32BB (customizable)",
+          "Solar Cell Thickness": "90-180μm",
+          "Welding Ribbon Specification": "φ0.16-φ0.32mm",
+          "Compatible Solar String Type": "Positive spacing (0.5-5mm) Negative spacing (-0.5-2mm)",
+          "Equipment Dimensions": "Length 10400 × Width 2100 × Height 2500 (mm)",
+          "Compatible Adhesive Film Specification": "Film material: Modified EVA/POE/TPO (or equivalent low fluidity material film); also compatible with Pet with back glue; Roll outer diameter: 450mm (online automatic material change available); Roll inner diameter: 76 mm; Film strip width: 2.8-6mm; Front and back film: Different films can be used for front and back sides",
+          "Fragmentation Rate": "≤0.15% (solar cell thickness 120-140um)",
+          "String Rework Rate": "≤1%",
+          "OEE": "≥85%",
+          "Flux": "None",
+          "Welding Temperature": "Low temperature"
+        }
+      },
+      "WV-AZ400": {
+        "id": "WV-AZ400",
+        "name": "Junction Box Installation All-in-One Machine (WV-AZ400)",
+        "images": [
+          "./img/WV-AZ400.jpg"
+        ],
+        "technicalPerformance": [
+          "High equipment stability: Backplane gluing controlled by independent PLC, streamline transmission controlled independently, one-click switch to straight-through mode",
+          "Self-developed vision control system to accurately realize junction box positioning and judge the installation effect of junction box",
+          "Multi-functional visual inspection, including busbar posture, teflon cloth and tape status, glue path detection, junction box installation condition judgment, and junction box installation and pressing effect detection",
+          "Unordered feeding, can be connected with AGV and overhead shuttle to realize unmanned intellectualization"
+        ],
+        "productParameters": {
+          "Cycle Time": "≤12S",
+          "Lead Lifting Success Rate": "≥99.9% (excluding incoming material defects)",
+          "Tape/Adhesive Tape Tearing Success Rate": "≥99.8% (excluding incoming material defects)",
+          "Backplane Gluing Success Rate": "≥99.9%",
+          "Junction Box Installation Success Rate": "≥99.8% (excluding incoming material defects)",
+          "Operation Rate": "≥99.5%",
+          "Feeding Method": "Ordered/unordered, AGV docking",
+          "Module Size Range": "L:2500-1650mm, W:1450-990mm",
+          "Equipment Power Supply & Power": "380V/220V 50/60HZ",
+          "Module Input & Output Height": "950±50 (mm)"
+        }
+      },
+      "WV-AJ100": {
+        "id": "WV-AJ100",
+        "name": "Lead Lifting & Backplane Gluing All-in-One Machine (WV-AJ100)",
+        "images": [
+          "./img/WV-AJ100.jpg"
+        ],
+        "technicalPerformance": [
+          "Self-developed vision system for accurate detection of incoming material status, guided positioning and finished product inspection",
+          "Integrates automatic lead lifting and straightening, high-temperature cloth tearing, ironing and recycling functions",
+          "Synchronous operation of multiple box leads with high cycle time, high speed and high efficiency"
+        ],
+        "productParameters": {
+          "Cycle Time": "≤12S",
+          "Lead Lifting Success Rate": "≥99.9% (excluding incoming material defects)",
+          "Tape/Adhesive Tape Tearing Success Rate": "≥99.8% (excluding incoming material defects)",
+          "Backplane Gluing Yield Rate": "≥99.9%",
+          "Operation Rate": "≥99.5%",
+          "Module Size Range": "L:2500-1650mm, W:1450-990mm"
+        }
+      },
+      "WV-AZ500A": {
+        "id": "WV-AZ500A",
+        "name": "Backplane Gluing & Junction Box Installation All-in-One Machine (WV-AZ500A)",
+        "images": [
+          "./img/WV-AZ500A.jpg"
+        ],
+        "technicalPerformance": [
+          "Equipped with busbar detection, glue line detection and junction box detection functions to automatically identify defective products and alarm",
+          "Self-developed deep learning vision system to realize accurate positioning and installation of junction box",
+          "Compatible with ordered/unordered junction box feeding methods, high compatibility, fast cycle time, can be connected with AGV and overhead shuttle to realize unmanned intellectualization"
+        ],
+        "productParameters": {
+          "Cycle Time": "≤12S",
+          "Backplane Gluing Yield Rate": "≥99.9%",
+          "Junction Box Installation Success Rate": "≥99.8% (excluding incoming material defects)",
+          "Operation Rate": "≥99.5%",
+          "Feeding Method": "Ordered/unordered, AGV docking",
+          "Module Size Range": "L:2500-1650mm, W:1450-990mm"
+        }
+      },
+      "WV-XH13A": {
+        "id": "WV-XH13A",
+        "name": "Junction Box Laser Welding Machine (WV-XH13A)",
+        "images": [
+          "./img/WV-XH13A.jpg"
+        ],
+        "technicalPerformance": [
+          "Adopts brand-new laser welding process, pioneering the application of laser technology in the field of junction box welding",
+          "Laser fusion welding realizes solder-free welding with higher welding strength",
+          "Equipped with high-precision automatic positioning by CCD before welding to achieve accurate welding",
+          "Equipped with high-precision in-welding and post-welding detection functions to accurately identify cold welding",
+          "Welding pressure block has the function of bending and leveling busbars with better compatibility",
+          "The overall layout of the equipment is reasonable, easy to debug and maintain"
+        ],
+        "productParameters": {
+          "Equipment Floor Area": "3145mm×2200mm×2160mm",
+          "Compatible Module Size": "Length (1600mm-2550mm) × Width (990-1450mm)",
+          "Cycle Time": "≤12S",
+          "Welding Yield Rate": "≥99.9% (excluding incoming material defects)",
+          "Operation Rate": "≥99.5%",
+          "Over-Judgment Rate": "≤0.5%",
+          "Welding Tensile Force": "≥100N",
+          "Rated Power": "10kw",
+          "Alignment Accuracy": "±0.5mm",
+          "Power Supply": "AC 380V±5%, 50Hz",
+          "Air Supply": "0.5-0.8MPa"
+        }
+      },
+      "WV-XH06A": {
+        "id": "WV-XH06A",
+        "name": "Junction Box High-Frequency Welding Machine (WV-XH06A)",
+        "images": [
+          "./img/WV-XH06A.jpg"
+        ],
+        "technicalPerformance": [
+          "Adopts visual positioning and full servo drive control",
+          "Features high capacity, high compatibility and high stability",
+          "Equipped with pressure detection and displacement detection",
+          "Automatic welding head cleaning",
+          "Multiple welding head specifications such as split welding head and integrated welding head are available for selection",
+          "Equipped with water leakage detection function"
+        ],
+        "productParameters": {
+          "Equipment Dimensions": "3600×2000×2220 (mm) customizable",
+          "Equipment Power Supply": "Three-phase five-wire 380V, 50Hz, peak current 40A",
+          "Power": "Rated power 24KW",
+          "Module Size Range": "L:2550-1500mm, W:1450-900mm",
+          "Cycle Time": "≤12S",
+          "Module & Junction Box Positioning Method": "Module four-point alignment by servo drive, junction box positioning by CCD",
+          "Welding Head Service Life": "≥15W",
+          "Operation Rate": "≥99.5%",
+          "Welding Time": "≤3S/point",
+          "Welding Spot Positioning Control Method": "CCD",
+          "Version Switching Time": "20min",
+          "Welding Temperature Range": "±15℃",
+          "Welding Pull-Out Force": "≥50N"
+        }
+      },
+      "WV-XH09A": {
+        "id": "WV-XH09A",
+        "name": "Junction Box Hot Press Welding Machine (WV-XH09A)",
+        "images": [
+          "./img/WV-XH09A.jpg"
+        ],
+        "technicalPerformance": [
+          "Adopts high-efficiency welding system and dynamic vision tracking design to improve machine stability",
+          "Precise Temperature Control: Each welding point is controlled independently, and each heating body does not affect each other to ensure accurate temperature control"
+        ],
+        "productParameters": {
+          "Floor Area Dimensions": "Length 3850 × Width 2100 × Height 2150mm (excluding three-color light)",
+          "Module Size Range": "L:2550-1500mm, W:1450-950mm",
+          "Equipment Power Supply": "Three-phase five-wire 380V, 50Hz, stable current 60A",
+          "Power": "Rated power 27KW",
+          "Welding Spot Positioning Control Method": "CCD",
+          "Module & Junction Box Positioning Method": "Module four-point alignment by servo/cylinder drive, junction box positioning by CCD",
+          "Welding Head Service Life": "≥3.5W",
+          "Version Switching Time": "20min",
+          "Welding Temperature Range": "±5℃",
+          "Welding Pull-Out Force": "≥50N",
+          "Module Weight": "≤50KG",
+          "Cycle Time": "≤16S",
+          "Operation Rate": "≥99.5%",
+          "Welding Yield Rate": "≥99.5% (≥99.9% after secondary repair welding)",
+          "Visual Inspection Misjudgment Rate": "<0.5%",
+          "Visual Inspection Missed Judgment Rate": "<0.5%"
+        }
+      },
+      "WV-KG02": {
+        "id": "WV-KG02",
+        "name": "Junction Box Cover Pressing Machine (WV-KG02)",
+        "images": [
+          "./img/WV-KG02.jpg"
+        ],
+        "technicalPerformance": [
+          "Realizes automatic junction box cover pressing",
+          "Adopts vacuum detection, visual inspection and other methods to detect the cover pressing effect of junction box",
+          "Vibrating disk feeding is compatible with various junction box covers with large storage capacity",
+          "Manipulator for material picking and placing with high cover pressing accuracy",
+          "Supports multiple cover pressing methods such as oblique insertion and flat cover",
+          "Easy version switching"
+        ],
+        "productParameters": {
+          "Power Supply": "Single-phase 220V, 50HZ, three-wire system (1 live wire, 1 neutral wire, 1 ground wire), incoming line specification 3×2.5mm",
+          "Power": "Rated power 4KW",
+          "Equipment Floor Area": "4700 (Length) × 2600 (Width) × 2600 (Height) mm",
+          "Module Size Range": "L:2550-1650mm, W:1450-990mm",
+          "Air Pressure": "0.6-0.8 MPa",
+          "Air Consumption": "Peak 500L/min, average 300L/min",
+          "Module & Junction Box Positioning Method": "Module four-point alignment by servo drive, junction box positioning by CCD",
+          "Silicone Detection": "Glue detection by displacement measurement",
+          "Version Switching Time": "10min",
+          "Repeat Positioning Accuracy": "0.05mm",
+          "Installation Success Rate": "≥99.8%",
+          "Noise": "≤75 dB",
+          "Cycle Time": "≤13S",
+          "Module Weight": "≤50KG"
+        }
+      },
+      "WV-TB03A": {
+        "id": "WV-TB03A",
+        "name": "Labeling Machine (WV-TB03A)",
+        "images": [
+          "./img/WV-TB03A.jpg"
+        ],
+        "technicalPerformance": [
+          "Power platform assists label tearing to improve label output integrity rate",
+          "Label receiving platform assists barcode output to increase label output stability",
+          "Pre-scanning + in-equipment supplementary scanning function with scanning success rate >99.9%",
+          "Driven by multiple servo motion axes for easy debugging and version switching",
+          "U-axis adopts stepping rotation with high precision, easy debugging and stable operation",
+          "Multiple optional functions such as visual inspection and three-code verification"
+        ],
+        "productParameters": {
+          "Equipment Dimensions": "3800×2300×2000mm (customizable)",
+          "Applicable Module Size": "Length (1580-2500) × Width (800-1500) mm",
+          "Cycle Time": "≤15S",
+          "Equipment Operation Rate": "≥99.5%",
+          "Labeling Accuracy": "±1mm",
+          "Qualified Rate": "≥99.8%",
+          "Equipment Power Supply & Power": "380V/220V 50/60Hz",
+          "Air Supply": "0.5-0.8MPa"
+        }
+      }
+    }
+  },
+  "contact": {
+    "title":"Company Information",
+    "company": "Company Name",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "companyName": "Suzhou WitValley Laser Intelligent Equipment Co., Ltd.",
+    "phoneNum": "13776027737",
+    "emailAddr": "witvalley@kswitvalley.com",
+    "addressDesc": "A2-2, ESR Industrial Park, No.28 Yongchang Road, Xiangcheng District, Suzhou"
+  },
+  "productInfo": {
+    "WV-3500C": {
+      "name": "Masterless Grid Electrode Interconnection All-in-One Machine (WV-3500C)",
+      "technicalPerformance": {
+        "0": "High Performance: Adopts PC-Base control system, reconfigurable I/O interface and customized system integration, and builds a high-performance automation platform with an intelligent control center",
+        "1": "High Precision: Submicron repeat positioning accuracy (±0.5μm), high-resolution linear motor drive unit, and high-precision servo control architecture with real-time temperature drift compensation module",
+        "2": "Battery Compatibility: Compatible with 182-210 specification HJT/TOPcon/PERC/perovskite stack"
+      },
+      "productParameters": {
+        "key": {
+          "capacity": "Capacity",
+          "slicingMethod": "Slicing Method",
+          "connectionMethod": "Connection Method",
+          "solarCellSpec": "Solar Cell Specification",
+          "mainGridLineCount": "Main Grid Line Count",
+          "solarCellThickness": "Solar Cell Thickness",
+          "weldingRibbonSpec": "Welding Ribbon Specification",
+          "solarStringType": "Solar String Compatible Type",
+          "equipmentDimensions": "Equipment Dimensions",
+          "adhesiveFilmSpec": "Compatible Adhesive Film Spec",
+          "fragmentationRate": "Fragmentation Rate",
+          "stringReworkRate": "String Rework Rate",
+          "oee": "OEE",
+          "flux": "Flux",
+          "solderingTemp": "Welding Temperature"
+        },
+        "value": {
+          "capacity": "4500 half-cells/hour (single track)",
+          "slicingMethod": "Laser non-destructive cutting (optional)",
+          "connectionMethod": "Strip film/sheet film laminating",
+          "solarCellSpec": "182-210mm solar cell 1/2 piece",
+          "mainGridLineCount": "12-32BB (customizable)",
+          "solarCellThickness": "90-180μm",
+          "weldingRibbonSpec": "φ0.16-φ0.32mm",
+          "solarStringType": "Positive spacing (0.5-5mm) Negative spacing (-0.5-2mm)",
+          "equipmentDimensions": "Length 8150 x Width 1294 x Height 2537 (mm)",
+          "adhesiveFilmSpec": "Film material: Modified EVA/POE/TPO (or equivalent low fluidity material film); also compatible with Pet with adhesive backing; Roll outer diameter: 450mm (online automatic material change); Roll inner diameter: 76 mm; Film strip width: 2.8-6mm; Front and back film: Different films can be used for front and back",
+          "fragmentationRate": "≤0.15% (solar cell thickness 120-140um)",
+          "stringReworkRate": "≤1%",
+          "oee": "≥85%",
+          "flux": "None",
+          "solderingTemp": "Low Temperature"
+        }
+      }
+    },
+    "WV-TM100A": {
+      "name": "Masterless Grid Electrode Interconnection All-in-One Machine (WV-TM100A)",
+      "technicalPerformance": {
+        "0": "High Speed: Highly customized system integration, based on PC-Base control system with fast response speed",
+        "1": "Intelligent Interconnection: Intelligent data classification, AI data analysis",
+        "2": "Battery Compatibility: Compatible with 182-210 specification HJT/TOPcon/PERC/perovskite stack",
+        "3": "Integrates multiple processes, detection and data tracking systems to realize production, detection and judgment in one, so as to ensure product yield in the production and manufacturing process"
+      },
+      "productParameters": {
+        "key": {
+          "capacity": "Capacity",
+          "slicingMethod": "Slicing Method",
+          "connectionMethod": "Connection Method",
+          "solarCellSpec": "Solar Cell Specification",
+          "mainGridLineCount": "Main Grid Line Count",
+          "solarCellThickness": "Solar Cell Thickness",
+          "weldingRibbonSpec": "Welding Ribbon Specification",
+          "solarStringType": "Solar String Compatible Type",
+          "equipmentDimensions": "Equipment Dimensions",
+          "adhesiveFilmSpec": "Compatible Adhesive Film Spec",
+          "fragmentationRate": "Fragmentation Rate",
+          "stringReworkRate": "String Rework Rate",
+          "oee": "OEE",
+          "flux": "Flux",
+          "solderingTemp": "Welding Temperature"
+        },
+        "value": {
+          "capacity": "7000 quarter-cells/hour (single track) (compatible with half-cells)",
+          "slicingMethod": "Laser non-destructive cutting (optional)",
+          "connectionMethod": "Strip film/sheet film laminating",
+          "solarCellSpec": "182-210mm",
+          "mainGridLineCount": "12-32BB (customizable)",
+          "solarCellThickness": "90-180μm",
+          "weldingRibbonSpec": "φ0.16-φ0.32mm",
+          "solarStringType": "Positive spacing (0.5-5mm) Negative spacing (-0.5-2mm)",
+          "equipmentDimensions": "Length 10400 × Width 2100 × Height 2500 (mm)",
+          "adhesiveFilmSpec": "Film material: Modified EVA/POE/TPO (or equivalent low fluidity material film); also compatible with Pet with adhesive backing; Roll outer diameter: 450mm (online automatic material change); Roll inner diameter: 76 mm; Film strip width: 2.8-6mm; Front and back film: Different films can be used for front and back",
+          "fragmentationRate": "≤0.15% (solar cell thickness 120-140um)",
+          "stringReworkRate": "≤1%",
+          "oee": "≥85%",
+          "flux": "None",
+          "solderingTemp": "Low Temperature"
+        }
+      }
+    },
+    "WV-AZ400": {
+      "name": "Junction Box Installation All-in-One Machine (WV-AZ400)",
+      "technicalPerformance": {
+        "0": "Strong equipment stability, independent PLC control for backplane gluing, independent control for streamline transmission, one-click switch to through mode",
+        "1": "Self-developed vision control system to accurately realize junction box positioning and judge junction box installation effect",
+        "2": "Multi-functional visual inspection, including busbar posture, PTFE cloth and tape status, glue path detection, junction box installation condition judgment, and junction box installation and pressing effect detection",
+        "3": "Unordered feeding, can be connected with AGV and aerial shuttle to realize unmanned intellectualization"
+      },
+      "productParameters": {
+        "key": {
+          "cycleTime": "Cycle Time",
+          "leadLiftingRate": "Lead Lifting Success Rate",
+          "tapeTearingRate": "Tape Tearing Success Rate",
+          "backplaneGluingRate": "Backplane Gluing Success Rate",
+          "boxInstallRate": "Junction Box Installation Success Rate",
+          "operationRate": "Operation Rate",
+          "feedingMethod": "Feeding Method",
+          "moduleSizeRange": "Module Size Range",
+          "powerSupply": "Equipment Power Supply and Power",
+          "moduleHeight": "Module Input and Output Height"
+        },
+        "value": {
+          "cycleTime": "≤12S",
+          "leadLiftingRate": "≥99.9% (excluding incoming material defects)",
+          "tapeTearingRate": "≥99.8% (excluding incoming material defects)",
+          "backplaneGluingRate": "≥99.9%",
+          "boxInstallRate": "≥99.8% (excluding incoming material defects)",
+          "operationRate": "≥99.5%",
+          "feedingMethod": "Ordered/unordered, AGV docking",
+          "moduleSizeRange": "L:2500-1650mm,W:1450-990mm",
+          "powerSupply": "380V/220V 50/60HZ",
+          "moduleHeight": "950±50(mm)"
+        }
+      }
+    },
+    "WV-AJ100": {
+      "name": "Lead Lifting and Backplane Gluing All-in-One Machine (WV-AJ100)",
+      "technicalPerformance": {
+        "0": "Self-developed vision system to accurately detect incoming material status, guide positioning and inspect finished products",
+        "1": "Integrates automatic lead lifting, straightening, high-temperature cloth tearing, ironing and recycling functions",
+        "2": "Synchronous operation of multiple box leads, high takt, high speed and high efficiency"
+      },
+      "productParameters": {
+        "key": {
+          "cycleTime": "Cycle Time",
+          "leadLiftingRate": "Lead Lifting Success Rate",
+          "tapeTearingRate": "Tape Tearing Success Rate",
+          "backplaneGluingYield": "Backplane Gluing Yield Rate",
+          "operationRate": "Operation Rate",
+          "moduleSizeRange": "Module Size Range"
+        },
+        "value": {
+          "cycleTime": "≤12S",
+          "leadLiftingRate": "≥99.9% (excluding incoming material defects)",
+          "tapeTearingRate": "≥99.8% (excluding incoming material defects)",
+          "backplaneGluingYield": "≥99.9%",
+          "operationRate": "≥99.5%",
+          "moduleSizeRange": "L:2500-1650mm,W:1450-990mm"
+        }
+      }
+    },
+    "WV-AZ500A": {
+      "name": "Backplane Gluing and Junction Box Installation All-in-One Machine (WV-AZ500A)",
+      "technicalPerformance": {
+        "0": "Equipped with busbar detection, glue line detection and junction box detection functions, automatically identify defective products and alarm",
+        "1": "Self-developed deep learning vision system to realize accurate positioning and installation of junction box",
+        "2": "Compatible with ordered/unordered junction box feeding methods, high coordination, fast takt, can be connected with AGV and aerial shuttle to realize unmanned intellectualization"
+      },
+      "productParameters": {
+        "key": {
+          "cycleTime": "Cycle Time",
+          "backplaneGluingYield": "Backplane Gluing Yield Rate",
+          "boxInstallRate": "Junction Box Installation Success Rate",
+          "operationRate": "Operation Rate",
+          "feedingMethod": "Feeding Method",
+          "moduleSizeRange": "Module Size Range"
+        },
+        "value": {
+          "cycleTime": "≤12S",
+          "backplaneGluingYield": "≥99.9%",
+          "boxInstallRate": "≥99.8% (excluding incoming material defects)",
+          "operationRate": "≥99.5%",
+          "feedingMethod": "Ordered/unordered, AGV docking",
+          "moduleSizeRange": "L:2500-1650mm,W:1450-990mm"
+        }
+      }
+    },
+    "WV-XH13A": {
+      "name": "Junction Box Laser Welding Machine (WV-XH13A)",
+      "technicalPerformance": {
+        "0": "Adopts a new laser welding process, pioneering the application of laser technology in the field of junction box welding",
+        "1": "Laser fusion welding, realizing solder-free welding with higher welding strength",
+        "2": "Equipped with CCD high-precision automatic positioning before welding to achieve accurate welding",
+        "3": "Equipped with high-precision in-welding and post-welding detection functions to accurately identify cold welding",
+        "4": "Welding pressure block has busbar bending and leveling function with better compatibility",
+        "5": "The overall layout of the equipment is reasonable, easy to debug and maintain"
+      },
+      "productParameters": {
+        "key": {
+          "floorArea": "Equipment Floor Area",
+          "moduleSize": "Compatible Module Size",
+          "cycleTime": "Cycle Time",
+          "weldingYield": "Welding Yield Rate",
+          "operationRate": "Operation Rate",
+          "overJudgmentRate": "Over Judgment Rate",
+          "weldingTensileForce": "Welding Tensile Force",
+          "ratedPower": "Rated Power",
+          "alignmentAccuracy": "Alignment Accuracy",
+          "powerSupply": "Power Supply",
+          "airSupply": "Air Supply"
+        },
+        "value": {
+          "floorArea": "3145mm×2200mm×2160mm",
+          "moduleSize": "Length (1600mm-2550mm) × Width (990-1450mm)",
+          "cycleTime": "≤12S",
+          "weldingYield": "≥99.9% (excluding incoming material defects)",
+          "operationRate": "≥99.5%",
+          "overJudgmentRate": "≤0.5%",
+          "weldingTensileForce": "≥100N",
+          "ratedPower": "10kw",
+          "alignmentAccuracy": "±0.5mm",
+          "powerSupply": "AC 380V±5%,50Hz",
+          "airSupply": "0.5-0.8MPa"
+        }
+      }
+    },
+    "WV-XH06A": {
+      "name": "Junction Box High Frequency Welding Machine (WV-XH06A)",
+      "technicalPerformance": {
+        "0": "Adopts visual positioning and full servo drive control",
+        "1": "With high productivity, high compatibility and high stability",
+        "2": "Equipped with pressure detection and displacement detection",
+        "3": "Fully automatic welding head cleaning",
+        "4": "Multiple welding head specifications such as split welding head and integrated welding head are available",
+        "5": "Equipped with water leakage detection function"
+      },
+      "productParameters": {
+        "key": {
+          "equipmentDimensions": "Equipment Dimensions",
+          "powerSupply": "Equipment Power Supply",
+          "power": "Power",
+          "moduleSizeRange": "Module Size Range",
+          "cycleTime": "Cycle Time",
+          "positioningMethod": "Module and Junction Box Positioning Method",
+          "weldingHeadLife": "Welding Head Service Life",
+          "operationRate": "Operation Rate",
+          "weldingTime": "Welding Time",
+          "spotPositioning": "Welding Spot Positioning Control Method",
+          "versionSwitchTime": "Version Switching Time",
+          "weldingTempRange": "Welding Temperature Range",
+          "weldingPullOutForce": "Welding Pull Out Force"
+        },
+        "value": {
+          "equipmentDimensions": "3600×2000×2220(mm) customizable",
+          "powerSupply": "Three-phase five-wire 380V,50Hz, peak current 40A",
+          "power": "Rated Power 24KW",
+          "moduleSizeRange": "L:2550-1500mm,W:1450-900mm",
+          "cycleTime": "≤12S",
+          "positioningMethod": "Module servo-driven four-point alignment, junction box CCD positioning",
+          "weldingHeadLife": "≥15W",
+          "operationRate": "≥99.5%",
+          "weldingTime": "≤3S/point",
+          "spotPositioning": "CCD",
+          "versionSwitchTime": "20min",
+          "weldingTempRange": "±15℃",
+          "weldingPullOutForce": "≥50N"
+        }
+      }
+    },
+    "WV-XH09A": {
+      "name": "Junction Box Hot Press Welding Machine (WV-XH09A)",
+      "technicalPerformance": {
+        "0": "Adopts high-efficiency welding system and dynamic vision tracking design to improve machine stability",
+        "1": "Precise temperature control: each welding point is independently controlled, and each heating body does not affect each other to ensure temperature control accuracy"
+      },
+      "productParameters": {
+        "key": {
+          "floorArea": "Floor Area Dimensions",
+          "moduleSizeRange": "Module Size Range",
+          "powerSupply": "Equipment Power Supply",
+          "power": "Power",
+          "spotPositioning": "Welding Spot Positioning Control Method",
+          "positioningMethod": "Module and Junction Box Positioning Method",
+          "weldingHeadLife": "Welding Head Service Life",
+          "versionSwitchTime": "Version Switching Time",
+          "weldingTempRange": "Welding Temperature Range",
+          "weldingPullOutForce": "Welding Pull Out Force",
+          "moduleWeight": "Module Weight",
+          "cycleTime": "Cycle Time",
+          "operationRate": "Operation Rate",
+          "weldingYield": "Welding Yield Rate",
+          "misjudgmentRate": "Visual Inspection Misjudgment Rate",
+          "missedJudgmentRate": "Visual Inspection Missed Judgment Rate"
+        },
+        "value": {
+          "floorArea": "Length 3850 x Width 2100 x Height 2150mm (excluding three-color light)",
+          "moduleSizeRange": "L:2550-1500mm,W:1450-950mm",
+          "powerSupply": "Three-phase five-wire 380V,50Hz, stable current 60A",
+          "power": "Rated Power 27KW",
+          "spotPositioning": "CCD",
+          "positioningMethod": "Module servo/cylinder-driven four-point alignment, junction box CCD positioning",
+          "weldingHeadLife": "≥3.5W",
+          "versionSwitchTime": "20min",
+          "weldingTempRange": "±5℃",
+          "weldingPullOutForce": "≥50N",
+          "moduleWeight": "≤50KG",
+          "cycleTime": "≤16S",
+          "operationRate": "≥99.5%",
+          "weldingYield": "≥99.5% (≥99.9% after secondary repair welding)",
+          "misjudgmentRate": "<0.5%",
+          "missedJudgmentRate": "<0.5%"
+        }
+      }
+    },
+    "WV-KG02": {
+      "name": "Junction Box Covering Machine (WV-KG02)",
+      "technicalPerformance": {
+        "0": "Realize fully automatic junction box cover buckling",
+        "1": "Adopt vacuum detection, visual detection and other methods to detect the effect of junction box cover",
+        "2": "Vibrating disk feeding can be compatible with various junction box covers with large storage capacity",
+        "3": "Manipulator for material picking and placing with high cover buckling accuracy",
+        "4": "Supports multiple cover buckling methods such as oblique insertion and flat cover",
+        "5": "Easy version switching"
+      },
+      "productParameters": {
+        "key": {
+          "powerSupply": "Power Supply",
+          "power": "Power",
+          "floorArea": "Equipment Floor Area",
+          "moduleSizeRange": "Module Size Range",
+          "airPressure": "Air Pressure",
+          "airConsumption": "Air Consumption",
+          "positioningMethod": "Module and Junction Box Positioning Method",
+          "siliconeDetection": "Silicone Detection",
+          "versionSwitchTime": "Version Switching Time",
+          "repeatAccuracy": "Repeat Positioning Accuracy",
+          "installationRate": "Installation Success Rate",
+          "noise": "Noise",
+          "cycleTime": "Cycle Time",
+          "moduleWeight": "Module Weight"
+        },
+        "value": {
+          "powerSupply": "Single-phase 220V,50HZ, three-wire system (1 live, 1 neutral, 1 ground), incoming line specification 3×2.5mm",
+          "power": "Rated Power 4KW",
+          "floorArea": "4700 (Length) × 2600 (Width) × 2600 (Height) mm",
+          "moduleSizeRange": "L:2550-1650mm,W:1450-990mm",
+          "airPressure": "0.6-0.8 MPa",
+          "airConsumption": "Peak 500L/min Average 300L/min",
+          "positioningMethod": "Module servo-driven four-point alignment, junction box CCD positioning",
+          "siliconeDetection": "Glue detection displacement detection",
+          "versionSwitchTime": "10min",
+          "repeatAccuracy": "0.05mm",
+          "installationRate": "≥99.8%",
+          "noise": "≤75 dB",
+          "cycleTime": "≤13S",
+          "moduleWeight": "≤50KG"
+        }
+      }
+    },
+    "WV-TB03A": {
+      "name": "Labeling Machine (WV-TB03A)",
+      "technicalPerformance": {
+        "0": "Power platform assists label tearing to improve label output integrity rate",
+        "1": "Label receiving platform assists barcode output to increase label output stability",
+        "2": "Pre-scanning + in-equipment supplementary scanning function, scanning success rate >99.9%",
+        "3": "Driven by multiple servo motion axes, easy to debug and switch versions",
+        "4": "U-axis adopts stepping rotation with high precision, easy debugging and stable action",
+        "5": "Multiple functions such as visual inspection and three-code verification are optional"
+      },
+      "productParameters": {
+        "key": {
+          "equipmentDimensions": "Equipment Dimensions",
+          "applicableModuleSize": "Applicable Module Size",
+          "cycleTime": "Cycle Time",
+          "operationRate": "Equipment Operation Rate",
+          "labelingAccuracy": "Labeling Accuracy",
+          "qualifiedRate": "Qualified Rate",
+          "powerSupply": "Equipment Power Supply and Power",
+          "airSupply": "Air Supply"
+        },
+        "value": {
+          "equipmentDimensions": "3800x2300x2000mm (customizable)",
+          "applicableModuleSize": "Length (1580-2500) x Width (800-1500) mm",
+          "cycleTime": "≤15S",
+          "operationRate": "≥99.5%",
+          "labelingAccuracy": "±1mm",
+          "qualifiedRate": "≥99.8%",
+          "powerSupply": "380V/220V 50/60Hz",
+          "airSupply": "0.5-0.8MPa"
+        }
+      }
+    }
+  }
+}
