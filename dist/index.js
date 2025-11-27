@@ -523,6 +523,8 @@ document.addEventListener('DOMContentLoaded', async function () {
             mobileLink.classList.add('block', 'py-2', 'px-4', 'text-dark', 'hover:text-primary', 'product-a');
             mobileLink.textContent = product.name;
             mobileLink.setAttribute('data-target', 'product-catalog');
+            mobileLink.setAttribute('data-i18n', `productInfo.${product.id}.name`);
+
             mobileMenu.appendChild(mobileLink);
         }
     }
@@ -785,18 +787,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                 productContentContainer.appendChild(productContent);
                 updateContent()
             }
-
-            // 获取所有内容区域
-            const contentAreas = document.querySelectorAll('.content');
-
-            // 隐藏所有内容区域
-            contentAreas.forEach(area => {
-                area.classList.remove('active');
-            });
-
-            // 显示目标内容区域
-            const targetArea = document.getElementById(targetId);
-            targetArea.classList.add('active');
 
             //隐藏移动端菜单
             mobileNav.style.display = 'none';
