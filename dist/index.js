@@ -767,46 +767,12 @@ document.addEventListener('DOMContentLoaded', async function () {
     });
 
 
-    //切换界面
-    // 获取所有导航项
-    const navItems = document.querySelectorAll('nav a');
-    // 为每个导航项添加点击事件监听器
-    navItems.forEach(item => {
-        item.addEventListener('click', function () {
-            // 获取目标内容区域的 ID
-            const targetId = this.getAttribute('data-target');
-            //生成指定产品内容
-            if (targetId == "product-catalog") {
-                const productId = this.dataset.product;
-                const product = products[productId];
-                // 清除之前的内容
-                removeProductContent();
-
-                // 生成新的产品内容
-                const productContent = generateProductContent(product);
-                productContentContainer.appendChild(productContent);
-                updateContent()
-            }
-
-            //隐藏移动端菜单
-            mobileNav.style.display = 'none';
-        });
-    });
-
-
-
     function firstProductClick(){
         const firstLink = document.querySelector("#product-container > a:nth-child(1)")
         firstLink.click();
     }
     
 
-    //产品目录按钮
-    const pBtn = document.getElementById("product-a")
-    pBtn.addEventListener('click', function (e) {
-        e.preventDefault(); // 阻止锚点跳转（关键！）
-        firstProductClick()
-    });
     //了解产品按钮
     const productsBtn = document.getElementById("productsBtn")
     productsBtn.addEventListener('click', function (e) {
@@ -963,7 +929,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     // ① 初始化哈希匹配（核心：直接访问带哈希的链接时触发）
     initHashMatch();
 
-    // ② 绑定导航点击事件（复用原有逻辑）
+    // ② 绑定导航点击事件
     // 普通导航（首页/关于我们/联系我们）
     document.querySelectorAll('nav a[data-target]:not([data-product])').forEach(item => {
         item.addEventListener('click', function (e) {
@@ -1038,7 +1004,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                 updateContent()
             }
         }
-
         // 4. 隐藏移动端菜单
         const mobileNav = document.getElementById('mobile-menu');
         if (mobileNav) mobileNav.style.display = 'none';
