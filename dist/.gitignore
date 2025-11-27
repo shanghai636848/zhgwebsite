@@ -1,0 +1,7 @@
+# 核心：忽略node_modules目录（必选）
+node_modules/
+
+# 忽略npm/yarn/pnpm包管理相关文件
+package-lock.json
+
+

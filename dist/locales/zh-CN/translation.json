@@ -1,0 +1,544 @@
+{
+  "home": {
+    "title": "智慧谷激光 - 光伏组件激光智能装备解决方案提供商"
+  },
+  "nav": {
+    "index": "首页",
+    "about": "关于我们",
+    "product": "产品目录",
+    "contact": "联系我们"
+  },
+  "lang": {
+    "zh": "中文",
+    "en": "English"
+  },
+  "hero": {
+    "title": "光伏组件激光智能装备<br><span class='text-primary'>综合解决方案提供商</span>",
+    "desc": "专注于电极互连技术应用研究及高端激光微纳加工智能装备研发制造，为光伏行业提供领先的封装焊接设备解决方案",
+    "btn": {
+      "product": "了解产品",
+      "about": "关于我们"
+    }
+  },
+  "stats": {
+    "rndBase": "平方米研发基地",
+    "annualOutput": "台设备年产量",
+    "employees": "名现有员工",
+    "patents": "项授权专利"
+  },
+  "section": {
+    "mainProducts": {
+      "title": "主产品展示",
+      "desc": "智慧谷激光核心产品，为光伏组件生产提供高效智能的解决方案"
+    },
+    "clients": {
+      "title": "合作客户",
+      "desc": "智慧谷激光的产品和服务已获得众多行业领先企业的认可和信赖"
+    },
+    "about": {
+      "title": "关于智慧谷激光",
+      "desc": "苏州智慧谷激光智能装备有限公司成立于2019年，聚焦于电极互连技术的应用研究及高端激光微纳加工智能装备的研发及制造"
+    },
+    "honors": {
+      "title": "荣誉资质"
+    },
+    "certificates": {
+      "title": "证书展示"
+    },
+    "products": {
+      "title": "产品目录",
+      "desc": "智慧谷激光凭借先进的技术和创新能力，为光伏行业提供多种高性能的激光智能装备"
+    },
+    "contact": {
+      "title": "联系我们",
+      "desc": "如果您有任何疑问或需求，请随时与我们联系。"
+    }
+  },
+  "mainProduct": {
+    "badge": "核心产品",
+    "title": "无主栅电极互连一体机(WV-3500C)",
+    "desc": "无主栅电极互连一体机（综合性焊接平台，可覆盖HJT/TOPcon/PERC/钙钛矿叠层, 首创 OBB 条膜工艺）",
+    "feature0": {
+      "title": "高性能",
+      "desc": "采用PC-Base控制系统，可重构I/O接口与定制化系统集成，智能化控制中枢构建高性能自动化平台"
+    },
+    "feature1": {
+      "title": "高精密",
+      "desc": "亚微米级重复定位精度(±0.5μm)，高分辨率直线电机驱动单元，温度漂移实时补偿模块高精度伺服控制架构"
+    },
+    "feature2": {
+      "title": "电池兼容",
+      "desc": "兼容182-210规格HJT/TOPcon/PERC/钙钛矿叠层"
+    },
+    "btn": "了解更多产品细节"
+  },
+  "tab": {
+    "overview": "概况",
+    "mission": "愿景使命",
+    "timeline": "发展历程"
+  },
+  "overview": {
+    "title": "光伏行业领先的封装焊接设备供应商",
+    "rndBase": {
+      "title": "研发生产基地",
+      "desc": "公司拥有8000平米研发及生产场地，具备年产量1000+台设备的组装交付能力，为客户提供稳定的产能保障。"
+    },
+    "team": {
+      "title": "专业团队",
+      "desc": "现有员工180余名，研发技术人员占比35%，拥有行业内资深的研发团队，培养一批行业激光焊接工艺技术骨干。"
+    },
+    "innovation": {
+      "title": "技术创新",
+      "desc": "凭借专业的技术积累和自主创新的研发理念，致力打造新能源电极互连高端激光装备新赛道，推动行业技术进步。"
+    }
+  },
+  "mission": {
+    "title": "企业愿景与使命",
+    "vision": {
+      "title": "企业愿景",
+      "desc": "成为最具价值的激光装备公司"
+    },
+    "mission": {
+      "title": "企业使命",
+      "desc": "激光装备技术创新应用实践者"
+    }
+  },
+  "timeline": {
+    "title": "发展历程",
+    "2019": "智慧谷激光成立",
+    "2020": "启动研发首款接线盒自动安装一体机AZ01A",
+    "2021": "18S汇流条叠焊机WV-DN200研发成功",
+    "2022": "AZ200研发成功并导入客户端生产",
+    "2023": "推出WV-XH12/AZ300并量产",
+    "2024": "获评苏州市独角兽培育企业",
+    "2025": "荣获高质量突出贡献奖"
+  },
+  "honor": {
+    "1": {
+      "title": "国家级高新技术企业",
+      "desc": "2021年获得认定，标志着公司在技术创新和研发能力方面达到国家级水平"
+    },
+    "2": {
+      "title": "江苏省专精特新中小企业",
+      "desc": "2024年通过认定，体现公司在专业领域的技术实力和市场竞争力"
+    },
+    "3": {
+      "title": "苏州市独角兽培育企业",
+      "desc": "2024年获评，代表公司具有高成长性和创新能力，是行业内的标杆企业"
+    },
+    "4": {
+      "title": "苏州市工程技术研究中心",
+      "desc": "依托公司建立，专注于激光智能装备领域的工程技术研究和产业化"
+    },
+    "5": {
+      "title": "208项授权专利",
+      "desc": "其中发明专利授权28项，体现了公司在激光装备领域的核心技术实力"
+    },
+    "6": {
+      "title": "12项软件著作权",
+      "desc": "涵盖激光装备控制系统、自动化管理软件等多个领域，展现公司的软件研发能力"
+    }
+  },
+  "product": {
+    "select": "选择产品",
+    "technicalPerformance": "技术性能",
+    "parameters": "产品参数",
+    "btn": {
+      "inquire": "咨询更多产品信息"
+    }
+  },
+  "contact": {
+    "title": "公司信息",
+    "company": "公司名称",
+    "phone": "电话",
+    "email": "邮箱",
+    "address": "地址",
+    "companyName": "苏州智慧谷激光智能装备有限公司",
+    "phoneNum": "13776027737",
+    "emailAddr": "witvalley@kswitvalley.com",
+    "addressDesc": "苏州市相城区永昌路28号ESR产业园A2-2"
+  },
+  "productInfo": {
+    "WV-3500C": {
+      "name": "无主栅电极互连一体机(WV-3500C)",
+      "technicalPerformance": {
+        "0": "高性能：采用PC-Base控制系统，可重构I/O接口与定制化系统集成，智能化控制中枢构建高性能自动化平台",
+        "1": "高精密：亚微米级重复定位精度(±0.5μm)，高分辨率直线电机驱动单元，温度漂移实时补偿模块高精度伺服控制架构",
+        "2": "电池兼容：兼容182-210规格HJT/TOPcon/PERC/钙钛矿叠层"
+      },
+      "productParameters": {
+        "key": {
+          "capacity": "产能",
+          "slicingMethod": "划片方式",
+          "connectionMethod": "连接方式",
+          "solarCellSpec": "电池片规格",
+          "mainGridLineCount": "主栅线数量",
+          "solarCellThickness": "电池片厚度",
+          "weldingRibbonSpec": "焊带规格",
+          "solarStringType": "电池串兼容类型",
+          "equipmentDimensions": "设备尺寸",
+          "adhesiveFilmSpec": "可兼容胶膜规格",
+          "fragmentationRate": "碎片率",
+          "stringReworkRate": "串返修率",
+          "oee": "OEE",
+          "flux": "助焊剂",
+          "solderingTemp": "焊接温度"
+        },
+        "value": {
+          "capacity": "4500半片/小时 (单轨)",
+          "slicingMethod": "激光无损切割(可选配)",
+          "connectionMethod": "条膜/片膜覆膜",
+          "solarCellSpec": "182-210mm电池片1/2片",
+          "mainGridLineCount": "12-32BB (可定制)",
+          "solarCellThickness": "90-180μm",
+          "weldingRibbonSpec": "φ0.16-φ0.32mm",
+          "solarStringType": "正间距(0.5-5mm) 负间距(-0.5-2mm)",
+          "equipmentDimensions": "长8150x宽1294x高2537(mm)",
+          "adhesiveFilmSpec": "膜材质:改性带EVA/POE/TPO(或同等低流动性材质膜);同时可兼容带背胶的Pet; 卷外直径:450mm(可在线自动换料); 卷轴内径:76 mm; 膜条宽度:2.8-6mm; 正背面膜:正面和背面可使用不同膜",
+          "fragmentationRate": "≤0.15% (电池片厚度120-140um)",
+          "stringReworkRate": "≤1%",
+          "oee": "≥85%",
+          "flux": "无",
+          "solderingTemp": "低温"
+        }
+      }
+    },
+    "WV-TM100A": {
+      "name": "无主栅电极互连一体机(WV-TM100A)",
+      "technicalPerformance": {
+        "0": "高速度：高度定制化系统集成、基于PC-Base控制系统，响应速度快",
+        "1": "智慧互连：智能数据分类、AI数据分析",
+        "2": "电池兼容：兼容182-210规格HJT/TOPcon/PERC/钙钛矿叠层",
+        "3": "集成多重工艺，检测、数据追踪系统、实现生产、检测、判断于一体，以保证生产制造过程中产品良率"
+      },
+      "productParameters": {
+        "key": {
+          "capacity": "产能",
+          "slicingMethod": "划片方式",
+          "connectionMethod": "连接方式",
+          "solarCellSpec": "电池片规格",
+          "mainGridLineCount": "主栅线数量",
+          "solarCellThickness": "电池片厚度",
+          "weldingRibbonSpec": "焊带规格",
+          "solarStringType": "电池串兼容类型",
+          "equipmentDimensions": "设备尺寸",
+          "adhesiveFilmSpec": "可兼容胶膜规格",
+          "fragmentationRate": "碎片率",
+          "stringReworkRate": "串返修率",
+          "oee": "OEE",
+          "flux": "助焊剂",
+          "solderingTemp": "焊接温度"
+        },
+        "value": {
+          "capacity": "7000四分片/小时(单轨) (兼容2分片)",
+          "slicingMethod": "激光无损切割 (可选配)",
+          "connectionMethod": "条膜/片膜覆膜",
+          "solarCellSpec": "182-210mm",
+          "mainGridLineCount": "12-32BB (可定制)",
+          "solarCellThickness": "90-180μm",
+          "weldingRibbonSpec": "φ0.16-φ0.32mm",
+          "solarStringType": "正间距(0.5-5mm) 负间距(-0.5-2mm)",
+          "equipmentDimensions": "长10400×宽2100×高2500(mm)",
+          "adhesiveFilmSpec": "膜材质:改性带EVA/POE/TPO(或同等低流动性材质膜);同时可兼容带背胶的Pet; 卷外直径:450mm(可在线自动换料); 卷轴内径:76 mm; 膜条宽度:2.8-6mm; 正背面膜:正面和背面可使用不同膜",
+          "fragmentationRate": "≤0.15% (电池片厚度120-140um)",
+          "stringReworkRate": "≤1%",
+          "oee": "≥85%",
+          "flux": "无",
+          "solderingTemp": "低温"
+        }
+      }
+    },
+    "WV-AZ400": {
+      "name": "接线盒安装一体机(WV-AZ400)",
+      "technicalPerformance": {
+        "0": "设备稳定性强,背板打胶独立PLC控制,流线传输独立控制,一键切换直通模式",
+        "1": "自主研发视觉控制系统,精准实现线盒定位并判定线盒安装效果",
+        "2": "多功能视觉检测,包含汇流条姿态,四氟布、胶带状态,胶路检测,线盒安装条件判定以及线盒安装、按压效果检测",
+        "3": "无序上料,可对接AGV、空中穿梭机,实现无人智能化"
+      },
+      "productParameters": {
+        "key": {
+          "cycleTime": "节拍",
+          "leadLiftingRate": "引线挑起成功率",
+          "tapeTearingRate": "胶带、胶布撕取成功率",
+          "backplaneGluingRate": "背板打胶成功率",
+          "boxInstallRate": "线盒安装成功率",
+          "operationRate": "稼动率",
+          "feedingMethod": "上料方式",
+          "moduleSizeRange": "组件尺寸范围",
+          "powerSupply": "设备电源、功率",
+          "moduleHeight": "组件输入、输出高度"
+        },
+        "value": {
+          "cycleTime": "≤12S",
+          "leadLiftingRate": "≥99.9%(去除来料不良)",
+          "tapeTearingRate": "≥99.8%(去除来料不良)",
+          "backplaneGluingRate": "≥99.9%",
+          "boxInstallRate": "≥99.8%(去除来料不良)",
+          "operationRate": "≥99.5%",
+          "feedingMethod": "有序/无序,AGV对接",
+          "moduleSizeRange": "L:2500-1650mm,W:1450-990mm",
+          "powerSupply": "380V/220V 50/60HZ",
+          "moduleHeight": "950±50(mm)"
+        }
+      }
+    },
+    "WV-AJ100": {
+      "name": "引线挑起背板打胶一体机(WV-AJ100)",
+      "technicalPerformance": {
+        "0": "自主研发视觉系统,精准检测来料状态、引导定位、成品检查",
+        "1": "兼具自动挑引线、捋直,高温布撕除、烫平、回收功能",
+        "2": "多处盒体引线采用同步操作,高节拍,高速度,高效率"
+      },
+      "productParameters": {
+        "key": {
+          "cycleTime": "节拍",
+          "leadLiftingRate": "引线挑起成功率",
+          "tapeTearingRate": "胶带、胶布撕取成功率",
+          "backplaneGluingYield": "背板打胶良率",
+          "operationRate": "稼动率",
+          "moduleSizeRange": "组件尺寸范围"
+        },
+        "value": {
+          "cycleTime": "≤12S",
+          "leadLiftingRate": "≥99.9%(去除来料不良)",
+          "tapeTearingRate": "≥99.8%(去除来料不良)",
+          "backplaneGluingYield": "≥99.9%",
+          "operationRate": "≥99.5%",
+          "moduleSizeRange": "L:2500-1650mm,W:1450-990mm"
+        }
+      }
+    },
+    "WV-AZ500A": {
+      "name": "背板打胶及线盒安装一体机(WV-AZ500A)",
+      "technicalPerformance": {
+        "0": "具备汇流条检测、胶线检测、线盒检测功能,自动识别不良品与报警",
+        "1": "自研深度学习视觉系统,实现线盒精准定位及安装",
+        "2": "兼容有序/无序线盒上料方式,配合度高,节拍快,可对接AGV、空中穿梭机,实现无人智能化"
+      },
+      "productParameters": {
+        "key": {
+          "cycleTime": "节拍",
+          "backplaneGluingYield": "背板打胶良率",
+          "boxInstallRate": "线盒安装成功率",
+          "operationRate": "稼动率",
+          "feedingMethod": "上料方式",
+          "moduleSizeRange": "组件尺寸范围"
+        },
+        "value": {
+          "cycleTime": "≤12S",
+          "backplaneGluingYield": "≥99.9%",
+          "boxInstallRate": "≥99.8%(去除来料不良)",
+          "operationRate": "≥99.5%",
+          "feedingMethod": "有序/无序,AGV对接",
+          "moduleSizeRange": "L:2500-1650mm,W:1450-990mm"
+        }
+      }
+    },
+    "WV-XH13A": {
+      "name": "接线盒激光焊接机(WV-XH13A)",
+      "technicalPerformance": {
+        "0": "采用全新激光焊接工艺,开创激光技术应用于接线盒焊接领域",
+        "1": "激光熔融焊,实现无锡焊接,焊接强度更高",
+        "2": "具备CCD焊前高精度自动定位,精准实现焊接",
+        "3": "具备高精度焊中、焊后检测功能,可精准识别虚焊",
+        "4": "焊接压块具备汇流条折弯校平功能,兼容性更好",
+        "5": "设备整体布局合理,便于调试和维护操作"
+      },
+      "productParameters": {
+        "key": {
+          "floorArea": "设备占地",
+          "moduleSize": "兼容组件大小",
+          "cycleTime": "节拍",
+          "weldingYield": "焊接良率",
+          "operationRate": "稼动率",
+          "overJudgmentRate": "过判率",
+          "weldingTensileForce": "焊接拉力",
+          "ratedPower": "额定功率",
+          "alignmentAccuracy": "归正精度",
+          "powerSupply": "电源",
+          "airSupply": "气源"
+        },
+        "value": {
+          "floorArea": "3145mm×2200mm×2160mm",
+          "moduleSize": "长(1600mm-2550mm)×宽(990-1450mm)",
+          "cycleTime": "≤12S",
+          "weldingYield": "≥99.9%(去除来料不良)",
+          "operationRate": "≥99.5%",
+          "overJudgmentRate": "≤0.5%",
+          "weldingTensileForce": "≥100N",
+          "ratedPower": "10kw",
+          "alignmentAccuracy": "±0.5mm",
+          "powerSupply": "AC 380V±5%,50Hz",
+          "airSupply": "0.5-0.8MPa"
+        }
+      }
+    },
+    "WV-XH06A": {
+      "name": "接线盒高频焊接机(WV-XH06A)",
+      "technicalPerformance": {
+        "0": "采用视觉定位、全伺服驱动控制",
+        "1": "具备高产能、高兼容性、高稳定性",
+        "2": "具备压力检测、位移检测",
+        "3": "全自动焊头清洁",
+        "4": "分体焊头,一体焊头等多种焊头规格可供选择",
+        "5": "具备漏水检测功能"
+      },
+      "productParameters": {
+        "key": {
+          "equipmentDimensions": "设备尺寸",
+          "powerSupply": "设备电源",
+          "power": "功率",
+          "moduleSizeRange": "组件尺寸范围",
+          "cycleTime": "节拍",
+          "positioningMethod": "组件、接线盒定位方式",
+          "weldingHeadLife": "焊头寿命",
+          "operationRate": "稼动率",
+          "weldingTime": "焊接时间",
+          "spotPositioning": "焊点定位控制方式",
+          "versionSwitchTime": "版型切换时间",
+          "weldingTempRange": "焊接温度范围",
+          "weldingPullOutForce": "焊接后拉拔力"
+        },
+        "value": {
+          "equipmentDimensions": "3600×2000×2220(mm)可定制",
+          "powerSupply": "三相五线 380V,50Hz, 峰值电流 40A",
+          "power": "额定功率 24KW",
+          "moduleSizeRange": "L:2550-1500mm,W:1450-900mm",
+          "cycleTime": "≤12S",
+          "positioningMethod": "组件伺服驱动四点归正,接线盒CCD定位",
+          "weldingHeadLife": "≥15W",
+          "operationRate": "≥99.5%",
+          "weldingTime": "≤3S/点",
+          "spotPositioning": "CCD",
+          "versionSwitchTime": "20min",
+          "weldingTempRange": "±15℃",
+          "weldingPullOutForce": "≥50N"
+        }
+      }
+    },
+    "WV-XH09A": {
+      "name": "接线盒热压焊接机(WV-XH09A)",
+      "technicalPerformance": {
+        "0": "采用高效焊接系统与动态视觉跟踪设计，提高机台稳定性",
+        "1": "控温精准：各焊接点位独立控制、各加热主体互不影响，保证控温准确性"
+      },
+      "productParameters": {
+        "key": {
+          "floorArea": "占地尺寸",
+          "moduleSizeRange": "组件尺寸范围",
+          "powerSupply": "设备电源",
+          "power": "功率",
+          "spotPositioning": "焊点定位控制方式",
+          "positioningMethod": "组件、接线盒定位方式",
+          "weldingHeadLife": "焊头寿命",
+          "versionSwitchTime": "版型切换时间",
+          "weldingTempRange": "焊接温度范围",
+          "weldingPullOutForce": "焊接后拉拔力",
+          "moduleWeight": "组件重量",
+          "cycleTime": "节拍",
+          "operationRate": "稼动率",
+          "weldingYield": "焊接良率",
+          "misjudgmentRate": "视觉检测误判率",
+          "missedJudgmentRate": "视觉检测漏判率"
+        },
+        "value": {
+          "floorArea": "长3850x宽2100x高2150mm(不含三色灯)",
+          "moduleSizeRange": "L:2550-1500mm,W:1450-950mm",
+          "powerSupply": "三相五线380V,50Hz,稳定电流60A",
+          "power": "额定功率27KW",
+          "spotPositioning": "CCD",
+          "positioningMethod": "组件伺服/气缸驱动四点归正，接线盒CCD定位",
+          "weldingHeadLife": "≥3.5W",
+          "versionSwitchTime": "20min",
+          "weldingTempRange": "±5℃",
+          "weldingPullOutForce": "≥50N",
+          "moduleWeight": "≤50KG",
+          "cycleTime": "≤16S",
+          "operationRate": "≥99.5%",
+          "weldingYield": "≥99.5%(二次补焊后≥99.9%)",
+          "misjudgmentRate": "<0.5%",
+          "missedJudgmentRate": "<0.5%"
+        }
+      }
+    },
+    "WV-KG02": {
+      "name": "接线盒扣盖机(WV-KG02)",
+      "technicalPerformance": {
+        "0": "实现全自动扣接线盒盖",
+        "1": "采用真空检测与视觉检测等多种方式检测线盒盒盖效果",
+        "2": "振动盘上料可以兼容多种线盒盖子，盒盖存料量大",
+        "3": "机械手取放料，扣盖精度高",
+        "4": "支持斜插、平盖等多种盖盒盖方式",
+        "5": "版型切换方便"
+      },
+      "productParameters": {
+        "key": {
+          "powerSupply": "电源",
+          "power": "功率",
+          "floorArea": "设备占地",
+          "moduleSizeRange": "组件尺寸范围",
+          "airPressure": "空气压力",
+          "airConsumption": "耗气量",
+          "positioningMethod": "组件、接线盒定位方式",
+          "siliconeDetection": "硅胶检测",
+          "versionSwitchTime": "版型切换时间",
+          "repeatAccuracy": "重复定位精度",
+          "installationRate": "安装成功率",
+          "noise": "噪音",
+          "cycleTime": "节拍",
+          "moduleWeight": "组件重量"
+        },
+        "value": {
+          "powerSupply": "单相220V,50HZ,三线制(1火1零1地)，进线规格3×2.5mm",
+          "power": "额定功率4KW",
+          "floorArea": "4700(长)×2600(宽)×2600(高)mm",
+          "moduleSizeRange": "L:2550-1650mm,W:1450-990mm",
+          "airPressure": "0.6-0.8 MPa",
+          "airConsumption": "峰值500L/min 平均300L/min",
+          "positioningMethod": "组件伺服驱动四点归正，接线盒CCD定位",
+          "siliconeDetection": "探胶位移检测",
+          "versionSwitchTime": "10min",
+          "repeatAccuracy": "0.05mm",
+          "installationRate": "≥99.8%",
+          "noise": "≤75分贝",
+          "cycleTime": "≤13S",
+          "moduleWeight": "≤50KG"
+        }
+      }
+    },
+    "WV-TB03A": {
+      "name": "贴标机(WV-TB03A)",
+      "technicalPerformance": {
+        "0": "动力平台辅助撕标，提高出标完好率",
+        "1": "接标平台辅助条码出标，增加出标稳定性",
+        "2": "提前扫码+设备内补扫码功能，扫码成功率>99.9%",
+        "3": "由多个伺服运动轴为驱动轴，调试以及切换版型方便",
+        "4": "U轴采用步进旋转，精度高、调试方便、动作稳定",
+        "5": "视觉检测、三码校验等多个功能选配"
+      },
+      "productParameters": {
+        "key": {
+          "equipmentDimensions": "设备尺寸",
+          "applicableModuleSize": "适用组件尺寸",
+          "cycleTime": "节拍",
+          "operationRate": "设备稼动率",
+          "labelingAccuracy": "贴标精度",
+          "qualifiedRate": "合格率",
+          "powerSupply": "设备电源、功率",
+          "airSupply": "气源"
+        },
+        "value": {
+          "equipmentDimensions": "3800x2300x2000mm(可定制)",
+          "applicableModuleSize": "长(1580-2500)x宽(800-1500)mm",
+          "cycleTime": "≤15S",
+          "operationRate": "≥99.5%",
+          "labelingAccuracy": "±1mm",
+          "qualifiedRate": "≥99.8%",
+          "powerSupply": "380V/220V 50/60Hz",
+          "airSupply": "0.5-0.8MPa"
+        }
+      }
+    }
+  }
+}
