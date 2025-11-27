@@ -341,8 +341,14 @@ function changeLanguage(lng) {
 
 document.addEventListener('DOMContentLoaded', async function () {
 
+    // 产品目录
+    const productContentContainer = document.getElementById('product-content-container');
+     //移动端
+    const mobileMenuButton = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-menu');
+
+    await initDom()
     await i18Load()
-    
     //选择语言
     const langSelect = document.getElementById('lang-selector');
     langSelect.addEventListener('change', function () {
@@ -365,11 +371,6 @@ document.addEventListener('DOMContentLoaded', async function () {
         document.getElementById('index').classList.add('active');
     }
   
-    
-    //移动端
-    const mobileMenuButton = document.getElementById('menu-toggle');
-    const mobileNav = document.getElementById('mobile-menu');
-
     
     // 生成主产品展示内容
     function generateMainProduct() {
@@ -434,20 +435,21 @@ document.addEventListener('DOMContentLoaded', async function () {
             </div>
         `;
     }
-    // 生成主产品内容
-    const mainProductHTML = generateMainProduct();
-    // 插入到主产品展示 section 中
-    const mainProductSection = document.getElementById('main-products');
-    if (mainProductSection) {
-        const contentContainer = mainProductSection.querySelector('#main-product-container');
-        if (contentContainer) {
-            contentContainer.innerHTML = mainProductHTML;
+  
+    //初始化dom元素
+    function initDom() {
+        // 插入到主产品展示 Container 中
+        const mainProductSContainer = document.getElementById('main-product-container');
+        if (mainProductSContainer) {
+            mainProductSContainer.innerHTML = generateMainProduct();
         }
+        //产品下拉框
+        generateProductSelect()
+        //导航栏产品目录
+        generateProductLinks()
     }
 
-    // 产品目录
-    const productContentContainer = document.getElementById('product-content-container');
-
+    
     // 清空容器产品内容
     function removeProductContent() {
         const firstProductContent = productContentContainer.querySelector('.product-content');
@@ -492,37 +494,39 @@ document.addEventListener('DOMContentLoaded', async function () {
         selectWrapper.appendChild(productSelect);
         productContentContainer.appendChild(selectWrapper);
     }
-    generateProductSelect()
 
   
   
     
     //桌面端和移动端产品目录导航生成
-    const productLinksContainer = document.getElementById('product-container');
-    const mobileMenu = document.getElementById('mobile-product-container');
-    for (const productId in products) {
-        const product = products[productId];
-        //桌面端
-        const link = document.createElement('a');
-        link.href = '#products';
-        link.dataset.product = productId;
-        link.classList.add('nav-link', 'product-a', 'no-wrap');
-        link.textContent = product.name;
-        link.setAttribute('data-target', 'product-catalog');
-        link.setAttribute('data-i18n', `productInfo.${product.id}.name`);
-        productLinksContainer.appendChild(link);
+    function generateProductLinks() {
+        const productLinksContainer = document.getElementById('product-container');
+        const mobileMenu = document.getElementById('mobile-product-container');
+        for (const productId in products) {
+            const product = products[productId];
+            //桌面端
+            const link = document.createElement('a');
+            link.href = '#products';
+            link.dataset.product = productId;
+            link.classList.add('nav-link', 'product-a', 'no-wrap');
+            link.textContent = product.name;
+            link.setAttribute('data-target', 'product-catalog');
+            link.setAttribute('data-i18n', `productInfo.${product.id}.name`);
+            productLinksContainer.appendChild(link);
 
 
 
-        //移动端
-        const mobileLink = document.createElement('a');
-        mobileLink.href = '#products';
-        mobileLink.dataset.product = productId;
-        mobileLink.classList.add('block', 'py-2', 'px-4', 'text-dark', 'hover:text-primary', 'product-a');
-        mobileLink.textContent = product.name;
-        mobileLink.setAttribute('data-target', 'product-catalog');
-        mobileMenu.appendChild(mobileLink);
+            //移动端
+            const mobileLink = document.createElement('a');
+            mobileLink.href = '#products';
+            mobileLink.dataset.product = productId;
+            mobileLink.classList.add('block', 'py-2', 'px-4', 'text-dark', 'hover:text-primary', 'product-a');
+            mobileLink.textContent = product.name;
+            mobileLink.setAttribute('data-target', 'product-catalog');
+            mobileMenu.appendChild(mobileLink);
+        }
     }
+    
 
     // 生成轮播图和指示器
     function generateSlider(images,productName,id) {
