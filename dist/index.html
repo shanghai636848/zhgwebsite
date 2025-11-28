@@ -28,10 +28,10 @@
             <div class="flex justify-between items-center h-16 md:h-20 no-wrap">
                 <!-- logo -->
                 <a href="#" class="flex items-center space-x-2">
-                    <div class="w-10 h-10  rounded-lg flex items-center justify-center">
-                        <img src="./img/logo.jpg">
+                    <div class="w-20 h-20  rounded-lg flex items-center justify-center">
+                        <img src="./img/logo-mini.svg">
+                        <!-- <span class="text-xl md:text-2xl font-bold text-primary" data-i18n="nav.logo">智慧谷激光</span> -->
                     </div>
-                    <span class="text-xl md:text-2xl font-bold text-primary" data-i18n="nav.logo">智慧谷激光</span>
                 </a>
 
                 <!-- 桌面导航 -->
@@ -80,28 +80,48 @@
     <!-- 首页 -->
     <div class="content active" id="index">
 
-        <section class="pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-br from-primary/5 to-accent/5"
-            style="background-image: url('./img/gs.jpg'); background-size: cover;  background-repeat: no-repeat; border-radius: 2xl;">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative min-h-[500px] md:min-h-[600px]">
-                <div class="flex flex-col lg:flex-row items-center relative z-10 h-full py-8">
-                    <div class="lg:w-1/2 relative min-h-[400px] flex items-center justify-center">
-                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl -z-10">
+        <section class="section-padding bg-white min-h-[500px] md:min-h-[600px]"
+            style="background-image: url('./img/bj1.jpg');background-size: cover ">
+            
+        </section>
+
+        <section class="section-padding bg-light">
+            <div class="container mx-auto ">
+                <div class="text-center  mx-auto mb-16">
+                     
+                    <div class="text-xl md:text-2xl text-dark flex justify-between items-center mb-4">
+                        <div class="flex items-center gap-2 text-left">
+                            <img src="./img/logo-mini.svg"  class="w-20 h-20">
+                            <span data-i18n="contact.companyName">苏州智慧谷激光智能装备有限公司</span>
                         </div>
+                        <span class="text-right" data-i18n="nav.about">关于我们</span>
+                    </div>
+                    <div class=" h-1 bg-primary mx-auto mb-4"></div>
+        
+                </div>
+        
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+        
+                    <div class="lg:w-1/2 relative">
+                        <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+                            <img src="./img/bj2.jpg" class="w-full h-auto">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl -z-10"></div>
                         <div class="absolute -top-6 -left-6 w-40 h-40 bg-primary/20 rounded-full blur-3xl -z-10"></div>
                     </div>
-
-                    <!-- 文字内容移到右侧（lg:w-1/2），并优化层级 -->
-                    <div class="lg:w-1/2 lg:pl-10">
-                        <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-dark leading-tight text-shadow" data-i18n="hero.title">
+        
+                    <div class="lg:w-1/2">
+                        <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-dark leading-tight text-shadow"
+                            data-i18n="hero.title">
                             光伏组件激光智能装备<br>
                             <span class="text-primary">综合解决方案提供商</span>
                         </h1>
-                        <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-lg text-white" data-i18n="hero.desc">
+                        <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-lg" data-i18n="hero.desc">
                             专注于电极互连技术应用研究及高端激光微纳加工智能装备研发制造，为光伏行业提供领先的封装焊接设备解决方案
                         </p>
                         <div class="mt-8 flex flex-wrap gap-4">
-                            <a href="#products" id="productsBtn"  data-i18n="hero.btn.product"
-                                class="px-8 py-3 bg-primary text-white rounded-lg font-medium shadow-lg hover:bg-primary/90 transition-custom" >
+                            <a href="#products" id="productsBtn" data-i18n="hero.btn.product"
+                                class="px-8 py-3 bg-primary text-white rounded-lg font-medium shadow-lg hover:bg-primary/90 transition-custom">
                                 了解产品
                             </a>
                             <a href="#about" id="aboutBtn" data-target="about-us" data-i18n="hero.btn.about"
@@ -111,34 +131,34 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- 数据统计 -->
-        <section class="py-12 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- 数据统计 -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                    <div class="p-4">
+                    <div class="p-8">
                         <div class="text-3xl md:text-4xl font-bold text-primary mb-2" id="counter1">8000+</div>
                         <p class="text-gray-600" data-i18n="stats.rndBase">平方米研发基地</p>
                     </div>
-                    <div class="p-4">
+                    <div class="p-8">
                         <div class="text-3xl md:text-4xl font-bold text-primary mb-2" id="counter2">1000+</div>
                         <p class="text-gray-600" data-i18n="stats.annualOutput">台设备年产量</p>
                     </div>
-                    <div class="p-4">
+                    <div class="p-8">
                         <div class="text-3xl md:text-4xl font-bold text-primary mb-2" id="counter3">180+</div>
                         <p class="text-gray-600" data-i18n="stats.employees">名现有员工</p>
                     </div>
-                    <div class="p-4">
+                    <div class="p-8">
                         <div class="text-3xl md:text-4xl font-bold text-primary mb-2" id="counter4">208</div>
                         <p class="text-gray-600" data-i18n="stats.patents">项授权专利</p>
                     </div>
                 </div>
+        
             </div>
         </section>
+
+      
         <!-- 主产品展示 -->
         <section id="main-products" class="section-padding bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="container mx-auto">
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4" data-i18n="section.mainProducts.title">主产品展示</h2>
                     <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -155,15 +175,15 @@
 
         <!-- 合作客户 -->
         <section id="clients" class="section-padding bg-light">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="container mx-auto">
+                <div class="text-center max-w-3xl mx-auto ">
                     <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4" data-i18n="section.clients.title">合作客户</h2>
                     <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
                     <p class="text-lg text-gray-600" data-i18n="section.clients.desc">
                         智慧谷激光的产品和服务已获得众多行业领先企业的认可和信赖
                     </p>
                 </div>
-
+        
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
                     <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-32 card-hover">
                         <img src="./img/hzhb/Logo_00.png" class="max-h-full max-w-full object-contain">
@@ -201,9 +221,9 @@
                     <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-32 card-hover">
                         <img src="./img/hzhb/Logo_11.png" class="max-h-full max-w-full object-contain">
                     </div>
-
+        
                 </div>
-
+        
                 <!-- <div id="client-container"></div> -->
             </div>
         </section>
@@ -213,11 +233,18 @@
 
         <!-- 关于智慧谷激光 -->
         <section id="about" class="section-padding bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="container mx-auto ">
                 <!-- 标题区域 -->
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4" data-i18n="section.about.title">关于智慧谷激光</h2>
-                    <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                 <div class="text-center  mx-auto mb-16">
+                    <div class="text-xl md:text-2xl  text-dark flex justify-between items-center mb-4">
+                        <div class="flex items-center gap-2 text-left">
+                            <img src="./img/logo-mini.svg"  class="w-20 h-20">
+                            <span class="text-left" data-i18n="contact.companyName"></span>
+                        </div>
+                        
+                        <span class="text-right" data-i18n="section.about.title">关于智慧谷激光</span>
+                    </div>
+                    <div class=" h-1 bg-primary mx-auto mb-4"></div>
                     <p class="text-lg text-gray-600" data-i18n="section.about.desc">
                         苏州智慧谷激光智能装备有限公司成立于2019年，聚焦于电极互连技术的应用研究及高端激光微纳加工智能装备的研发及制造
                     </p>
@@ -461,7 +488,7 @@
 
         <!-- 3D 翻转轮播图 - 证书展示 -->
         <section class="section-padding bg-white" >
-            <div class="relative container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative container mx-auto ">
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4" data-i18n="section.certificates.title">证书展示</h2>
                     <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -488,10 +515,17 @@
     <div class="content" id="product-catalog">
         <!-- 产品目录 -->
         <section id="products" class="section-padding bg-light">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4" data-i18n="section.products.title">产品目录</h2>
-                    <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+            <div class="container mx-auto ">
+                <div class="text-center  mx-auto mb-16">
+                    <div class="text-xl md:text-2xl  text-dark flex justify-between items-center mb-4">
+                        <div class="flex items-center gap-2 text-left">
+                            <img src="./img/logo-mini.svg"  class="w-20 h-20">
+                            <span class="text-left" data-i18n="contact.companyName"></span>
+                        </div>
+                        <span class="text-right" data-i18n="section.products.title">产品目录</span>
+                    </div>
+                    <div class=" h-1 bg-primary mx-auto mb-4"></div>
+                
                     <p class="text-lg text-gray-600" data-i18n="section.products.desc">
                         智慧谷激光凭借先进的技术和创新能力，为光伏行业提供多种高性能的激光智能装备
                     </p>
@@ -510,12 +544,19 @@
     </div>
 
     <!-- 联系我们 -->
-    <section id="index-contact" class="section-padding bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-dark mb-4" data-i18n="section.contact.title">联系我们</h2>
-                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                <p class="text-lg text-gray-600" data-i18n="section.contact.desc">如果您有任何疑问或需求，请随时与我们联系。</p>
+    <section id="index-contact" class="section-padding bg-white"
+        style="background-image: url(./img/bj5.jpg); background-size: cover">
+        <div class="container mx-auto">
+            <div class="text-center  mx-auto mb-16">
+                <div class="text-xl md:text-2xl  text-dark flex justify-between items-center mb-4">
+                    <div class="flex items-center gap-2 text-left text-white">
+                        <!-- <img src="./img/logo-mini.svg" class="w-20 h-20">
+                        <span class="text-left" data-i18n="contact.companyName"></span> -->
+                    </div>
+                    <span class="text-right  text-white" data-i18n="section.contact.title">联系我们</span>
+                </div>
+                <div class="h-1 bg-primary mx-auto mb-6" style="background-color: white;"></div>
+                <p class="text-lg text-gray-600  text-white" data-i18n="section.contact.desc">如果您有任何疑问或需求，请随时与我们联系。</p>
             </div>
             <div class="flex flex-col md:flex-row justify-center gap-8">
                 <div class="bg-light p-8 rounded-xl shadow-md w-full md:w-2/3 lg:w-1/2">

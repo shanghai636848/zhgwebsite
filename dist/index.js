@@ -771,6 +771,13 @@ document.addEventListener('DOMContentLoaded', async function () {
         const firstLink = document.querySelector("#product-container > a:nth-child(1)")
         firstLink.click();
     }
+
+    //产品目录按钮
+    const pBtn = document.getElementById("product-a")
+    pBtn.addEventListener('click', function (e) {
+        e.preventDefault(); // 阻止锚点跳转（关键！）
+        firstProductClick()
+    });
     
 
     //了解产品按钮
@@ -979,8 +986,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         
         e.preventDefault(); // 阻止默认锚点跳转
 
-        // 新增：滚动到对应section（核心修复）
-        scrollToTargetSection(targetId);
+       
 
         // 1. 添加历史记录
         const stateData = { target: targetId, product: productId };
@@ -1004,6 +1010,10 @@ document.addEventListener('DOMContentLoaded', async function () {
                 updateContent()
             }
         }
+
+         // 新增：滚动到对应section（核心修复）
+        scrollToTargetSection(targetId);
+
         // 4. 隐藏移动端菜单
         const mobileNav = document.getElementById('mobile-menu');
         if (mobileNav) mobileNav.style.display = 'none';
@@ -1026,7 +1036,6 @@ document.addEventListener('DOMContentLoaded', async function () {
         // 平滑滚动到目标位置（兼容导航栏高度）
         const navbarHeight = document.getElementById('navbar').offsetHeight;
         const targetTop = targetSection.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-
         window.scrollTo({
             top: targetTop,
             behavior: 'auto' 

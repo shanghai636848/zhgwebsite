@@ -1,9 +1,9 @@
 {
   "home": {
-    "title": "WitValley Laser - Provider of Laser Intelligent Equipment Solutions for PV Modules"
+    "title": "SUZHOU WISDOM VALLEY LASER INTELLIGENT EQUIPMENT CO.,LTD - Provider of Laser Intelligent Equipment Solutions for PV Modules"
   },
   "nav": {
-    "logo": "WitValley Laser",
+    "logo": "Wisdom Valley Laser",
     "index": "Home",
     "about": "About Us",
     "product": "Product Catalog",
@@ -14,7 +14,7 @@
     "en": "English"
   },
   "hero": {
-    "title": "Laser Intelligent Equipment for PV Modules<br><span class='text-primary'>Comprehensive Solution Provider</span>",
+    "title": "Comprehensive Solution Provider<br><span class='text-primary'>for photovoltaic module laser intelligent equipment </span>",
     "desc": "Focused on the application research of electrode interconnection technology and the R&D and manufacturing of high-end laser micro-nano processing intelligent equipment, providing leading packaging and welding equipment solutions for the photovoltaic industry",
     "btn": {
       "product": "Explore Products",
@@ -23,22 +23,22 @@
   },
   "stats": {
     "rndBase": "R&D & Production Base (sqm)",
-    "annualOutput": "Annual Equipment Output (units)",
-    "employees": "Current Employees",
+    "annualOutput": "Annual Output Of Equipment  (units)",
+    "employees": "Existing Employees",
     "patents": "Authorized Patents"
   },
   "section": {
     "mainProducts": {
       "title": "Core Product Display",
-      "desc": "WitValley Laser's core products provide efficient and intelligent solutions for PV module production"
+      "desc": "Wisvalley Laser provides highly efficient and intelligent solutions for the production of photovoltaic modules through its core products."
     },
     "clients": {
       "title": "Cooperative Clients",
       "desc": "WitValley Laser's products and services have been recognized and trusted by many leading enterprises in the industry"
     },
     "about": {
-      "title": "About WitValley Laser",
-      "desc": "Suzhou WitValley Laser Intelligent Equipment Co., Ltd. was established in 2019, focusing on the application research of electrode interconnection technology and the R&D and manufacturing of high-end laser micro-nano processing intelligent equipment"
+      "title": "About WISDOM VALLEY LASER",
+      "desc": "Suzhou Wisdom Valley Laser Intelligent Equipment Co., Ltd. was established in 2019, focusing on the application research of electrode interconnection technology and the R&D and manufacturing of high-end laser micro-nano processing intelligent equipment"
     },
     "honors": {
       "title": "Honors & Qualifications"
@@ -48,7 +48,7 @@
     },
     "products": {
       "title": "Product Catalog",
-      "desc": "With advanced technology and innovation capabilities, WitValley Laser provides a variety of high-performance laser intelligent equipment for the photovoltaic industry"
+      "desc": "With advanced technology and innovation capabilities, Wisdom Valley Laser provides a variety of high-performance laser intelligent equipment for the photovoltaic industry"
     },
     "contact": {
       "title": "Contact Us",
@@ -57,19 +57,19 @@
   },
   "mainProduct": {
     "badge": "Core Product",
-    "title": "Cell Interconnection Integrated Machine (WV-3500C)",
-    "desc": "Cell Interconnection Integrated Machine (Comprehensive welding platform covering HJT/TOPcon/PERC/Perovskite Tandem, pioneering OBB strip film technology)",
+    "title": "Non main grid electrode Interconnection all-in-one machine (WV-3500C)",
+    "desc": "Non main grid electrode Interconnection all-in-one machine(Comprehensive welding platform,capable of covering HJT/TOPcon/PERC/Perovskite stack, pioneeringOBB strip film process)",
     "feature0": {
       "title": "High Performance",
-      "desc": "Adopts PC-Base control system, reconfigurable I/O interface and customized system integration, intelligent control core builds high-performance automation platform"
+      "desc": "using PC Base control system,reconigurable I/O interface and customized system integration,intelligent control center to build ahigh-per-formance automation platform"
     },
     "feature1": {
       "title": "High Precision",
-      "desc": "Sub-micron repeat positioning accuracy (±0.5μm), high-resolution linear motor drive unit, temperature drift real-time compensation module, high-precision servo control architecture"
+      "desc": "sub micron level repetitive positioning accuracy(±0.5μm), high-resolutionlinearmotordrive unit,real-time temperature driftcompensation module,high-precision servo control architecture"
     },
     "feature2": {
       "title": "Battery Compatibility",
-      "desc": "Compatible with 182-210mm HJT/TOPcon/PERC/Perovskite Tandem cells"
+      "desc": "compatible with HJT/TOPcon/PERC/perovskite stack specifications 182-210"
     },
     "btn": "Learn More Product Details"
   },
@@ -79,7 +79,7 @@
     "timeline": "Development History"
   },
   "overview": {
-    "title": "Leading Packaging and Welding Equipment Supplier in the PV Industry",
+    "title": "Leading Packaging and Welding Equipment Supplier in the photovoltaic Industry",
     "rndBase": {
       "title": "R&D & Production Base",
       "desc": "The company has an 8,000-square-meter R&D and production site, with an annual assembly and delivery capacity of over 1,000 sets of equipment, providing stable production capacity guarantee for customers."
@@ -106,13 +106,13 @@
   },
   "timeline": {
     "title": "Development History",
-    "2019": "WitValley Laser Established",
+    "2019": "Suzhou Wisdom Valley Laser Intelligent Equipment Co., Ltd Established",
     "2020": "Launched R&D of first junction box automatic installation machine AZ01A",
-    "2021": "18S Busbar Laminating Welder WV-DN200 R&D Successful",
+    "2021": "18S Busbar Laminating Welder WV-DN200 R&D Successful；Awarded as a nationalhigh-tech enterprise",
     "2022": "AZ200 R&D Successful and Introduced to Customer Production",
-    "2023": "Launched WV-XH12/AZ300 and Mass Production",
-    "2024": "Rated as Suzhou Unicorn Cultivation Enterprise",
-    "2025": "Won High-Quality Outstanding Contribution Award"
+    "2023": "Launched WV-XH12/AZ300 and Mass Production；The W-3500 integrated machine withoutmain gate electrode interconnection has officially started research and development,enriching the range of series weldingequipment products",
+    "2024": "Rated as Suzhou Unicorn Cultivation Enterprise；Successfully passed the cer tification of specialized,refined,and innowaive small and medium-sized enterprises in Jiangsu Province in 2024",
+    "2025": "The two new products,WV-3500C/W-TM100A,with no main gate electrode interconnection integrated machine,have been launched simultaneously officaly opening a new chapter in the low-temperature interconnecion equipment of SmartValley"
   },
   "honor": {
     "1": {
@@ -150,7 +150,7 @@
     "list": {
       "WV-3500C": {
         "id": "WV-3500C",
-        "name": "Busbar-Free Electrode Interconnection Machine(WV-3500C)",
+        "name": "Non main grid electrode Interconnection all-in-one machine(WV-3500C)",
         "images": [
           "./img/3500-1.jpg",
           "./img/3500-2.jpg",
@@ -181,7 +181,7 @@
       },
       "WV-TM100A": {
         "id": "WV-TM100A",
-        "name": "Busbarless Electrode Interconnection Machine (WV-TM100A)",
+        "name": "Non main grid electrode Interconnection all-in-one machine (WV-TM100A)",
         "images": [
           "./img/TM100A-1.jpg",
           "./img/TM100A-2.jpg",
@@ -213,7 +213,7 @@
       },
       "WV-AZ400": {
         "id": "WV-AZ400",
-        "name": "Junction Box Installation All-in-One Machine (WV-AZ400)",
+        "name": "Junction box installation all-in-one machine (WV-AZ400)",
         "images": [
           "./img/WV-AZ400.jpg"
         ],
@@ -238,7 +238,7 @@
       },
       "WV-AJ100": {
         "id": "WV-AJ100",
-        "name": "Lead Lifting & Backplane Gluing All-in-One Machine (WV-AJ100)",
+        "name": "Lead lifting and backboard gluing all-in-one machine (WV-AJ100)",
         "images": [
           "./img/WV-AJ100.jpg"
         ],
@@ -258,7 +258,7 @@
       },
       "WV-AZ500A": {
         "id": "WV-AZ500A",
-        "name": "Backplane Gluing & Junction Box Installation All-in-One Machine (WV-AZ500A)",
+        "name": "Backboard gluing and wire box installation integrated machine (WV-AZ500A)",
         "images": [
           "./img/WV-AZ500A.jpg"
         ],
@@ -278,7 +278,7 @@
       },
       "WV-XH13A": {
         "id": "WV-XH13A",
-        "name": "Junction Box Laser Welding Machine (WV-XH13A)",
+        "name": "Junction box laser welding machine (WV-XH13A)",
         "images": [
           "./img/WV-XH13A.jpg"
         ],
@@ -306,7 +306,7 @@
       },
       "WV-XH06A": {
         "id": "WV-XH06A",
-        "name": "Junction Box High-Frequency Welding Machine (WV-XH06A)",
+        "name": "High frequency soldering machine for junction boxes (WV-XH06A)",
         "images": [
           "./img/WV-XH06A.jpg"
         ],
