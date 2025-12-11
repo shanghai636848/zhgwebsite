@@ -30,11 +30,11 @@
   "section": {
     "mainProducts": {
       "title": "Core Product Display",
-      "desc": "Wisvalley Laser provides highly efficient and intelligent solutions for the production of photovoltaic modules through its core products."
+      "desc": "Wisdom Valley Laser provides highly efficient and intelligent solutions for the production of photovoltaic modules through its core products."
     },
     "clients": {
       "title": "Cooperative Clients",
-      "desc": "WitValley Laser's products and services have been recognized and trusted by many leading enterprises in the industry"
+      "desc": "Wisdom Valley Laser's products and services have been recognized and trusted by many leading enterprises in the industry"
     },
     "about": {
       "title": "About WISDOM VALLEY LASER",
@@ -56,16 +56,16 @@
     }
   },
   "mainProduct": {
-    "badge": "Core Product",
+    "badge": "Core Products",
     "title": "Non main grid electrode Interconnection all-in-one machine (WV-3500C)",
     "desc": "Non main grid electrode Interconnection all-in-one machine(Comprehensive welding platform,capable of covering HJT/TOPcon/PERC/Perovskite stack, pioneeringOBB strip film process)",
     "feature0": {
       "title": "High Performance",
-      "desc": "using PC Base control system,reconigurable I/O interface and customized system integration,intelligent control center to build ahigh-per-formance automation platform"
+      "desc": "using PC Base control system,reconigurable I/O interface and customized system integration,intelligent control center to build a high-per-formance automation platform"
     },
     "feature1": {
       "title": "High Precision",
-      "desc": "sub micron level repetitive positioning accuracy(±0.5μm), high-resolutionlinearmotordrive unit,real-time temperature driftcompensation module,high-precision servo control architecture"
+      "desc": "sub micron level repetitive positioning accuracy(±0.5μm), high-resolution linear motor drive unit,real-time temperature drift compensation module,high-precision servo control architecture"
     },
     "feature2": {
       "title": "Battery Compatibility",
